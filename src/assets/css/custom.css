@@ -5,14 +5,9 @@ body {
   overflow-x: hidden;
 }
 
-.header {
-  width: 100vw;
-  height: 100vh;
-}
 .header .container-fluid {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
   margin: 0 auto;
   padding: 0;
 }
@@ -57,4 +52,11 @@ body {
   font-size: 14pt;
   font-weight: 700;
   color: #000;
+}
+
+.body {
+  margin-top: 3rem;
+}
+.body .container {
+  width: 70%;
 }/*# sourceMappingURL=custom.css.map */
