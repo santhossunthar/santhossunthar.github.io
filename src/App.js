@@ -3,9 +3,9 @@ import HomePage from './components/pages/HomePage';
 
 const App = () => {
   return (
-     <div className='container'>
-          <HomePage/>
-      </div>     
+    <>
+      <HomePage />
+    </>
   );
 }
 
