@@ -1,12 +1,10 @@
 import React from 'react';
-import NavBar from './components/NavBar';
-import ProfileBody from './components/ProfileBody';
+import HomePage from './components/pages/HomePage';
 
 const App = () => {
   return (
      <div className='container'>
-          <ProfileBody/>
-          <NavBar/>
+          <HomePage/>
       </div>     
   );
 }
