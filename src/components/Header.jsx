@@ -16,11 +16,11 @@ const Header = () => {
                         </div>
 
                         <div className="col-lg-6 col-sm">
-                            <div className="row h-75 justify-content-center align-items-start">
+                            <div className="row justify-content-center">
                                 <p className='about'>Data Analyst | CTF Player</p>
                             </div>
 
-                            <div className="row h-25 justify-content-end">
+                            <div className="row justify-content-end">
                                 <p className='country'>Srilanka</p>
                             </div>
                         </div>
