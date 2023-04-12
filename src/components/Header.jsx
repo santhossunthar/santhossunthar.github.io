@@ -4,7 +4,9 @@ const Header = () => {
     return (
         <section className="header">
             <div className="container-fluid">
-                <p id='title'>Santhos Suntharalingam</p>
+                <div className="title">
+                    <p data-aos="fade">Santhos Suntharalingam</p>
+                </div>
 
                 <div className="container">
                     <div className="row w-75">
@@ -25,7 +27,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </section>
     )
 }
