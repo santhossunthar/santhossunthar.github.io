@@ -7,6 +7,12 @@ $test: aqua;
 @import "/node_modules/bootstrap/dist/css/bootstrap.css";
 @import "./media";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #fff;
     max-width: 100%;
@@ -74,9 +80,9 @@ body {
                     max-height: 100%;
                     margin: -5rem 0 0 0;
                     object-fit: cover;
-                }    
+                }
             }
-    
+
             .about {
                 text-transform: uppercase;
                 font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -84,7 +90,7 @@ body {
                 font-weight: 700;
                 color: #000;
             }
-    
+
             .country {
                 text-transform: uppercase;
                 font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -96,12 +102,20 @@ body {
     }
 }
 
-.body{
-    .container-fluid{
+.body {
+    .container-fluid {
         width: 100% !important;
         height: 100vh !important;
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.75) 48%,
+            rgba(255, 255, 255, 0.75) 77%,
+            rgba(236, 252, 255, 1) 100%
+        ), url('../images/sql.png') no-repeat;
+        background-size: cover;
 
-        .card{
+        .card {
             width: 50%;
             height: 100%;
 
@@ -115,22 +129,21 @@ body {
                     margin: 0;
                     padding: 0;
                     object-fit: cover;
-                }    
+                }
             }
 
-            .card-body{
+            .card-body {
                 width: 100%;
                 height: 30%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
-                .card-title{
+                .card-title {
                     font-size: 20pt;
                     font-weight: 500;
                 }
             }
-            
         }
     }
 }
