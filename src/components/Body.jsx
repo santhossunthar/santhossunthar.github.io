@@ -10,11 +10,11 @@ const Body = () => {
                         rgba(255, 255, 255, 0.2) 48%,
                         rgba(255, 255, 255, 0.2) 77%,
                         rgba(236, 252, 255, 0.5) 100%), 
-                        url(/images/sql.png) no-repeat`,
+                        url(/images/sql.jpg) no-repeat`,
                     backgroundSize: 'cover'
                 }}>
                 <div className="card mb-5 mt-5 shadow-sm">
-                    <img src="/images/sql.png" alt="Card Image" className='img img-fluid' />
+                    <img src="/images/sql.jpg" alt="Card Image" className='img img-fluid' />
 
                     <div className="card-body">
                         <div className="card-title">
@@ -64,11 +64,11 @@ const Body = () => {
                     rgba(255, 255, 255, 0.2) 48%,
                     rgba(255, 255, 255, 0.2) 77%,
                     rgba(236, 252, 255, 0.5) 100%), 
-                    url(/images/sql.png) no-repeat`,
+                    url(/images/python.jpg) no-repeat`,
                     backgroundSize: 'cover'
                 }}>
                 <div className="card mb-5 mt-5 shadow-sm">
-                    <img src="/images/sql.png" alt="Card Image" className='img img-fluid' />
+                    <img src="/images/python.jpg" alt="Card Image" className='img img-fluid' />
 
                     <div className="card-body">
                         <div className="card-title">
