@@ -1,5 +1,4 @@
 import React from 'react';
-import ProfilePicture from '../assets/images/profile-picture.png';
 
 const Header = () => {
     return (
@@ -11,7 +10,7 @@ const Header = () => {
                     <div className="row w-75">
                         <div className="col-lg-6 col-sm">
                             <div className="profile-picture">
-                                <img src={ProfilePicture} alt="Profile Picture" />
+                                <img src="/images/profile-picture.png" alt="Profile Picture" />
                             </div>
                         </div>
 
