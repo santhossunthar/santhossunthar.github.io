@@ -2,15 +2,42 @@
 body {
   background-color: #fff;
   max-width: 100%;
+  height: 100vh;
   overflow-x: hidden;
 }
 
-.header .container-fluid {
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 auto;
-  padding: 0;
+.App {
+  width: 100%;
+  height: 100vh;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
+.App section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 28pt;
+  font-weight: 600;
+}
+
+.App section .container-fluid {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  padding: 0;
+  margin: 0;
+}
+
 .header .container-fluid #title {
   background-color: #333;
   width: 100%;
@@ -29,24 +56,24 @@ body {
   justify-content: center;
   align-items: center;
 }
-.header .container-fluid .profile-picture {
+.header .container-fluid .container .profile-picture {
   width: 400px;
 }
-.header .container-fluid .profile-picture img {
+.header .container-fluid .container .profile-picture img {
   max-width: 100%;
   max-height: 100%;
   margin: -5rem 0 0 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.header .container-fluid .about {
+.header .container-fluid .container .about {
   text-transform: uppercase;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18pt;
   font-weight: 700;
   color: #000;
 }
-.header .container-fluid .country {
+.header .container-fluid .container .country {
   text-transform: uppercase;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14pt;
@@ -54,9 +81,6 @@ body {
   color: #000;
 }
 
-.body {
-  margin-top: 3rem;
-}
-.body .container {
-  width: 70%;
+.body .container-fluid {
+  width: 50% !important;
 }/*# sourceMappingURL=custom.css.map */
