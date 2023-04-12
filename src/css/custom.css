@@ -36,7 +36,7 @@ body {
 
 .App section .container-fluid {
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
@@ -44,10 +44,10 @@ body {
   margin: 0;
 }
 
-.header .container-fluid #title {
+.header .container-fluid .title {
   background-color: #333;
   width: 100%;
-  height: 15rem;
+  height: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,14 +58,23 @@ body {
   color: #fff;
 }
 .header .container-fluid .container {
+  width: 100%;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .container-fluid .container .profile-picture {
-  width: 400px;
+.header .container-fluid .container .col-lg-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.header .container-fluid .container .profile-picture img {
+.header .container-fluid .container .col-lg-6 .profile-picture {
+  width: 20rem;
+  margin: 0 auto;
+  padding: 0;
+}
+.header .container-fluid .container .col-lg-6 .profile-picture img {
   max-width: 100%;
   max-height: 100%;
   margin: -5rem 0 0 0;
@@ -88,8 +97,6 @@ body {
 }
 
 .body .container-fluid {
-  width: 100% !important;
-  height: 100vh !important;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -100,7 +107,13 @@ body {
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.1);
 }
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
+  .body .container-fluid .card {
+    width: 90%;
+    height: 85%;
+  }
+}
+@media (max-width: 772px) {
   .body .container-fluid .card {
     width: 90%;
   }
