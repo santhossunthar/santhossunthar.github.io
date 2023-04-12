@@ -20,8 +20,13 @@ const Body = () => {
                         <div className="card-title">
                             Project Name
                         </div>
-                    </div>
 
+                        <div className="view-more">
+                            <a href="#" className='card-btn'>
+                                View More
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -42,8 +47,13 @@ const Body = () => {
                         <div className="card-title">
                             Project Name
                         </div>
-                    </div>
 
+                        <div className="view-more">
+                            <a href="#" className='card-btn'>
+                                View More
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -63,7 +73,13 @@ const Body = () => {
                     <div className="card-body">
                         <div className="card-title">
                             Project Name
-                        </div>       
+                        </div>
+
+                        <div className="view-more">
+                            <a href="#" className='card-btn'>
+                                View More
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
