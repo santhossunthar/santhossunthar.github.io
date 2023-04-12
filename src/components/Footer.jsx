@@ -5,15 +5,15 @@ const Footer = () => {
         <section className='footer'>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-lg-6 col-md-6">
+                    <div className="col-lg-4 col-md-4">
                         Quick links
                     </div>
 
-                    <div className="col-lg-6 col-md-6">
+                    <div className="col-lg-4 col-md-4">
                         copyright
                     </div>
 
-                    <div className="col-lg-6 col-md-6">
+                    <div className="col-lg-4 col-md-4">
                         Social links
                     </div>
                 </div>
