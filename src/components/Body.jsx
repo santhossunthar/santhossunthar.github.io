@@ -28,21 +28,7 @@ const Body = () => {
                     url(/images/tableau.png) no-repeat`,
                     backgroundSize: 'cover'
                 }}>
-                <div className="card mb-5 mt-5 shadow-sm">
-                    <img src="/images/tableau.png" alt="Card Image" className='img img-fluid' />
-
-                    <div className="card-body">
-                        <div className="card-title">
-                            Project Name
-                        </div>
-
-                        <div className="view-more">
-                            <a href="#" className='card-btn'>
-                                View More
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <Card imgName="sql.jpg" projectName="SQL Project" />
             </div>
 
             <div className="container-fluid align-items-center"
@@ -55,21 +41,7 @@ const Body = () => {
                     url(/images/python.jpg) no-repeat`,
                     backgroundSize: 'cover'
                 }}>
-                <div className="card mb-5 mt-5 shadow-sm">
-                    <img src="/images/python.jpg" alt="Card Image" className='img img-fluid' />
-
-                    <div className="card-body">
-                        <div className="card-title">
-                            Project Name
-                        </div>
-
-                        <div className="view-more">
-                            <a href="#" className='card-btn'>
-                                View More
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <Card imgName="sql.jpg" projectName="SQL Project" />
             </div>
         </section>
     )

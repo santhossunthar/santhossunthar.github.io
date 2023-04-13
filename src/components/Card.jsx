@@ -6,7 +6,7 @@ const Card = ({imgName, projectName}) => {
         <div className="card mb-5 mt-5 shadow-sm">
             <motion.img
                 initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1, transition: { duration: 2 } }}
+                animate={{ opacity: 1, transition: { duration: 2 } }}
                 src={"/images/"+imgName}
                 alt="Card Image"
                 className='img img-fluid'
@@ -20,7 +20,7 @@ const Card = ({imgName, projectName}) => {
 
                 <motion.div
                     initial={{ opacity: 0, translateY: 100 }}
-                    whileInView={{ opacity: 1, translateY: 0, transition: { duration: 0.5 } }}
+                    animate={{ opacity: 1, translateY: 0, transition: { duration: 0.5 } }}
                     className="view-more">
                     <a href="#" className='card-btn'>
                         View More
