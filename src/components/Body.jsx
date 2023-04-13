@@ -12,12 +12,18 @@ const Body = () => {
                         rgba(236, 252, 255, 0.5) 100%), 
                         url(/images/sql.jpg) no-repeat`,
                     backgroundSize: 'cover'
-                }}>
+                }}
+            >
                 <div className="card mb-5 mt-5 shadow-sm">
-                    <img src="/images/sql.jpg" alt="Card Image" className='img img-fluid' />
+                    <img
+                        src="/images/sql.jpg"
+                        alt="Card Image"
+                        className='img img-fluid'
+                    />
 
                     <div className="card-body">
-                        <div className="card-title">
+                        <div className="card-title" 
+                        >
                             Project Name
                         </div>
 
