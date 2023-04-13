@@ -96,11 +96,6 @@ body {
   color: #000;
 }
 
-.body .container-fluid {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
 .body .container-fluid .card {
   width: 50%;
   height: 100%;

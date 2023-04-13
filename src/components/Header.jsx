@@ -10,7 +10,7 @@ const Header = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={true}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 1 }}
                     >
                         Santhos Suntharalingam
                     </motion.p>
@@ -20,10 +20,10 @@ const Header = () => {
                     <div className="row w-75">
                         <div className="col-lg-6 col-sm">
                             <motion.div
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
+                                initial={{ opacity: 0, translateX: -100 }}
+                                whileInView={{ opacity: 1, translateX: 0 }}
                                 viewport={true}
-                                transition={{ duration: 0.3 }}
+                                transition={{ duration: 1 }}
                                 className="profile-picture">
                                 <img src="/images/profile-picture.png"
                                     alt="Profile Picture"
@@ -34,10 +34,10 @@ const Header = () => {
                         <div className="col-lg-6 col-sm">
                             <div className="row justify-content-center">
                                 <motion.p
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
+                                    initial={{ opacity: 0, translateX: 100 }}
+                                    whileInView={{ opacity: 1, translateX: 0 }}
                                     viewport={true}
-                                    transition={{ duration: 0.3 }}
+                                    transition={{ duration: 1 }}
                                     className='about'>
                                     Data Analyst | CTF Player
                                 </motion.p>
@@ -45,10 +45,10 @@ const Header = () => {
 
                             <div className="row justify-content-end">
                                 <motion.p
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
+                                    initial={{ opacity: 0, translateX: 100 }}
+                                    whileInView={{ opacity: 1, translateX: 0 }}
                                     viewport={true}
-                                    transition={{ duration: 0.3 }}
+                                    transition={{ duration: 1 }}
                                     className='country'>
                                     Srilanka
                                 </motion.p>
