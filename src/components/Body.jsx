@@ -28,7 +28,7 @@ const Body = () => {
                     url(/images/tableau.png) no-repeat`,
                     backgroundSize: 'cover'
                 }}>
-                <Card imgName="sql.jpg" projectName="SQL Project" />
+                <Card imgName="tableau.png" projectName="Tableau Project" />
             </div>
 
             <div className="container-fluid align-items-center"
@@ -41,7 +41,7 @@ const Body = () => {
                     url(/images/python.jpg) no-repeat`,
                     backgroundSize: 'cover'
                 }}>
-                <Card imgName="sql.jpg" projectName="SQL Project" />
+                <Card imgName="python.jpg" projectName="python Project" />
             </div>
         </section>
     )
