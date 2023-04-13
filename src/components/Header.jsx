@@ -1,36 +1,49 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Header = () => {
     return (
         <section className="header">
             <div className="container-fluid">
                 <div className="title">
-                    <p>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1, transition: { duration: 1 } }}
+                    >
                         Santhos Suntharalingam
-                    </p>
+                    </motion.p>
                 </div>
 
                 <div className="container">
                     <div className="row w-75">
                         <div className="col-lg-6 col-sm">
-                            <div className="profile-picture">
+                            <motion.div
+                                initial={{ opacity: 0, translateX: -100 }}
+                                whileInView={{ opacity: 1, translateX: 0, transition: { duration: 1 } }}
+                                className="profile-picture">
                                 <img src="/images/profile-picture.png"
                                     alt="Profile Picture"
                                 />
-                            </div>
+                            </motion.div>
                         </div>
 
                         <div className="col-lg-6 col-sm">
                             <div className="row justify-content-center">
-                                <p className='about'>
+                                <motion.p
+                                    initial={{ opacity: 0, translateX: 100 }}
+                                    whileInView={{ opacity: 1, translateX: 0, transition: { duration: 1 } }}
+                                    className='about'>
                                     Data Analyst | CTF Player
-                                </p>
+                                </motion.p>
                             </div>
 
                             <div className="row justify-content-end">
-                                <p className='country'>
+                                <motion.p
+                                    initial={{ opacity: 0, translateX: 100 }}
+                                    whileInView={{ opacity: 1, translateX: 0, transition: { duration: 1 } }}
+                                    className='country'>
                                     Srilanka
-                                </p>
+                                </motion.p>
                             </div>
                         </div>
                     </div>
