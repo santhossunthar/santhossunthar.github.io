@@ -19,8 +19,8 @@ const Header = () => {
                 </div>
 
                 <div className="container">
-                    <div className="row w-75">
-                        <div className="col-lg-6 col-sm">
+                    <div className="row">
+                        <div className="col profile-item">
                             <motion.div
                                 initial={{ opacity: 0, translateX: -100 }}
                                 whileInView={{ opacity: 1, translateX: 0 }}
@@ -34,7 +34,7 @@ const Header = () => {
                             </motion.div>
                         </div>
 
-                        <div className="col-lg-6 col-sm description">
+                        <div className="col profile-item description ">
                             <div className="row justify-content-center">
                                 <motion.p
                                     initial={{ opacity: 0, translateX: 100 }}
