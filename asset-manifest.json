@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/santhossundar.github.io/static/css/main.1da33a28.css",
-    "main.js": "/santhossundar.github.io/static/js/main.44d1f746.js",
-    "static/media/bootstrap-icons.woff?": "/santhossundar.github.io/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
-    "static/media/bootstrap-icons.woff2?": "/santhossundar.github.io/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
-    "index.html": "/santhossundar.github.io/index.html",
-    "main.1da33a28.css.map": "/santhossundar.github.io/static/css/main.1da33a28.css.map",
-    "main.44d1f746.js.map": "/santhossundar.github.io/static/js/main.44d1f746.js.map"
+    "main.css": "/static/css/main.5232d7d8.css",
+    "main.js": "/static/js/main.44d1f746.js",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
+    "index.html": "/index.html",
+    "main.5232d7d8.css.map": "/static/css/main.5232d7d8.css.map",
+    "main.44d1f746.js.map": "/static/js/main.44d1f746.js.map"
   },
   "entrypoints": [
-    "static/css/main.1da33a28.css",
+    "static/css/main.5232d7d8.css",
     "static/js/main.44d1f746.js"
   ]
 }
