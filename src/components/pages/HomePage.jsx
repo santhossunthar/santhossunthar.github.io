@@ -1,6 +1,5 @@
 import React from 'react';
 import Body from '../Body';
-import Footer from '../Footer';
 import Header from '../Header';
 
 const HomePage = () => {
@@ -8,7 +7,6 @@ const HomePage = () => {
         <div className='App'>
             <Header />
             <Body />
-            <Footer />
         </div>
     )
 }
