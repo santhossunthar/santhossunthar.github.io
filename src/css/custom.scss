@@ -4,6 +4,16 @@ $bg-primary: #333;
 $text-primary: #fff;
 $test: aqua;
 
+$grid-breakpoints: (
+    sm: 576px,
+    lg: 998px,
+);
+
+$container-max-widths: (
+    sm: 540px,
+    lg: 960px,
+);
+
 @import "/node_modules/bootstrap/dist/css/bootstrap.css";
 @import "./media";
 
@@ -65,6 +75,21 @@ body {
             font-size: 34pt;
             font-weight: 800;
             color: $text-primary;
+            padding: 1rem;
+
+            @include medium {           
+                height: 30%;
+            }
+
+            p {
+                margin: 0;
+                text-align: center;
+
+                @include medium {
+                    margin: 0;
+                    font-size: 28pt;
+                }
+            }
         }
 
         .container {
@@ -74,11 +99,18 @@ body {
             justify-content: center;
             align-items: center;
 
-            .col-lg-6 {
+            @include medium {
+                height: 70%;
+            }
+
+            .row {
+                width: 70%;
+            }
+
+            .profile-item {
                 width: 100%;
-                height: 40%;
+                height: 100%;
                 display: flex;
-                justify-content: center;
                 align-items: center;
 
                 .profile-picture {
@@ -97,21 +129,51 @@ body {
 
             .description {
                 width: 100%;
-                height: 60%;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
                 text-align: center;
                 font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-                
+                margin: 0;
+                padding: 0;
+
+                .row {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .row .about {
+                    height: 70%;
+                    height: 12rem;
+
+                    @include medium {
+                        height: 70%;
+                    }
+                }
+
+                .row .social-profiles .item {
+                    height: 30%;
+                }
+
                 .about {
                     text-transform: uppercase;
                     font-size: 18pt;
                     font-weight: 700;
                     color: #000;
+                    margin: 0;
+
+                    @include medium {
+                        font-size: 14pt;
+                    }
                 }
 
                 .social-profiles {
-                    margin: 0;
+                    width: 100%;
+                    margin: 0;     
+
+                    @include medium {
+                        font-size: 22pt;
+                    }
 
                     .social-link {
                         color: #333;
@@ -123,12 +185,17 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 0.7rem;
+                    padding: 0.5rem;
+                    font-size: 14pt;
+                    font-weight: 700;
+
+                    @include medium {
+                        font-size: 12pt;
+                        padding: 0.4rem;
+                    }
 
                     .country {
                         text-transform: uppercase;
-                        font-size: 14pt;
-                        font-weight: 700;
                         color: #000;
                         margin: 0;
                         padding: 0;
@@ -141,19 +208,27 @@ body {
 
 .body {
     .container-fluid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         .card {
-            width: 50%;
-            height: 100%;
+            width: 70%;
+            height: 70%;
             box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
             background: rgba(255, 255, 255, 0.1);
 
-            @include medium {
-                width: 90%;
-                height: 85%;
+            @include large {
+                width: 50%;
             }
 
+            @include medium {
+                height: 70%;
+            }
+            
             @include small {
                 width: 90%;
+                height: 90%;
             }
 
             .img {
