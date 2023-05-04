@@ -105,6 +105,7 @@ body {
 
             .row {
                 width: 70%;
+                height: 30%;
             }
 
             .profile-item {
@@ -114,7 +115,7 @@ body {
                 align-items: center;
 
                 .profile-picture {
-                    width: 250px;
+                    width: 320px;
                     margin: 0 auto;
                     padding: 0;
 
@@ -144,7 +145,7 @@ body {
 
                 .row .about {
                     height: 70%;
-                    height: 12rem;
+                    height: 50%;
 
                     @include medium {
                         height: 70%;

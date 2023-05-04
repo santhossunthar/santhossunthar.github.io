@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
-const Card = ({ imgName, projectName }) => {
+const Card = ({ name, bgimg }) => {
     return (
         <div className="card mb-5 mt-5 shadow-sm">
             <motion.img
@@ -9,7 +9,7 @@ const Card = ({ imgName, projectName }) => {
                 whileInView={{ opacity: 1 }}
                 viewport={false}
                 transition={{ duration: 2 }}
-                src={"/images/" + imgName}
+                src={"/images/" + bgimg}
                 alt="Card Image"
                 className='img img-fluid'
             />
@@ -22,7 +22,7 @@ const Card = ({ imgName, projectName }) => {
                     transition={{ duration: 0.5 }}
                     className="card-title"
                 >
-                    {projectName}
+                    {name}
                 </motion.div>
 
                 <motion.div
