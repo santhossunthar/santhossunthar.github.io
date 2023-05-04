@@ -87,6 +87,7 @@ body {
 }
 .header .container-fluid .container .row {
   width: 70%;
+  height: 30%;
 }
 .header .container-fluid .container .profile-item {
   width: 100%;
@@ -95,7 +96,7 @@ body {
   align-items: center;
 }
 .header .container-fluid .container .profile-item .profile-picture {
-  width: 250px;
+  width: 320px;
   margin: 0 auto;
   padding: 0;
 }
@@ -122,7 +123,7 @@ body {
 }
 .header .container-fluid .container .description .row .about {
   height: 70%;
-  height: 12rem;
+  height: 50%;
 }
 @media (max-width: 792px) {
   .header .container-fluid .container .description .row .about {
