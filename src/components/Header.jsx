@@ -43,7 +43,8 @@ const Header = () => {
                                     transition={{ duration: 1 }}
                                     className='about'
                                 >
-                                    Data Analyst | CTF Player
+                                    <p>Software Engineering Undergraduate</p>
+                                    <h5>University of Kelaniya</h5>
                                 </motion.p>
                             </div>
 
@@ -55,10 +56,10 @@ const Header = () => {
                                     transition={{ duration: 1 }}
                                     className='social-profiles'
                                 >
-                                    <a href="#" className='social-link'>
+                                    <a href="https://twitter.com/santhossunthar" className='social-link'>
                                         <FaTwitter />
                                     </a>
-                                    <a href="#" className='social-link'>
+                                    <a href="https://www.linkedin.com/in/santhossundar/" className='social-link'>
                                         <FaLinkedinIn />
                                     </a>
                                 </motion.div>
