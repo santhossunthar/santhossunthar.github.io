@@ -8,12 +8,13 @@ const Main = () => {
     return (
         <section className="main w-100 h-100">
             <div className="row w-100 h-25 bg-secondary">
-                <div className="col bg-primary d-flex justify-content-center align-items-center fw-bold text-light">
+                <div className="col bg-primary d-flex justify-content-center align-items-center">
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={true}
                         transition={{ duration: 1 }}
+                        className="h4 fw-bold text-light"
                     >
                         Santhos Suntharalingam
                     </motion.p>
@@ -22,7 +23,7 @@ const Main = () => {
 
             <div className="row w-100 h-75">
                 <div className="col-md-6 h-50 p-2 mt-2 mb-2">
-                    <div className="w-100 h-100 d-flex justify-content-center">
+                    <div className="profile-img w-100 h-100 d-flex justify-content-center">
                         <motion.div
                             initial={{ opacity: 0, translateX: -100 }}
                             whileInView={{ opacity: 1, translateX: 0 }}
@@ -36,16 +37,24 @@ const Main = () => {
                     </div>
                 </div>
 
-                <div className="col-md-6 h-50 d-flex justify-content-center align-items-center">
-                    <div className="description d-flex flex-column justify-content-center align-items-center w-100 h-100 p-3">
-                        <h2 className="h2">Software Engineering Undergraduate</h2>
+                <div className="col-md-6 h-50">
+                    <div className="description d-flex flex-column justify-content-center w-100 h-100 p-3">
+                        <h2 className="display-6">
+                            Software Engineering Undergraduate
+                        </h2>
                         <h5 className='mt-2'>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
                         </h5>
                         <ul className="list-group list-group-horizontal mt-2 mb-4">
-                            <li className="list-group-item list-group-item-sm ps-3 pe-3"><SiGmail size={25} /></li>
-                            <li className="list-group-item list-group-item-sm ps-3 pe-3"><FaLinkedinIn size={25} /></li>
-                            <li className="list-group-item list-group-item-sm ps-3 pe-3"><FaTwitter size={25} /></li>
+                            <li className="list-group-item ps-3 pe-3">
+                                <SiGmail size={25} />
+                            </li>
+                            <li className="list-group-item ps-3 pe-3">
+                                <FaLinkedinIn size={25} />
+                            </li>
+                            <li className="list-group-item ps-3 pe-3">
+                                <FaTwitter size={25} />
+                            </li>
                         </ul>
                     </div>
                 </div>
