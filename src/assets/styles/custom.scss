@@ -1,19 +1,6 @@
-$grid-gutter-width: 1.2rem;
-$bs-gutter-x: 0rem;
+$primary: #333333;
 
-$primary: #333;
-
-$grid-breakpoints: (
-    sm: 576px,
-    lg: 998px,
-);
-
-$container-max-widths: (
-    sm: 540px,
-    lg: 960px,
-);
-
-@import "/node_modules/bootstrap/dist/css/bootstrap.css";
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
 @import "./media";
 
 * {
@@ -63,6 +50,52 @@ li {
         @include medium {
             height: 100% !important;
             padding: 3rem !important;
+        }
+    }
+}
+
+.h4 {
+    @include small {
+        font-size: 24pt;
+    }
+}
+
+.profile-img {
+    @include medium {
+        justify-content: end !important;
+    }
+}
+
+.description {
+    @include x-medium {
+        align-items: center;
+    }
+
+    .display-6 {
+        @include x-medium {
+            text-align: center;
+            font-size: 20pt;
+        }
+    }
+
+    h5 {
+        @include x-medium {
+            text-align: center;
+            font-size: 12pt;
+        }
+    }
+}
+
+.list-group {
+    @include medium {
+        width: 30%;
+    }
+
+    .list-group-item {
+        @include medium {
+            width: 60%;
+            height: 100%;
+            font-size: 14pt;
         }
     }
 }

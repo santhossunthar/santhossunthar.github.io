@@ -10,8 +10,14 @@
     }
 };
 
+@mixin x-medium {
+    @media (max-width: 768px) {
+        @content
+    }
+};
+
 @mixin small {
-    @media (max-width: 546px) {
+    @media (min-width: 546px) {
         @content
     }
 };
