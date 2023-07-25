@@ -7,7 +7,7 @@ import { IoLocationOutline } from 'react-icons/io5';
 const Main = () => {
     return (
         <section className="main w-100 h-100">
-            <div className="row w-100 h-25 bg-secondary">
+            <div className="row w-100 bg-secondary header">
                 <div className="col bg-primary d-flex justify-content-center align-items-center">
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -21,8 +21,8 @@ const Main = () => {
                 </div>
             </div>
 
-            <div className="row w-100 h-75">
-                <div className="col-md-6 h-50 p-2 mt-2 mb-2">
+            <div className="row w-100 info">
+                <div className="col-md-6 h-50 p-3">
                     <div className="profile-img w-100 h-100 d-flex justify-content-center">
                         <motion.div
                             initial={{ opacity: 0, translateX: -100 }}
@@ -43,7 +43,9 @@ const Main = () => {
                             Software Engineering Undergraduate
                         </h2>
                         <h5 className='mt-2'>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                            Full Stack Developer
+                            <br/>
+                            ReactJS | NodeJS | .NET Framework
                         </h5>
                         <ul className="list-group list-group-horizontal mt-2 mb-4">
                             <li className="list-group-item ps-3 pe-3">
