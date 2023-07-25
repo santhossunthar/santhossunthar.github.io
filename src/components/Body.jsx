@@ -7,11 +7,11 @@ const Body = () => {
         <section className='body'>
             {ProjectData.map((project) => {
                 return (
-                <Project 
-                key={project.Id} 
-                name={project.Name} 
-                bgimg={project.BgImg} />)
-            })}   
+                    <Project
+                        key={project.Id}
+                        name={project.Name}
+                        bgimg={project.BgImg} />)
+            })}
         </section>
     )
 }
