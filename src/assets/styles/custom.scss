@@ -56,6 +56,24 @@ li {
     margin: 0;
 }
 
+.main {
+    .header {
+        height: 25%;
+
+        @include x-medium {
+            height: 15%;
+        }
+    }
+
+    .info {
+        height: 75%;
+
+        @include x-medium {
+            height: 85%;
+        }
+    }
+}
+
 .row {
     .col-md-6 {
         @include medium {
@@ -98,16 +116,16 @@ li {
 }
 
 .list-group {
-    @include medium {
-        width: 30%;
+    width: 30%;
+
+    @include x-medium {
+        width: 50%;
     }
 
     .list-group-item {
-        @include medium {
-            width: 60%;
-            height: 100%;
-            font-size: 14pt;
-        }
+        width: 60%;
+        height: 100%;
+        font-size: 14pt;
     }
 }
 
@@ -117,7 +135,7 @@ li {
         align-items: center;
 
         .card.glass-card {
-            width:600px;
+            width: 600px;
             height: 500px;
             justify-content: center;
             align-items: center;
@@ -127,7 +145,7 @@ li {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(8px);
 
-            @include x-medium{
+            @include x-medium {
                 width: 300px;
                 height: 400px;
             }
