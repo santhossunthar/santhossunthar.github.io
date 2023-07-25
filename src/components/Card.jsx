@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Card = ({ name, bgimg }) => {
     return (
-        <div className="card mb-5 mt-5 shadow-sm">
+        <div className="card glass-card">
             <motion.img
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -11,7 +11,7 @@ const Card = ({ name, bgimg }) => {
                 transition={{ duration: 2 }}
                 src={"/images/" + bgimg}
                 alt="Card Image"
-                className='img img-fluid'
+                className='card-img-top img-fluid'
             />
 
             <div className="card-body">
@@ -31,7 +31,7 @@ const Card = ({ name, bgimg }) => {
                     viewport={false}
                     transition={{ duration: 0.5 }}
                     className="view-more">
-                    <a href="#" className='card-btn'>
+                    <a href="#" className='btn btn-outline-primary'>
                         View More
                     </a>
                 </motion.div>
