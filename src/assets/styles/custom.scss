@@ -104,9 +104,26 @@ li {
     }
 }
 
+.profile-img-bg {
+    background-color: white;
+    border-top-right-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+
+    @include x-medium {
+        background-color: white;
+        border-radius: 0;
+    }
+}
+
 .profile-img {
     @include medium {
         justify-content: end !important;
+    }
+}
+
+.info-col {
+    @include x-medium {
+        background-color: white !important;
     }
 }
 
@@ -116,14 +133,19 @@ li {
     }
 
     .display-6 {
+        color: white;
         @include x-medium {
+            color: $primary;
             text-align: center;
             font-size: 20pt;
         }
     }
 
     h6 {
+        color: white;
+
         @include x-medium {
+            color: $primary;
             text-align: center;
             font-size: 12pt;
         }

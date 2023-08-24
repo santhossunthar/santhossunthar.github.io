@@ -35,8 +35,8 @@ const Main = () => {
                 <BsArrowUpCircleFill size={40} />
             </div>
 
-            <div className="row w-100 info">
-                <div className="col-md-6 h-50 p-3">
+            <div className="row bg-primary w-100 info">
+                <div className="col-md-6 profile-img-bg h-50 p-3">
                     <div className="profile-img w-100 h-100 d-flex justify-content-center">
                         <motion.div
                             initial={{ opacity: 0, translateX: -100 }}
@@ -51,7 +51,7 @@ const Main = () => {
                     </div>
                 </div>
 
-                <div className="col-md-6 h-50">
+                <div className="col-md-6 info-col bg-primary h-50">
                     <div className="description d-flex flex-column justify-content-center w-100 h-100 p-3">
                         <h2 className="display-6">
                             Software Engineering Undergraduate
