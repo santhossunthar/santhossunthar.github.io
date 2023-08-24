@@ -10,7 +10,8 @@ const Body = () => {
                     <Project
                         key={project.Id}
                         name={project.Name}
-                        bgimg={project.BgImg} />)
+                        bgimg={project.BgImg}
+                        url={project.url} />)
             })}          
         </section>
     )

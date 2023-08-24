@@ -1,27 +1,32 @@
 [
     {
         "Id": 1,
-        "Name": "Ende",
-        "BgImg": "python.jpg"
+        "Name": "Tent",
+        "BgImg": "android.jpg",
+        "url": "https://github.com/santhossunthar/tent"
     },
     {
         "Id": 2,
-        "Name": "ChatMore",
-        "BgImg": "android.jpg"
+        "Name": "Ende",
+        "BgImg": "python.jpg",
+        "url": "https://github.com/santhossunthar/EnDe"
     },
     {
         "Id": 3,
-        "Name": "Student-Management-System",
-        "BgImg": "dotnet.jpg"
+        "Name": "Student Management System",
+        "BgImg": "dotnet.jpg",
+        "url": "https://github.com/santhossunthar/Student-Management-System"
     },
     {
         "Id": 4,
         "Name": "Task Manager",
-        "BgImg": "react.png"
-    }, 
+        "BgImg": "react.png",
+        "url": "https://github.com/santhossunthar/Task-Manager"
+    },
     {
         "Id": 5,
         "Name": "Password Manager",
-        "BgImg": "react2.png"
+        "BgImg": "react2.png",
+        "url": "https://github.com/santhossunthar/Password-Manager"
     }
 ]

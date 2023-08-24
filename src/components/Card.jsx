@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
-const Card = ({ name, bgimg }) => {
+const Card = ({ name, bgimg, url }) => {
     return (
         <div className="card glass-card">
             <motion.img
@@ -31,7 +31,7 @@ const Card = ({ name, bgimg }) => {
                     viewport={false}
                     transition={{ duration: 0.5 }}
                     className="view-more">
-                    <a href="#" className='btn btn-outline-primary'>
+                    <a href={url} target='_blank' className='btn btn-outline-primary'>
                         View More
                     </a>
                 </motion.div>
