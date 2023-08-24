@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaTwitter, FaLinkedinIn, FaGithub, FaHackerrank, FaStackOverflow } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { IoLocationOutline } from 'react-icons/io5';
 
@@ -42,20 +42,39 @@ const Main = () => {
                         <h2 className="display-6">
                             Software Engineering Undergraduate
                         </h2>
-                        <h5 className='mt-2'>
-                            Full Stack Developer
-                            <br/>
-                            ReactJS | NodeJS | .NET Framework
-                        </h5>
+                        <h6 className='mt-2'>
+                            ReactJS | NodeJS | .NET Framework | ASP.NET | .NET Core | Spring Boot 
+                        </h6>
                         <ul className="list-group list-group-horizontal mt-2 mb-4">
                             <li className="list-group-item ps-3 pe-3">
-                                <SiGmail size={25} />
+                                <a href="mailto:santhoshsunthar@gmail.com?subject=Hello%20Santhos,%20From%20GitHub" target='_blank'>
+                                    <SiGmail size={25} />
+                                </a>
                             </li>
                             <li className="list-group-item ps-3 pe-3">
-                                <FaLinkedinIn size={25} />
+                                <a href="https://www.linkedin.com/in/santhossunthar/" target='_blank'>
+                                    <FaLinkedinIn size={25} />
+                                </a>
                             </li>
                             <li className="list-group-item ps-3 pe-3">
-                                <FaTwitter size={25} />
+                                <a href="https://github.com/santhossunthar" target='_blank'>
+                                    <FaGithub size={25} />
+                                </a>
+                            </li>
+                            <li className="list-group-item ps-3 pe-3">
+                                <a href="https://www.hackerrank.com/santhossunthar" target='_blank'>
+                                    <FaHackerrank size={25} />
+                                </a>
+                            </li>
+                            <li className="list-group-item ps-3 pe-3">
+                                <a href="https://stackoverflow.com/users/22310579/santhos" target='_blank'>
+                                    <FaStackOverflow size={25} />
+                                </a>
+                            </li>
+                            <li className="list-group-item ps-3 pe-3">
+                                <a href="https://twitter.com/santhossunthar" target='_blank'>
+                                    <FaTwitter size={25} />
+                                </a>
                             </li>
                         </ul>
                     </div>

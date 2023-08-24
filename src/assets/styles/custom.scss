@@ -107,7 +107,7 @@ li {
         }
     }
 
-    h5 {
+    h6 {
         @include x-medium {
             text-align: center;
             font-size: 12pt;
@@ -120,12 +120,18 @@ li {
 
     @include x-medium {
         width: 50%;
+        justify-content: center;
     }
 
     .list-group-item {
         width: 60%;
         height: 100%;
         font-size: 14pt;
+
+        @include x-medium {
+            width: 30%;
+            justify-content: center;
+        }
     }
 }
 
