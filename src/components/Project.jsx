@@ -6,7 +6,7 @@ const Project = ({ name, bgimg }) => {
         <div className="container-fluid">
             <Card
                 name={name}
-                bgimg={bgimg} 
+                bgimg={bgimg}
             />
         </div>
     )

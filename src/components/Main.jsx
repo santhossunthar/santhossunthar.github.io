@@ -3,10 +3,18 @@ import { motion } from 'framer-motion';
 import { FaTwitter, FaLinkedinIn, FaGithub, FaHackerrank, FaStackOverflow } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { IoLocationOutline } from 'react-icons/io5';
+import { BsArrowUpCircleFill } from 'react-icons/bs';
 
 const Main = () => {
+    const scrollToTop = (sectionID) => {
+        const section = document.getElementById(sectionID);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <section className="main w-100 h-100">
+        <section className="main w-100 h-100" id='1'>
             <div className="row w-100 bg-secondary header">
                 <div className="col bg-primary d-flex justify-content-center align-items-center">
                     <motion.p
@@ -19,6 +27,12 @@ const Main = () => {
                         Santhos Suntharalingam
                     </motion.p>
                 </div>
+            </div>
+
+            <div
+                className="top-arrow"
+                onClick={() => { scrollToTop('1') }}>
+                <BsArrowUpCircleFill size={40} />
             </div>
 
             <div className="row w-100 info">
@@ -43,7 +57,7 @@ const Main = () => {
                             Software Engineering Undergraduate
                         </h2>
                         <h6 className='mt-2'>
-                            ReactJS | NodeJS | .NET Framework | ASP.NET | .NET Core | Spring Boot 
+                            ReactJS | NodeJS | .NET Framework | ASP.NET | .NET Core | Spring Boot | Spreadsheets | BigQuery | CyberSecurity
                         </h6>
                         <ul className="list-group list-group-horizontal mt-2 mb-4">
                             <li className="list-group-item ps-3 pe-3">

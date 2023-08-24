@@ -24,6 +24,21 @@ li {
     list-style-type: none;
 }
 
+.top-arrow {
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    bottom: 0;
+    margin-right: 2.2rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+
+    @include x-medium {
+        width: 10px;
+        margin-bottom: .2rem;
+    }
+}
+
 .home {
     width: 100%;
     height: 100vh;

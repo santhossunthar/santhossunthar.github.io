@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ProjectData from '../ProjectData.json';
 import Project from './Project';
 
@@ -11,7 +11,7 @@ const Body = () => {
                         key={project.Id}
                         name={project.Name}
                         bgimg={project.BgImg} />)
-            })}
+            })}          
         </section>
     )
 }
