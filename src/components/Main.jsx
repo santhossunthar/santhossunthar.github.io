@@ -57,7 +57,7 @@ const Main = () => {
                             Software Engineering Undergraduate
                         </h2>
                         <h6 className='mt-2'>
-                            ReactJS | NodeJS | .NET Framework | ASP.NET | .NET Core | Spring Boot | Spreadsheets | BigQuery | CyberSecurity
+                            Developer | CTF Player
                         </h6>
                         <ul className="list-group list-group-horizontal mt-2 mb-4">
                             <li className="list-group-item ps-3 pe-3">
