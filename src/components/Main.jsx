@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaTwitter, FaLinkedinIn, FaGithub, FaHackerrank, FaStackOverflow } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { IoLocationOutline } from 'react-icons/io5';
+import { SiTryhackme } from 'react-icons/si';
 import { BsArrowUpCircleFill } from 'react-icons/bs';
 
 const Main = () => {
@@ -45,7 +46,7 @@ const Main = () => {
                             transition={{ duration: 1 }}
                         >
                             <img src="/images/profile-pic.png"
-                                alt="Profile Picture" className='img-fluid h-100'
+                                alt="Profile Picture" className='img-fluid rounded-circle h-100'
                             />
                         </motion.div>
                     </div>
@@ -57,7 +58,7 @@ const Main = () => {
                             Software Engineering Undergraduate
                         </h2>
                         <h6 className='mt-2'>
-                            Developer | CTF Player
+                            Cybersecurity Enthusiast | Software Developer
                         </h6>
                         <ul className="list-group list-group-horizontal mt-2 mb-4">
                             <li className="list-group-item ps-3 pe-3">
@@ -73,6 +74,11 @@ const Main = () => {
                             <li className="list-group-item ps-3 pe-3">
                                 <a href="https://github.com/santhossunthar" target='_blank'>
                                     <FaGithub size={25} />
+                                </a>
+                            </li>
+                            <li className="list-group-item ps-3 pe-3">
+                                <a href="https://tryhackme.com/p/santhos" target='_blank'>
+                                    <SiTryhackme size={25} />
                                 </a>
                             </li>
                             <li className="list-group-item ps-3 pe-3">
