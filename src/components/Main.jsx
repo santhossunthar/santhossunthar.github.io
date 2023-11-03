@@ -58,7 +58,7 @@ const Main = () => {
                             Software Engineering Undergraduate
                         </h2>
                         <h6 className='mt-2'>
-                            Cybersecurity Enthusiast | Software Developer
+                            University of Kelaniya | Sri Lanka
                         </h6>
                         <ul className="list-group list-group-horizontal mt-2 mb-4">
                             <li className="list-group-item ps-3 pe-3">

@@ -171,11 +171,16 @@ li {
         width: 60%;
         height: 100%;
         font-size: 14pt;
+        transition: .7s;
 
         @include x-medium {
             width: 30%;
             justify-content: center;
         }
+    }
+
+    .list-group-item:hover {
+        background-color: hsl(0, 0, 70%);
     }
 }
 
@@ -222,6 +227,16 @@ li {
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+
+                .view-more {
+                    .btn {
+                        transition: .7s;
+                    }
+
+                    .btn:hover {
+                        background-color: #333;
+                    }
+                }
             }
         }
     }
