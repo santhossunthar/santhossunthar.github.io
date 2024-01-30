@@ -9,6 +9,7 @@ import { BsArrowUpCircleFill } from 'react-icons/bs';
 const Main = () => {
     const [scrolled, setScrolled] = useState(false);
     const controls = useAnimation();
+    const customEase = [0,1.15,.2,.99];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,11 +17,11 @@ const Main = () => {
 
             if (scrollPosition > 0) {
                 // User has scrolled, move the image to the specific position
-                controls.start({ x: -150, y: -150, opacity: 0.8 });
+                controls.start({ x: -150, y: -150, opacity: 1, transition: { duration: 0.3, ease: customEase } });
                 setScrolled(true);
             } else {
                 // User is back at the top, move the image back to the original position
-                controls.start({ x: 0, y: 0, opacity: 1 });
+                controls.start({ x: 0, y: 0, opacity: 1, transition: { duration: 0.3, ease: customEase } });
                 setScrolled(false);
             }
         };
@@ -43,7 +44,19 @@ const Main = () => {
 
     return (
         <section className="container-fluid vh-100 main" id='1'>
-            <div className="row h-25 bg-secondary header">
+            <motion.div
+                initial={{ opacity: 1, y: 0 }}
+                animate={controls}
+                viewport={true}
+                transition={{ duration: 1 }}
+                className={!scrolled ? "profile-img" : "profile-img-scrolled"}
+            >
+                <img src="/images/profile-pic.png"
+                    alt="Profile Picture" className='img-fluid rounded-circle'
+                />
+            </motion.div>
+
+            <div className={!scrolled ? "row h-25 bg-secondary header" : "row h-25 bg-secondary header fixed-top"}>
                 <div className="col bg-primary d-flex justify-content-center align-items-center">
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -56,26 +69,15 @@ const Main = () => {
                     </motion.p>
                 </div>
             </div>
-           
-            <div className="row h-75 bg-primary info">
-                <div className="col-md-6 profile-img-bg p-3">
-                    <div className="profile-img w-100 h-100 d-flex justify-content-center">
-                        <motion.div
-                            initial={{ opacity: 1, y: 0}}
-                            animate={controls}
-                            viewport={true}
-                            transition={{ duration: 1 }}
-                        >
-                            <img src="/images/profile-pic.png"
-                                alt="Profile Picture" className='img-fluid rounded-circle h-100 p-3'
-                            />
-                        </motion.div>
-                    </div>
+
+            <div className={!scrolled ? "row h-75 bg-primary info" : "d-none"}>
+                <div className={!scrolled ? "col-md-6 profile-img-bg p-3" : "col-md-6 profile-img-col-scrolled h-25"}>
+
                 </div>
 
-                <div className="col-md-6 info-col bg-primary">
-                    <div className="description d-flex flex-column justify-content-center w-100 h-100 p-5">
-                        <h2 className="display-5 text-white">
+                <div className={!scrolled ? "col-md-6 info-col" : "desc-col-scrolled"}>
+                    <div className="description d-flex flex-column justify-content-center w-100 h-100 p-3">
+                        <h2 className="display-6">
                             Software Engineering Undergraduate
                         </h2>
                         <h6 className='mt-2'>

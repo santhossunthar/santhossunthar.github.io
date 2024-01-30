@@ -75,8 +75,9 @@ li {
 }*/
 
 .main {
-    //--bs-gutter-x: 0;
     .header {
+        z-index: 1;
+        
         @include x-medium {
             height: 15%;
         }
@@ -107,6 +108,7 @@ li {
 }
 
 .profile-img-bg {
+    position: relative;
     background-color: white;
     border-top-right-radius: 20rem;
     border-bottom-right-radius: 20rem;
@@ -118,9 +120,13 @@ li {
 }
 
 .profile-img {
-    object-fit: cover;
-    .rounded-circle {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    top: 40%;
 
+    .rounded-circle {
         background-color: white;
         object-fit: cover;
         border: none;
@@ -129,6 +135,27 @@ li {
     @include medium {
         justify-content: end !important;
     }
+}
+
+.profile-img-scrolled {
+    width: 200px;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 30%;
+}
+
+.profile-img-col-scrolled {
+    background-color: aqua;
+    --bs-bg-opacity:0;
+}
+
+.desc-col-scrolled {
+    position: absolute;
+    z-index: -1;
+    display: none;
 }
 
 .info-col {
