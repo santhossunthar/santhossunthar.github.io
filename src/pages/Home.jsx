@@ -4,9 +4,9 @@ import Main from '../components/Main';
 
 const Home = () => {
     return (
-        <div className='home'>
+        <div className='home w-100 bg-info'>
             <Main />
-            <Body />
+
         </div>
     )
 }

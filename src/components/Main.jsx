@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { FaTwitter, FaLinkedinIn, FaGithub, FaHackerrank, FaStackOverflow } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { IoLocationOutline } from 'react-icons/io5';
@@ -7,6 +7,33 @@ import { SiTryhackme } from 'react-icons/si';
 import { BsArrowUpCircleFill } from 'react-icons/bs';
 
 const Main = () => {
+    const [scrolled, setScrolled] = useState(false);
+    const controls = useAnimation();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > 0) {
+                // User has scrolled, move the image to the specific position
+                controls.start({ x: -150, y: -150, opacity: 0.8 });
+                setScrolled(true);
+            } else {
+                // User is back at the top, move the image back to the original position
+                controls.start({ x: 0, y: 0, opacity: 1 });
+                setScrolled(false);
+            }
+        };
+
+        // Attach the scroll event listener
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [controls]);
+
     const scrollToTop = (sectionID) => {
         const section = document.getElementById(sectionID);
         if (section) {
@@ -15,46 +42,40 @@ const Main = () => {
     };
 
     return (
-        <section className="main w-100 h-100" id='1'>
-            <div className="row w-100 bg-secondary header">
+        <section className="container-fluid vh-100 main" id='1'>
+            <div className="row h-25 bg-secondary header">
                 <div className="col bg-primary d-flex justify-content-center align-items-center">
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={true}
                         transition={{ duration: 1 }}
-                        className="h4 fw-bold text-light"
+                        className="h4 p-5 fw-bold text-light"
                     >
                         Santhos Suntharalingam
                     </motion.p>
                 </div>
             </div>
-
-            <div
-                className="top-arrow"
-                onClick={() => { scrollToTop('1') }}>
-                <BsArrowUpCircleFill size={40} />
-            </div>
-
-            <div className="row bg-primary w-100 info">
-                <div className="col-md-6 profile-img-bg h-50 p-3">
+           
+            <div className="row h-75 bg-primary info">
+                <div className="col-md-6 profile-img-bg p-3">
                     <div className="profile-img w-100 h-100 d-flex justify-content-center">
                         <motion.div
-                            initial={{ opacity: 0, translateX: -100 }}
-                            whileInView={{ opacity: 1, translateX: 0 }}
+                            initial={{ opacity: 1, y: 0}}
+                            animate={controls}
                             viewport={true}
                             transition={{ duration: 1 }}
                         >
                             <img src="/images/profile-pic.png"
-                                alt="Profile Picture" className='img-fluid rounded-circle h-100'
+                                alt="Profile Picture" className='img-fluid rounded-circle h-100 p-3'
                             />
                         </motion.div>
                     </div>
                 </div>
 
-                <div className="col-md-6 info-col bg-primary h-50">
-                    <div className="description d-flex flex-column justify-content-center w-100 h-100 p-3">
-                        <h2 className="display-6">
+                <div className="col-md-6 info-col bg-primary">
+                    <div className="description d-flex flex-column justify-content-center w-100 h-100 p-5">
+                        <h2 className="display-5 text-white">
                             Software Engineering Undergraduate
                         </h2>
                         <h6 className='mt-2'>
