@@ -9,7 +9,8 @@ import { BsArrowUpCircleFill } from 'react-icons/bs';
 const Main = () => {
     const [scrolled, setScrolled] = useState(false);
     const controls = useAnimation();
-    const customEase = [0,1.15,.2,.99];
+    const secControls = useAnimation();
+    const customEase = [0, 1.15, .2, .99];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,10 +19,13 @@ const Main = () => {
             if (scrollPosition > 0) {
                 // User has scrolled, move the image to the specific position
                 controls.start({ x: -150, y: -150, opacity: 1, transition: { duration: 0.3, ease: customEase } });
+                secControls.start({ x: 10000, y: 0, opacity: 1, transition: { duration: 1, ease: customEase } });
+
                 setScrolled(true);
             } else {
                 // User is back at the top, move the image back to the original position
                 controls.start({ x: 0, y: 0, opacity: 1, transition: { duration: 0.3, ease: customEase } });
+                secControls.start({ x: 0, y: 0, opacity: 1, transition: { duration: 1, ease: customEase } });
                 setScrolled(false);
             }
         };
@@ -33,7 +37,7 @@ const Main = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [controls]);
+    }, [controls, secControls]);
 
     const scrollToTop = (sectionID) => {
         const section = document.getElementById(sectionID);
@@ -76,7 +80,15 @@ const Main = () => {
                 </div>
 
                 <div className={!scrolled ? "col-md-6 info-col" : "desc-col-scrolled"}>
-                    <div className="description d-flex flex-column justify-content-center w-100 h-100 p-3">
+
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        animate={secControls}
+                        viewport={true}
+                        transition={{ duration: 1 }} 
+                        className="description d-flex flex-column justify-content-center w-100 h-100 p-5">
+                        
                         <h2 className="display-6">
                             Software Engineering Undergraduate
                         </h2>
@@ -120,7 +132,7 @@ const Main = () => {
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

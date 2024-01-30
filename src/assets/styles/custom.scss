@@ -139,11 +139,11 @@ li {
 
 .profile-img-scrolled {
     width: 200px;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     background-color: white;
     border-radius: 50%;
-    top: 50%;
+    top: 35%;
     left: 30%;
 }
 
