@@ -5,14 +5,7 @@ import Project from './Project';
 const Body = () => {
     return (
         <section className='body'>
-            {ProjectData.map((project) => {
-                return (
-                    <Project
-                        key={project.Id}
-                        name={project.Name}
-                        bgimg={project.BgImg}
-                        url={project.url} />)
-            })}          
+            <p></p>
         </section>
     )
 }

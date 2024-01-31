@@ -5,11 +5,14 @@ import { SiGmail } from 'react-icons/si';
 import { IoLocationOutline } from 'react-icons/io5';
 import { SiTryhackme } from 'react-icons/si';
 import { BsArrowUpCircleFill } from 'react-icons/bs';
+import ProjectData from '../ProjectData.json';
+import Project from './Project';
 
 const Main = () => {
     const [scrolled, setScrolled] = useState(false);
     const controls = useAnimation();
-    const secControls = useAnimation();
+    const descControls = useAnimation();
+    const profileInfoControls = useAnimation();
     const customEase = [0, 1.15, .2, .99];
 
     useEffect(() => {
@@ -19,13 +22,15 @@ const Main = () => {
             if (scrollPosition > 0) {
                 // User has scrolled, move the image to the specific position
                 controls.start({ x: -150, y: -150, opacity: 1, transition: { duration: 0.3, ease: customEase } });
-                secControls.start({ x: 10000, y: 0, opacity: 1, transition: { duration: 1, ease: customEase } });
+                descControls.start({ x: 10000, y: 0, opacity: 1, transition: { duration: 1, ease: customEase } });
+                profileInfoControls.start({ x: 0, y: 0, opacity: 1, transition: { duration: 1, ease: customEase } });
 
                 setScrolled(true);
             } else {
                 // User is back at the top, move the image back to the original position
                 controls.start({ x: 0, y: 0, opacity: 1, transition: { duration: 0.3, ease: customEase } });
-                secControls.start({ x: 0, y: 0, opacity: 1, transition: { duration: 1, ease: customEase } });
+                descControls.start({ x: 0, y: 0, opacity: 1, transition: { duration: 1, ease: customEase } });
+                profileInfoControls.start({ x: 0, y: 10000, opacity: 1, transition: { duration: 1, ease: customEase } });
                 setScrolled(false);
             }
         };
@@ -37,7 +42,7 @@ const Main = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [controls, secControls]);
+    }, [controls, descControls, profileInfoControls]);
 
     const scrollToTop = (sectionID) => {
         const section = document.getElementById(sectionID);
@@ -58,6 +63,38 @@ const Main = () => {
                 <img src="/images/profile-pic.png"
                     alt="Profile Picture" className='img-fluid rounded-circle'
                 />
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 1, y: 10000 }}
+                animate={profileInfoControls}
+                viewport={true}
+                transition={{ duration: 1 }}
+                className={!scrolled ? "profile-info" : "profile-info-scrolled"}>
+                
+                <h4 className='text-bold'>Contact</h4>
+                <hr />
+                <p><SiGmail/> Email</p> 
+                <p><FaLinkedinIn/> LinkedIn</p> 
+                <p><FaGithub/> GitHub</p> 
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 1, y: 10000 }}
+                animate={profileInfoControls}
+                viewport={true}
+                transition={{ duration: 1 }}
+                className={!scrolled ? "profile-body" : "profile-body-scrolled"}>
+                <div className="project-body">
+                    {ProjectData.map((project) => {
+                        return (
+                            <Project
+                                key={project.Id}
+                                name={project.Name}
+                                bgimg={project.BgImg}
+                                url={project.url} />)
+                    })}
+                </div>
             </motion.div>
 
             <div className={!scrolled ? "row h-25 bg-secondary header" : "row h-25 bg-secondary header fixed-top"}>
@@ -84,11 +121,11 @@ const Main = () => {
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        animate={secControls}
+                        animate={descControls}
                         viewport={true}
-                        transition={{ duration: 1 }} 
+                        transition={{ duration: 1 }}
                         className="description d-flex flex-column justify-content-center w-100 h-100 p-5">
-                        
+
                         <h2 className="display-6">
                             Software Engineering Undergraduate
                         </h2>
