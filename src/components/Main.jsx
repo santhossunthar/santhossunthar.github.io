@@ -52,7 +52,7 @@ const Main = () => {
     };
 
     return (
-        <section className="container-fluid vh-100 main" id='1'>
+        <section className="container-fluid main" id='1'>
             <motion.div
                 initial={{ opacity: 1, y: 0 }}
                 animate={controls}
@@ -71,12 +71,12 @@ const Main = () => {
                 viewport={true}
                 transition={{ duration: 1 }}
                 className={!scrolled ? "profile-info" : "profile-info-scrolled"}>
-                
+
                 <h4 className='text-bold'>Contact</h4>
                 <hr />
-                <p><SiGmail/> Email</p> 
-                <p><FaLinkedinIn/> LinkedIn</p> 
-                <p><FaGithub/> GitHub</p> 
+                <p><SiGmail /> Email</p>
+                <p><FaLinkedinIn /> LinkedIn</p>
+                <p><FaGithub /> GitHub</p>
             </motion.div>
 
             <motion.div
@@ -97,7 +97,7 @@ const Main = () => {
                 </div>
             </motion.div>
 
-            <div className={!scrolled ? "row h-25 bg-secondary header" : "row h-25 bg-secondary header fixed-top"}>
+            <div className={!scrolled ? "row bg-secondary header" : "row h-25 bg-secondary header fixed-top"}>
                 <div className="col bg-primary d-flex justify-content-center align-items-center">
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -111,9 +111,19 @@ const Main = () => {
                 </div>
             </div>
 
-            <div className={!scrolled ? "row h-75 bg-primary info" : "d-none"}>
+            <div className={!scrolled ? "row bg-primary info" : "d-none"}>
                 <div className={!scrolled ? "col-md-6 profile-img-bg p-3" : "col-md-6 profile-img-col-scrolled h-25"}>
-
+                    <motion.div
+                        initial={{ opacity: 1, y: 0 }}
+                        animate={controls}
+                        viewport={true}
+                        transition={{ duration: 1 }}
+                        className={!scrolled ? "profile-img-small" : "profile-img-scrolled"}
+                    >
+                        <img src="/images/profile-pic.png"
+                            alt="Profile Picture" className='img-fluid rounded-circle'
+                        />
+                    </motion.div>
                 </div>
 
                 <div className={!scrolled ? "col-md-6 info-col" : "desc-col-scrolled"}>
