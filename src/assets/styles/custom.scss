@@ -41,45 +41,10 @@ li {
 .home {
     width: 100%;
     height: 100%;
-    /*
-    height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    */
 }
-
-/*
-.home section {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 28pt;
-    font-weight: 600;
-}
-
-.home .main,
-.home section .container-fluid {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    scroll-snap-align: start;
-    padding: 0;
-    margin: 0;
-}*/
 
 .main {
     height: 100vh;
-
-    @include large-y {
-        height: 100%;
-    }
 
     .header {
         height: 25vh;
@@ -88,19 +53,14 @@ li {
         @include large-y {
             display: flex;
         }
+
+        @include x-small {
+            display: flex;
+        }
     }
 
     .info {
         height: 75vh;
-    }
-}
-
-.row {
-    .col-md-6 {
-        @include medium {
-            //height: 100% !important;
-            // padding: 3rem !important;
-        }
     }
 }
 
@@ -151,7 +111,7 @@ li {
     }
 
     @include x-large {
-        left: 10%;
+        left: 0;
         top: 40%;
     }
 
@@ -178,6 +138,16 @@ li {
     @include large-y {
         top: 30vh;
     }
+
+    @include x-small {
+        width: 120px;
+        top: 25vh;
+        left: 45vw;
+    }
+}
+
+.profile-img-small-bg {
+    display: none;
 }
 
 .profile-img-small {
@@ -194,7 +164,6 @@ li {
     }
 
     .rounded-circle {
-        width: 400px;
         background-color: white;
         object-fit: cover;
         border: none;
@@ -300,6 +269,10 @@ li {
     @include large-y {
         top: 40%;
     }
+
+    @include x-small {
+        display: none;
+    }
 }
 
 .profile-body {
@@ -311,7 +284,7 @@ li {
     flex-direction: column;
     position: relative;
     left: 50%;
-    right: 5%;
+    right: 25%;
     top: 31%;
 
     @include x-large {
@@ -325,23 +298,118 @@ li {
     }
 
     @include x-medium {
-        left: 15%;
-        right: 20%;
-        top: 60%;
+        display: none;
     }
+}
 
-    @include large-y {
+.body {
+    @include x-medium {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 45vh;
+    }
+}
+
+.profile-body-small-scrolled {
+    display: none;
+
+    @include x-medium {
         display: flex;
-        position: relative;
+        position: fixed;
+        top: 30vh;
+        height: 100vh;
     }
 }
 
 .project-body {
     width: 80%;
 
+    @include x-small {
+        width: 100vw;
+    }
+
     .container {
         justify-content: center;
         align-items: center;
+
+        @include x-small {
+            display: flex;
+        }
+
+        .card.glass-card {
+            width: 30rem;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+
+            @include large-x {
+                width: 28rem;
+            }
+
+            @include x-medium {
+                width: 25rem;
+            }
+
+            .card-img-top {
+                width: 100%;
+                height: 300px;
+                border-radius: 8px 8px 0 0;
+
+                @include x-medium {
+                    height: 400px;
+                }
+            }
+
+            .card-title {
+                margin: 10px 0;
+                font-size: 14pt;
+                color: #333;
+            }
+
+            .card-body {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                .view-more {
+                    .btn {
+                        transition: 0.7s;
+                        font-size: 12pt;
+                        padding-left: 0.5rem;
+                        padding-right: 0.5rem;
+                    }
+
+                    .btn:hover {
+                        background-color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.project-body-scrolled {
+    @include x-small {
+        width: 100vw;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .container {
+        justify-content: center;
+        align-items: center;
+
+        @include x-small {
+            display: flex;
+        }
 
         .card.glass-card {
             width: 30rem;

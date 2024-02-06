@@ -97,7 +97,7 @@ const Main = () => {
                 </div>
             </motion.div>
 
-            <div className={!scrolled ? "row bg-secondary header" : "row h-25 bg-secondary header fixed-top"}>
+            <div className={!scrolled ? "row bg-secondary header" : "row bg-secondary header fixed-top"}>
                 <div className="col bg-primary d-flex justify-content-center align-items-center">
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -127,7 +127,6 @@ const Main = () => {
                 </div>
 
                 <div className={!scrolled ? "col-md-6 info-col" : "desc-col-scrolled"}>
-
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}

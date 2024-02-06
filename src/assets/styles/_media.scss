@@ -42,6 +42,12 @@
     }
 };
 
+@mixin x-small {
+    @media (max-width: 546px) {
+        @content
+    }
+};
+
 // height
 
 @mixin large-y {
