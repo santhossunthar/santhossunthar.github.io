@@ -115,9 +115,10 @@ li {
 .profile-img {
     position: absolute;
     z-index: 2;
-    left: 25%;
-    top: 40%;
+    left: 20%;
+    top: 35%;
     border-radius: 50%;
+    width: 350px;
 
     .rounded-circle {
         background-color: white;
@@ -144,8 +145,8 @@ li {
     }
 
     @include large-y {
-        left: 0;
-        top: 42%;
+        left: 7%;
+        top: 47%;
         z-index: 4;
     }
 
@@ -224,12 +225,14 @@ li {
     }
 
     .list-group-item {
+        display: flex;
         width: 60%;
         height: 100%;
         font-size: 14pt;
         transition: 0.7s;
 
         @include x-medium {
+            position: relative;
             width: 30%;
             justify-content: center;
         }
