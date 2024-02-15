@@ -97,14 +97,14 @@ const Main = () => {
                 </div>
             </motion.div>
 
-            <div className={!scrolled ? "row bg-secondary header" : "row bg-secondary header fixed-top"}>
+            <div className={!scrolled ? "row bg-secondary header" : "row bg-secondary header-small-scrolled fixed-top"}>
                 <div className="col bg-primary d-flex justify-content-center align-items-center">
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={true}
                         transition={{ duration: 1 }}
-                        className="h4 p-5 fw-bold text-light"
+                        className="p-5 fw-bold text-light"
                     >
                         Santhos Suntharalingam
                     </motion.p>

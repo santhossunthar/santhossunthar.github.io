@@ -57,6 +57,40 @@ li {
         @include x-small {
             display: flex;
         }
+
+        p {
+            text-transform: uppercase;
+
+            @include x-small {
+                font-size: 22pt;
+                text-align: center;
+            }
+        }
+    }
+
+    .header-small-scrolled {
+        height: 25vh;
+        z-index: 1;
+
+        @include x-small {
+            height: 10vh;
+        }
+
+        @include large-y {
+            display: flex;
+        }
+
+        @include x-small {
+            display: flex;
+        }
+
+        p {
+            text-transform: uppercase;
+
+            @include x-small {
+                display: none;
+            }
+        }
     }
 
     .info {
@@ -141,8 +175,8 @@ li {
 
     @include x-small {
         width: 120px;
-        top: 25vh;
-        left: 45vw;
+        top: 20vh;
+        left: 70vw;
     }
 }
 
@@ -317,7 +351,7 @@ li {
     @include x-medium {
         display: flex;
         position: fixed;
-        top: 30vh;
+        top: 21vh;
         height: 100vh;
     }
 }
