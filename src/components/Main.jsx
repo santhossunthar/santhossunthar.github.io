@@ -60,7 +60,7 @@ const Main = () => {
                 transition={{ duration: 1 }}
                 className={!scrolled ? "profile-img" : "profile-img-scrolled"}
             >
-                <img src="/images/santhos_picture.jpg"
+                <img src="/images/picture.jpg"
                     alt="Profile Picture" className='img-fluid rounded-circle'
                 />
             </motion.div>
@@ -122,7 +122,7 @@ const Main = () => {
                         transition={{ duration: 1 }}
                         className={!scrolled ? "profile-img-small" : "profile-img-scrolled"}
                     >
-                        <img src="/images/santhos_picture.jpg"
+                        <img src="/images/picture.jpg"
                             alt="Profile Picture" className='img-fluid rounded-circle'
                         />
                     </motion.div>
