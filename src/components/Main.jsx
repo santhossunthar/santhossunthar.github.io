@@ -74,9 +74,11 @@ const Main = () => {
 
                 <h4 className='text-bold'>Contact</h4>
                 <hr />
-                <p><SiGmail /> Email</p>
-                <p><FaLinkedinIn /> LinkedIn</p>
-                <p><FaGithub /> GitHub</p>
+                <div className="contact-group d-flex flex-column gap-3">
+                    <a href="mailto:santhoshsunthar@gmail.com" className='d-flex gap-2 align-items-center'><SiGmail /> Email</a>
+                    <a href="https://www.linkedin.com/in/santhossunthar/" className='d-flex gap-2 align-items-center'><FaLinkedinIn /> LinkedIn</a>
+                    <a href="https://github.com/santhossunthar" className='d-flex gap-2 align-items-center'><FaGithub /> GitHub</a>
+                </div>
             </motion.div>
 
             <motion.div
