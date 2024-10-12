@@ -1,0 +1,57 @@
+// width
+
+@mixin large-x {
+    @media (max-width: 1115px) {
+        @content
+    }
+};
+
+@mixin large {
+    @media (min-width: 792px) {
+        @content
+    }
+};
+
+@mixin x-large {
+    @media (max-width: 1000px) {
+        @content
+    }
+};
+
+@mixin xx-large {
+    @media (max-width: 868px) {
+        @content
+    }
+};
+
+@mixin medium {
+    @media (min-width: 768px) {
+        @content
+    }
+};
+
+@mixin x-medium {
+    @media (max-width: 768px) {
+        @content
+    }
+};
+
+@mixin small {
+    @media (min-width: 546px) {
+        @content
+    }
+};
+
+@mixin x-small {
+    @media (max-width: 546px) {
+        @content
+    }
+};
+
+// height
+
+@mixin large-y {
+    @media (min-height: 820px) {
+        @content
+    }
+};
