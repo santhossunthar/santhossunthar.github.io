@@ -14,12 +14,28 @@ const Body = () => {
 
             if (scrollPosition > 0) {
                 // User has scrolled, move the image to the specific position
-                profileInfoControls.start({ x: 0, y: 0, opacity: 1, transition: { duration: 1, ease: customEase } });
+                profileInfoControls.start({ 
+                    x: 0, 
+                    y: 0, 
+                    opacity: 1, 
+                    transition: { 
+                        duration: 1, 
+                        ease: customEase 
+                    } 
+                });
 
                 setScrolled(true);
             } else {
                 // User is back at the top, move the image back to the original position
-                profileInfoControls.start({ x: 0, y: 10000, opacity: 1, transition: { duration: 1, ease: customEase } });
+                profileInfoControls.start({ 
+                    x: 0, 
+                    y: 10000, 
+                    opacity: 1, 
+                    transition: { 
+                        duration: 1, 
+                        ease: customEase 
+                    } 
+                });
                 setScrolled(false);
             }
         };
@@ -41,8 +57,14 @@ const Body = () => {
                 animate={profileInfoControls}
                 viewport={true}
                 transition={{ duration: 1 }}
-                className={!scrolled ? "profile-body" : "profile-body-small-scrolled"}>
-                <div className={!scrolled ? "project-body" : "project-body-scrolled"}>
+                className={
+                    !scrolled ? "profile-body" : 
+                    "profile-body-small-scrolled"
+                }>
+                <div className={
+                    !scrolled ? "project-body" : 
+                    "project-body-scrolled"
+                    }>
                     {ProjectData.map((project) => {
                         return (
                             <Project

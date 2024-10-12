@@ -31,7 +31,11 @@ const Card = ({ name, bgimg, url }) => {
                     viewport={false}
                     transition={{ duration: 0.5 }}
                     className="view-more">
-                    <a href={url} target='_blank' className='btn btn-outline-primary'>
+                    <a 
+                        href={url} 
+                        target='_blank' 
+                        className='btn btn-outline-primary'
+                        >
                         View
                     </a>
                 </motion.div>
