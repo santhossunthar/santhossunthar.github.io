@@ -16,7 +16,7 @@ export const Body = () => (
       <div className="flex items-center justify-between space-y-0">
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-cyber-100">
-            Projects
+            PROJECTS
           </h2>
           <p className="text-cyber-300">
             Explore my recent work and contributions

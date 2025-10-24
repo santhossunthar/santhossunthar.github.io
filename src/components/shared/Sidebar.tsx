@@ -36,14 +36,14 @@ export const Sidebar = () => (
     </div>
     
     <div className="text-center mb-6">
-      <h2 className="
-        text-xl
-        font-bold
-        text-cyber-100
-        tracking-wide
-      ">
-        Santhos Suntharalingam
-      </h2>
+        <h2 className="
+          text-xl 
+          font-bold 
+          text-cyber-100 
+          tracking-wide
+        ">
+          SANTHOS SUNTHARALINGAM
+        </h2>
       <p className="
         text-sm
         text-cyber-400/80

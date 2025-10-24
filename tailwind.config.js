@@ -31,15 +31,15 @@ module.exports = {
           foreground: "hsl(var(--primary-foreground))",
         },
         cyber: {
-          900: "#1a0505",
-          800: "#2d0a0a",
-          700: "#410f0f",
-          600: "#541414",
-          500: "#671919",
-          400: "#8f2424",
-          300: "#b72f2f",
-          200: "#df3a3a",
-          100: "#ff4444",
+          900: "#1a1a1a",
+          800: "#2d2d2d",
+          700: "#414141",
+          600: "#545454",
+          500: "#676767",
+          400: "#8f8f8f",
+          300: "#b7b7b7",
+          200: "#dfdfdf",
+          100: "#ffffff",
         },
         text: {
           primary: "#FFFFFF",    // White
@@ -48,9 +48,9 @@ module.exports = {
         },
         // Border colors
         border: {
-          DEFAULT: "#8f2424",   // cyber-400
-          light: "#b72f2f",     // cyber-300
-          hover: "#ff4444"      // cyber-100
+          DEFAULT: "#8f8f8f",   // cyber-400
+          light: "#b7b7b7",     // cyber-300
+          hover: "#ffffff"      // cyber-100
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -65,19 +65,19 @@ module.exports = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#8f2424",   // cyber-400
-          hover: "#b72f2f",     // cyber-300
-          active: "#ff4444"     // cyber-100
+          DEFAULT: "#8f8f8f",   // cyber-400
+          hover: "#b7b7b7",     // cyber-300
+          active: "#ffffff"     // cyber-100
         },
         boxShadow: {
-          'cyber': '0 0 10px rgba(143, 36, 36, 0.3)',
-          'cyber-lg': '0 0 20px rgba(143, 36, 36, 0.4)',
-          'cyber-xl': '0 0 30px rgba(143, 36, 36, 0.5)',
+          'cyber': '0 0 10px rgba(143, 143, 143, 0.3)',
+          'cyber-lg': '0 0 20px rgba(143, 143, 143, 0.4)',
+          'cyber-xl': '0 0 30px rgba(143, 143, 143, 0.5)',
         },
         // Add gradient backgrounds
         backgroundImage: {
-          'cyber-gradient': 'linear-gradient(to bottom right, #1a0505, #000000)',
-          'cyber-glow': 'radial-gradient(circle at center, rgba(143, 36, 36, 0.15), transparent 70%)',
+          'cyber-gradient': 'linear-gradient(to bottom right, #1a1a1a, #000000)',
+          'cyber-glow': 'radial-gradient(circle at center, rgba(143, 143, 143, 0.15), transparent 70%)',
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -96,6 +96,12 @@ module.exports = {
           accent: "hsl(var(--sidebar-accent))",
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
         },
+      },
+      fontFamily: {
+        'orbitron': ['Orbitron', 'monospace'],
+        'poppins': ['Poppins', 'sans-serif'],
+        'nunito': ['Nunito Sans', 'sans-serif'],
+        'open-sans': ['Open Sans', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
