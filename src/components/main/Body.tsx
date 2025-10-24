@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import { projectData } from '@/data/constants';
 import { ProjectCard } from '../shared/ProjectCard';
@@ -10,7 +12,6 @@ export const Body = () => (
     exit={{ opacity: 0 }}
     className="w-full h-screen flex flex-col relative"
   >
-    {/* Fixed Header Section */}
     <div className="sticky top-0 z-10 py-6 bg-background/80 backdrop-blur-sm">
       <div className="flex items-center justify-between space-y-0">
         <div>
@@ -27,7 +28,6 @@ export const Body = () => (
       </div>
     </div>
 
-    {/* Scrollable Project Section */}
     <div className="flex-1 overflow-y-auto pt-6 hide-scrollbar">
       <div className="flex flex-col gap-6">
         {projectData.map((project) => (

@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef } from 'react';
 import { Main } from '@/components/main/Main';
 import { Sidebar } from '@/components/shared/Sidebar';
@@ -19,7 +21,6 @@ const Home = () => {
         mandatory"
       style={{ scrollSnapType: 'y mandatory' }}
     >
-      {/* PAGE 1: Main */}
       <section
         className="
           h-screen 
@@ -30,7 +31,6 @@ const Home = () => {
           scroll-snap-start"
         style={{ scrollSnapAlign: 'start' }}
       >
-        {/* Accent Line */}
         <div className="
           absolute 
           left-0 
@@ -44,7 +44,6 @@ const Home = () => {
           <Main />
       </section>
 
-      {/* PAGE 2: Sidebar + Body */}
       <section
         className="
           min-h-screen 
@@ -56,7 +55,6 @@ const Home = () => {
           bg-background"
         style={{ scrollSnapAlign: 'start', position: 'relative' }}
       >
-        {/* Horizontal line */}
         <div
           className="absolute left-0 right-0 z-0 pointer-events-none"
           style={{ top: '7.5rem' }}

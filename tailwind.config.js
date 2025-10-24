@@ -2,9 +2,9 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   prefix: "",
   theme: {
@@ -96,18 +96,6 @@ module.exports = {
           accent: "hsl(var(--sidebar-accent))",
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
         },
-        backgroundImage: {
-          'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        },
-        animation: {
-          'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        },
-        keyframes: {
-          pulse: {
-            '0%, 100%': { opacity: 1 },
-            '50%': { opacity: .5 },
-          },
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -134,6 +122,8 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "shake": "shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both",
+        "spin-slower": "spin 3s linear infinite",
+        "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },

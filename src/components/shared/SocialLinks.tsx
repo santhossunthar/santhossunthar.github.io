@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { socialLinks } from "@/data/constants";
 
-export const SocialLinks = ({ minimal = false }) => (
+interface SocialLinksProps {
+  minimal?: boolean;
+}
+
+export const SocialLinks = ({ minimal = false }: SocialLinksProps) => (
   <div className={minimal ? "flex flex-wrap gap-2" : "flex flex-col gap-3"}>
     {socialLinks.map((link, index) => (
       <Button

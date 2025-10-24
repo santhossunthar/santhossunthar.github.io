@@ -1,4 +1,5 @@
 import { SocialLinks } from '../shared/SocialLinks';
+import Image from 'next/image';
 
 export const Sidebar = () => (
   <div
@@ -13,12 +14,13 @@ export const Sidebar = () => (
       cyber-glow
     "
   >
-    {/* Profile Image */}
     <div className="mx-auto mb-6 relative">
       <div className="absolute -inset-2 rounded-full bg-cyber-400/20 blur-lg z-0" />
-      <img
+      <Image
         src="/images/picture.jpg"
         alt="Profile"
+        width={128}
+        height={128}
         className="
           h-32
           w-32
@@ -33,7 +35,6 @@ export const Sidebar = () => (
       />
     </div>
     
-    {/* Name and Title */}
     <div className="text-center mb-6">
       <h2 className="
         text-xl
@@ -51,7 +52,6 @@ export const Sidebar = () => (
       </p>
     </div>
 
-    {/* Divider */}
     <div className="
       w-full
       h-[2px]
@@ -62,7 +62,6 @@ export const Sidebar = () => (
       mb-6
     " />
 
-    {/* Nav Links */}
     <nav className="flex flex-col gap-2 mb-8">
       <a
         href="#projects"
