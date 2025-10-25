@@ -98,6 +98,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        'cyber': ['JetBrains Mono', 'Fira Code', 'monospace'],
         'orbitron': ['Orbitron', 'monospace'],
         'poppins': ['Poppins', 'sans-serif'],
         'nunito': ['Nunito Sans', 'sans-serif'],
