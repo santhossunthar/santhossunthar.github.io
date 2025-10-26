@@ -27,11 +27,19 @@ const postsDirectory = typeof window === 'undefined'
   ? path.join(process.cwd(), 'src/data/blog-posts')
   : '';
 
-// Generate short ID from filename (first 8 characters of filename hash)
+// Generate short ID from filename with blog ID + short SHA format
 function generateShortId(filename: string): string {
   const crypto = require('crypto');
   const hash = crypto.createHash('sha256').update(filename).digest('hex');
-  return hash.substring(0, 8);
+  const shortSha = hash.substring(0, 8);
+  
+  // Split filename by hyphens and take maximum 5 words
+  const words = filename.split('-');
+  const maxWords = Math.min(words.length, 5);
+  const blogId = words.slice(0, maxWords).join('-');
+  
+  // Return blog ID with short SHA appended
+  return `${blogId}-${shortSha}`;
 }
 
 export function getAllPostIds(): string[] {

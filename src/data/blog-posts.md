@@ -1,6 +1,6 @@
 # Blog Posts Data
 
-This file contains metadata for blog posts. In a real implementation, this would be generated from markdown files.
+This file contains metadata for blog posts.
 
 ## Post 1: Bash
 - ID: bash-scripting-basics
@@ -17,3 +17,4 @@ This file contains metadata for blog posts. In a real implementation, this would
 - Tags: Linux, Security, DevOps
 - Date: 2024-01-05
 - Featured: true
+
