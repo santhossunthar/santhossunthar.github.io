@@ -16,14 +16,18 @@ export const SocialLinks = ({ minimal = false }: SocialLinksProps) => (
         className={
           minimal
             ? `
-              hover:scale-110
-              transition-transform
-              border-cyber-400/40
-              bg-cyber-900/70
-              text-cyber-200
-              hover:bg-cyber-800
+              p-3
+              rounded-full
+              bg-cyber-800/80
+              hover:bg-cyber-700
+              border
+              border-cyber-600/50
+              transition-all
+              duration-300
               hover:border-cyber-400
-              shadow
+              cyber-glow
+              group
+              hover:scale-110
               `
             : `
               w-full

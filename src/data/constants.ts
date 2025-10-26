@@ -2,7 +2,7 @@ import {
   FaGithub, 
   FaLinkedinIn, 
   FaHackerrank, 
-  FaStackOverflow 
+  FaStackOverflow
 } from 'react-icons/fa';
 import { SiGmail, SiTryhackme } from 'react-icons/si';
 import { BsTwitterX } from 'react-icons/bs';
