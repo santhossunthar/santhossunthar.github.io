@@ -50,16 +50,16 @@ export const Main = () => {
           y: scrolled ? -50 : 0 
         }}
         transition={{ duration: 0.3 }}
-        className="h-screen flex items-center relative z-20"
+        className="min-h-screen flex items-center relative z-20 py-4 md:py-8"
       >
-        <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid w-full grid-cols-1 gap-4 md:gap-8 lg:grid-cols-2">
           {/* Profile Image Section */}
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             className="flex items-center"
           >
-            <div className="relative w-full h-screen">
+            <div className="relative w-full h-64 md:h-80 lg:h-screen">
               <div className="
                 absolute 
                 top-1/2 
@@ -69,7 +69,7 @@ export const Main = () => {
               >
                 <div className="relative">
                   {/* Outer Layer - Broken Circle */}
-                  <div className="absolute -inset-28">
+                  <div className="absolute -inset-16 md:-inset-20 lg:-inset-28">
                     {[0, 90, 180, 270].map((rotation) => (
                       <div
                         key={`outer-${rotation}`}
@@ -82,8 +82,8 @@ export const Main = () => {
                           absolute 
                           top-0 
                           left-1/2 
-                          w-[3px] 
-                          h-16 
+                          w-[2px] md:w-[3px] 
+                          h-8 md:h-12 lg:h-16 
                           bg-gradient-to-b 
                           from-cyber-400 
                           to-transparent 
@@ -95,7 +95,7 @@ export const Main = () => {
                   </div>
 
                   {/* Middle Layer - Spinning Segments */}
-                  <div className="absolute -inset-20">
+                  <div className="absolute -inset-12 md:-inset-16 lg:-inset-20">
                     {[45, 135, 225, 315].map((rotation) => (
                       <div
                         key={`middle-${rotation}`}
@@ -107,8 +107,8 @@ export const Main = () => {
                         <div className="
                           absolute top-0 
                           left-1/2 
-                          w-[2px] 
-                          h-14 
+                          w-[1px] md:w-[2px] 
+                          h-6 md:h-10 lg:h-14 
                           bg-gradient-to-b 
                           from-cyber-300 
                           to-transparent 
@@ -119,7 +119,7 @@ export const Main = () => {
                   </div>
 
                   {/* Inner Layer - Pulsing Arcs */}
-                  <div className="absolute -inset-16">
+                  <div className="absolute -inset-10 md:-inset-12 lg:-inset-16">
                     {[30, 150, 270].map((rotation) => (
                       <div
                         key={`inner-${rotation}`}
@@ -152,8 +152,7 @@ export const Main = () => {
                       alt="Profile"
                       className="
                         relative 
-                        h-80 
-                        w-80 
+                        h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 
                         rounded-full 
                         object-cover 
                         border-2 border-cyber-900"
@@ -183,11 +182,11 @@ export const Main = () => {
                         left: `calc(50% + ${
                           Math.cos(
                             rotation * Math.PI / 180
-                          ) * 200}px)`,
+                          ) * 120}px)`,
                         top: `calc(50% + ${
                           Math.sin(
                             rotation * Math.PI / 180
-                          ) * 200}px)`
+                          ) * 120}px)`
                       }}
                     />
                   ))}
@@ -200,26 +199,26 @@ export const Main = () => {
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className="flex flex-col justify-center space-y-8 px-1"
+            className="flex flex-col justify-center items-center text-center md:items-start md:text-left space-y-4 md:space-y-6 lg:space-y-8 px-2 md:px-4 lg:px-1"
           >
             <div className="space-y-4">
-              <h1 className={`text-5xl font-bold text-cyber-100 tracking-tight glitch ${showGlitch ? 'page-load-glitch' : ''}`} data-text="SANTHOS SUNTHARALINGAM">
+              <h1 className={`text-2xl md:text-3xl lg:text-5xl font-bold text-cyber-100 tracking-tight glitch ${showGlitch ? 'page-load-glitch' : ''}`} data-text="SANTHOS SUNTHARALINGAM">
                 SANTHOS SUNTHARALINGAM
               </h1>
               <div className="space-y-2">
-                <h2 className={`text-2xl text-cyber-200 font-medium glitch ${showGlitch ? 'page-load-glitch' : ''}`} data-text="SECURITY RESEARCHER">
+                <h2 className={`text-lg md:text-xl lg:text-2xl text-cyber-200 font-medium glitch ${showGlitch ? 'page-load-glitch' : ''}`} data-text="SECURITY RESEARCHER">
                   SECURITY RESEARCHER
                 </h2>
-                <p className="text-cyber-300 text-lg">
+                <p className="text-cyber-300 text-sm md:text-base lg:text-lg">
                   BSc (Hons) in Software Engineering
-                  <span className="block text-cyber-400 text-base">
+                  <span className="block text-cyber-400 text-xs md:text-sm lg:text-base">
                     University of Kelaniya, Sri Lanka
                   </span>
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3">
               {socialLinks.map(({ Icon, href, label }, index) => (
                 <motion.a
                   key={index}
@@ -231,9 +230,8 @@ export const Main = () => {
                   className="
                     inline-flex 
                     items-center 
-                    gap-2 
-                    px-4 
-                    py-2 
+                    gap-1 md:gap-2 
+                    px-2 py-1 md:px-4 md:py-2 
                     bg-black 
                     border 
                     border-white/20 
@@ -247,15 +245,14 @@ export const Main = () => {
                     group"
                 >
                   <Icon className="
-                    h-4 
-                    w-4 
+                    h-3 w-3 md:h-4 md:w-4 
                     text-cyber-100 
                     group-hover:text-white 
                     transition-colors 
                     duration-300" 
                   />
                   <span className="
-                    text-xs 
+                    text-xs md:text-xs 
                     text-cyber-100 
                     group-hover:text-white 
                     transition-colors 
@@ -266,47 +263,6 @@ export const Main = () => {
                   </span>
                 </motion.a>
               ))}
-              
-              <motion.a
-                href="/blog"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="
-                  inline-flex 
-                  items-center 
-                  gap-2 
-                  px-4 
-                  py-2 
-                  bg-black 
-                  border 
-                  border-white/20 
-                  rounded-lg 
-                  cursor-pointer 
-                  hover:bg-white/5 
-                  hover:border-white/40 
-                  text-cyber-100 
-                  font-medium 
-                  transition-all 
-                  duration-300 
-                  cyber-glow 
-                  group
-                  text-xs"
-              >
-                <svg 
-                  className="w-4 h-4 text-cyber-100 group-hover:text-white transition-colors duration-300" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" 
-                  />
-                </svg>
-                <span>Blog</span>
-              </motion.a>
             </div>
           </motion.div>
         </div>

@@ -2,7 +2,6 @@
 
 import { useRef } from 'react';
 import { Main } from '@/components/main/Main';
-import { Sidebar } from '@/components/shared/Sidebar';
 import { Body } from '@/components/main/Body';
 
 const Home = () => {
@@ -16,6 +15,7 @@ const Home = () => {
         h-screen 
         w-full 
         overflow-y-scroll 
+        overflow-x-hidden
         scroll-smooth 
         scroll-snap-y 
         mandatory"
@@ -46,7 +46,7 @@ const Home = () => {
         <Main />
       </section>
 
-      {/* PAGE 2: Sidebar + Body */}
+      {/* PAGE 2: Body */}
       <section
         className="
           min-h-screen 
@@ -81,25 +81,8 @@ const Home = () => {
           w-full 
           px-4 
           sm:px-6 
-          lg:px-8 
-          grid 
-          grid-cols-1 
-          lg:grid-cols-[250px_1fr] 
-          gap-4"
+          lg:px-8"
         >
-          <div className="sticky top-8 self-start z-10">
-            <div className="
-              rounded-xl 
-              overflow-hidden 
-              bg-cyber-800/95 
-              backdrop-blur 
-              shadow-xl 
-              border 
-              border-cyber-400"
-            >
-              <Sidebar />
-            </div>
-          </div>
           <div className="relative pt-4 pb-6">
             <Body />
           </div>

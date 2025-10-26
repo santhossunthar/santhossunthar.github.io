@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fa';
 import { SiGmail, SiTryhackme } from 'react-icons/si';
 import { BsTwitterX } from 'react-icons/bs';
+import { BlogIcon } from '../components/shared/BlogIcon';
 
 export const socialLinks = [
   {
@@ -22,6 +23,11 @@ export const socialLinks = [
     Icon: FaGithub,
     href: "https://github.com/santhossunthar",
     label: "GitHub"
+  },
+  {
+    Icon: BlogIcon,
+    href: "/blog",
+    label: "Blog"
   },
 ];
 
