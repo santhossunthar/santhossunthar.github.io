@@ -5,29 +5,28 @@ import { useSearchParams } from 'next/navigation';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
 import BlogPostList from '@/components/blog/BlogPostList';
-import BlogPostDetail from '@/components/blog/BlogPostDetail';
 import TagsView from '@/components/blog/TagsView';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import MobileNavbar from '@/components/blog/MobileNavbar';
-import { TableOfContentsItem } from '@/lib/table-of-contents';
 import { BlogPost } from '@/lib/blog-utils';
 
 interface BlogPageClientProps {
   posts: BlogPost[];
+  initialView?: 'posts' | 'tags';
 }
 
-export default function BlogPageClient({ posts }: BlogPageClientProps) {
-  const [selectedPost, setSelectedPost] = useState<string | null>(null);
+export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPageClientProps) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [breadcrumb, setBreadcrumb] = useState<Array<{label: string, path?: string}>>([
-    { label: 'Blog', path: '/blog' }
-  ]);
+  const [breadcrumb, setBreadcrumb] = useState<Array<{label: string, path?: string}>>(
+    initialView === 'tags' 
+      ? [{ label: 'Blog', path: '/blog' }, { label: 'Tags' }]
+      : [{ label: 'Blog', path: '/blog' }]
+  );
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [tableOfContents, setTableOfContents] = useState<TableOfContentsItem[]>([]);
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>(posts);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const [currentView, setCurrentView] = useState<'posts' | 'tags'>('posts');
+  const [currentView, setCurrentView] = useState<'posts' | 'tags'>(initialView);
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -37,25 +36,17 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
   // Reset state when URL changes (e.g., when clicking "All Posts")
   useEffect(() => {
     if (isMounted) {
-      setSelectedPost(null);
       setCurrentPage(1);
       setBreadcrumb([{ label: 'Blog', path: '/blog' }]);
     }
   }, [searchParams, isMounted]);
 
-  // Handle URL parameters for view and tag filtering
+  // Handle URL parameters for tag filtering (only for query params, not route-based)
   useEffect(() => {
     if (isMounted && searchParams) {
-      const view = searchParams.get('view');
       const tag = searchParams.get('tag');
       
-      if (view === 'tags') {
-        setCurrentView('tags');
-        setBreadcrumb([
-          { label: 'Blog', path: '/blog' },
-          { label: 'Tags', path: '/blog?view=tags' }
-        ]);
-      } else if (tag) {
+      if (tag) {
         setCurrentView('posts');
         setSelectedTag(tag);
         const filtered = posts.filter(post => 
@@ -64,37 +55,22 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
         setFilteredPosts(filtered);
         setBreadcrumb([
           { label: 'Blog', path: '/blog' },
-          { label: `Tag: ${tag}`, path: `/blog?tag=${tag}` }
+          { label: 'Tag', path: `/blog?tag=${tag}` }
         ]);
-      } else {
+      } else if (initialView === 'posts') {
         setCurrentView('posts');
         setSelectedTag(null);
         setFilteredPosts(posts);
         setBreadcrumb([{ label: 'Blog', path: '/blog' }]);
       }
     }
-  }, [searchParams, isMounted, posts]);
+  }, [searchParams, isMounted, posts, initialView]);
 
-  const handlePostSelect = (postId: string, postTitle: string) => {
-    setSelectedPost(postId);
-    setBreadcrumb([
-      { label: 'Blog', path: '/blog' },
-      { label: postTitle }
-    ]);
-    
-    // Scroll to top when selecting a post
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handlePostSelect = (post: BlogPost) => {
+    // Navigate to individual post page using shortId
+    window.location.href = `/blog/${post.shortId}`;
   };
 
-  const handleBackToList = () => {
-    setSelectedPost(null);
-    setBreadcrumb([{ label: 'Blog', path: '/blog' }]);
-    setTableOfContents([]);
-  };
-
-  const handleTableOfContentsChange = useCallback((toc: TableOfContentsItem[]) => {
-    setTableOfContents(toc);
-  }, []);
 
   const handleTagClick = useCallback((tag: string) => {
     if (isMounted) {
@@ -106,9 +82,8 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
       setFilteredPosts(filtered);
       setBreadcrumb([
         { label: 'Blog', path: '/blog' },
-        { label: `Tag: ${tag}`, path: `/blog?tag=${tag}` }
+        { label: 'Tag', path: `/blog?tag=${tag}` }
       ]);
-      setSelectedPost(null);
       setCurrentPage(1);
     }
   }, [isMounted, posts]);
@@ -129,6 +104,9 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
         <MobileNavbar 
           breadcrumb={breadcrumb}
           onMenuClick={() => setIsMobileSidebarOpen(true)}
+          currentPage={currentPage}
+          totalPages={Math.ceil(filteredPosts.length / 6)}
+          currentView={currentView}
         />
       </div>
 
@@ -144,6 +122,7 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
           >
             <BlogSidebar 
               onClose={() => setIsMobileSidebarOpen(false)}
+              currentView={currentView}
             />
           </div>
         </div>
@@ -153,7 +132,7 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-screen">
           {/* Left Sidebar - Profile & Navigation (Desktop) */}
           <div className="hidden lg:flex lg:col-span-2 flex-col sticky top-0 h-screen border-r border-white/20">
-            <BlogSidebar />
+            <BlogSidebar currentView={currentView} />
           </div>
 
           {/* Main Content - Blog Posts */}
@@ -167,13 +146,7 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
             <div className="lg:hidden pt-16"></div>
             
                <div className="relative z-0">
-                 {selectedPost ? (
-                   <BlogPostDetail
-                     postId={selectedPost}
-                     onBack={handleBackToList}
-                     onTableOfContentsChange={handleTableOfContentsChange}
-                   />
-                 ) : currentView === 'tags' ? (
+                 {currentView === 'tags' ? (
                    <TagsView
                      posts={posts}
                      onTagClick={handleTagClick}
@@ -190,8 +163,8 @@ export default function BlogPageClient({ posts }: BlogPageClientProps) {
           </div>
 
           {/* Right Sidebar - Tags & Top Posts (Desktop) */}
-          <div className={`hidden lg:flex lg:col-span-3 flex-col ${selectedPost ? '' : 'sticky top-0 h-screen'}`}>
-            <BlogRightSidebar tableOfContents={selectedPost ? tableOfContents : undefined} />
+          <div className="hidden lg:flex lg:col-span-3 flex-col sticky top-0 h-screen">
+            <BlogRightSidebar posts={posts} />
           </div>
         </div>
       </div>

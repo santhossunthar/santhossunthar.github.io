@@ -6,7 +6,7 @@ import { aboutContent, animationTiming } from '../../../data/sectionContent';
 export const AboutSection = () => {
   return (
     <div className="space-y-4">
-      <p className="text-lg leading-relaxed">
+      <p className="text-lg leading-relaxed text-justify">
         <TypewriterText 
           text={aboutContent.paragraphs[0]}
           delay={animationTiming.titleDelay}
@@ -14,7 +14,7 @@ export const AboutSection = () => {
         />
       </p>
       
-      <p className="text-base leading-relaxed">
+      <p className="text-base leading-relaxed text-justify">
         <TypewriterText 
           text={aboutContent.paragraphs[1]}
           delay={animationTiming.titleDelay + animationTiming.itemDelay}

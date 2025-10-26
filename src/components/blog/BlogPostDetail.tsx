@@ -1,21 +1,18 @@
 'use client'
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { getPostData, BlogPost } from '@/lib/blog-utils';
+import { BlogPost } from '@/lib/blog-utils';
 import { extractTableOfContents, TableOfContentsItem } from '@/lib/table-of-contents';
 
 interface BlogPostDetailProps {
-  postId: string;
-  onBack: () => void;
+  post: BlogPost;
   onTableOfContentsChange?: (toc: TableOfContentsItem[]) => void;
 }
 
-export default function BlogPostDetail({ postId, onBack, onTableOfContentsChange }: BlogPostDetailProps) {
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
+export default function BlogPostDetail({ post, onTableOfContentsChange }: BlogPostDetailProps) {
 
   // Function to strip the first H1 from markdown content
   const stripFirstH1 = (content: string) => {
@@ -33,56 +30,20 @@ export default function BlogPostDetail({ postId, onBack, onTableOfContentsChange
   };
 
   useEffect(() => {
-    // Load post data from file system
-    const loadPost = async () => {
-      try {
-        const postData = getPostData(postId);
-        setPost(postData);
-        
-        // Extract table of contents and notify parent
-        if (postData && onTableOfContentsChange) {
-          const toc = extractTableOfContents(postData.content);
-          onTableOfContentsChange(toc);
-        }
-      } catch (error) {
-        console.error('Error loading post:', error);
-        setPost(null);
-      } finally {
-        setLoading(false);
-      }
-    };
+    // Extract table of contents and notify parent
+    if (post && onTableOfContentsChange) {
+      const toc = extractTableOfContents(post.content);
+      onTableOfContentsChange(toc);
+    }
+  }, [post, onTableOfContentsChange]);
 
-    loadPost();
-  }, [postId]); // Remove onTableOfContentsChange from dependencies
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-      </div>
-    );
-  }
-
-  if (!post) {
-    return (
-      <div className="text-center py-12">
-        <h2 className="text-2xl font-bold text-white mb-4">Post Not Found</h2>
-        <button
-          onClick={onBack}
-          className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors duration-300"
-        >
-          Back to Posts
-        </button>
-      </div>
-    );
-  }
 
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="bg-black border border-white/20 rounded-lg p-8 font-cyber"
+      className="bg-black border border-white/20 rounded-lg p-6 font-cyber"
     >
       {/* Post Header */}
       <div className="mb-8">
@@ -203,14 +164,7 @@ export default function BlogPostDetail({ postId, onBack, onTableOfContentsChange
 
       {/* Post Footer */}
       <div className="mt-8 pt-6 border-t border-white/20">
-        <div className="flex items-center justify-between">
-          <button
-            onClick={onBack}
-            className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 rounded-lg text-white hover:text-white transition-all duration-300"
-          >
-            ← Back to Posts
-          </button>
-          
+        <div className="flex items-center justify-end">
           <div className="flex items-center gap-4 text-white/60 text-sm">
             <span>Share this post</span>
             <div className="flex gap-2">

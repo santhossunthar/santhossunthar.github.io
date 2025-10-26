@@ -43,10 +43,10 @@ const AnimatedListItem = ({ text, delay, className = '' }: AnimatedListItemProps
   }, [delay]);
 
   return (
-    <li className="flex items-center gap-3">
+    <li className="flex items-start gap-3 w-full max-w-md">
       {showItem && (
         <>
-          <span className="w-2 h-2 bg-cyber-400 rounded-full flex-shrink-0"></span>
+          <span className="w-2 h-2 bg-cyber-400 rounded-full flex-shrink-0 mt-2"></span>
           <span className={className}>{text}</span>
         </>
       )}
@@ -57,23 +57,25 @@ const AnimatedListItem = ({ text, delay, className = '' }: AnimatedListItemProps
 export const ExpertiseSection = () => {
   return (
     <div className="space-y-4">
-      <h4 className="text-xl font-semibold text-cyber-100">
+      <h4 className="text-xl font-semibold text-cyber-100 text-center lg:text-left">
         <AnimatedText 
           text={expertiseContent.title} 
           delay={animationTiming.titleDelay}
           className="text-cyber-100"
         />
       </h4>
-      <ul className="space-y-3 text-cyber-300">
-        {expertiseContent.items.map((item, index) => (
-          <AnimatedListItem
-            key={index}
-            text={item}
-            delay={animationTiming.itemDelay + (index * animationTiming.itemInterval)}
-            className="text-cyber-300"
-          />
-        ))}
-      </ul>
+      <div className="flex justify-center lg:justify-start">
+        <ul className="space-y-3 text-cyber-300 flex flex-col">
+          {expertiseContent.items.map((item, index) => (
+            <AnimatedListItem
+              key={index}
+              text={item}
+              delay={animationTiming.itemDelay + (index * animationTiming.itemInterval)}
+              className="text-cyber-300"
+            />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

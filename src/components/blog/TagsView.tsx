@@ -32,7 +32,8 @@ export default function TagsView({ posts, onTagClick }: TagsViewProps) {
 
   return (
     <div className="space-y-6">
-      <div className="text-center">
+      {/* Desktop-only title */}
+      <div className="hidden lg:block text-center">
         <h1 className="text-3xl font-bold text-white mb-2">All Tags</h1>
         <p className="text-white/70">Browse posts by category</p>
       </div>

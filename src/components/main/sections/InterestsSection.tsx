@@ -36,14 +36,14 @@ const AnimatedTag = ({ text, delay }: AnimatedTagProps) => {
 export const InterestsSection = () => {
   return (
     <div className="space-y-4">
-      <h4 className="text-xl font-semibold text-cyber-100">
+      <h4 className="text-xl font-semibold text-cyber-100 text-center lg:text-left">
         <TypewriterText 
           text={interestsContent.title} 
           delay={animationTiming.titleDelay}
           className="text-cyber-100"
         />
       </h4>
-      <p className="text-base leading-relaxed text-cyber-300">
+      <p className="text-base leading-relaxed text-cyber-300 text-justify">
         <TypewriterText 
           text={interestsContent.description}
           delay={animationTiming.itemDelay}

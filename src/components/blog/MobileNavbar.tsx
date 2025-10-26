@@ -10,23 +10,28 @@ interface BreadcrumbItem {
 interface MobileNavbarProps {
   breadcrumb: BreadcrumbItem[];
   onMenuClick: () => void;
+  currentPage?: number;
+  totalPages?: number;
+  currentView?: 'posts' | 'tags';
 }
 
-export default function MobileNavbar({ breadcrumb, onMenuClick }: MobileNavbarProps) {
-  const [currentTitle, setCurrentTitle] = useState('Blog');
+export default function MobileNavbar({ breadcrumb, onMenuClick, currentPage, totalPages, currentView }: MobileNavbarProps) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (isMounted) {
-      // Get the current page title from breadcrumb
-      const title = breadcrumb[breadcrumb.length - 1]?.label || 'Blog';
-      setCurrentTitle(title);
+  // Get the current page title based on view
+  const getPageTitle = () => {
+    if (currentView === 'tags') {
+      return 'Tags';
     }
-  }, [breadcrumb, isMounted]);
+    if (breadcrumb.length > 1) {
+      return breadcrumb[breadcrumb.length - 1].label;
+    }
+    return 'Blog Posts';
+  };
 
   return (
     <div className="fixed top-0 left-0 right-0 z-40 bg-black border-b border-white/20">
@@ -56,38 +61,53 @@ export default function MobileNavbar({ breadcrumb, onMenuClick }: MobileNavbarPr
         <div className="flex-1 mx-4">
           <div className="overflow-x-auto scrollbar-hide">
             <div className="flex items-center space-x-2 text-white font-cyber text-sm whitespace-nowrap">
-              {isMounted ? (
-                breadcrumb.map((item, index) => (
-                  <div key={index} className="flex items-center">
-                    {index > 0 && (
-                      <svg
-                        className="w-3 h-3 text-white/60 mx-2 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    )}
-                    <span className={index === breadcrumb.length - 1 ? 'font-semibold' : 'text-white/80'}>
-                      {item.label}
-                    </span>
-                  </div>
-                ))
+              {isMounted && breadcrumb.length > 1 ? (
+                <div className="flex items-center">
+                  {/* Previous page clickable icon */}
+                  <button
+                    onClick={() => {
+                      const previousItem = breadcrumb[breadcrumb.length - 2];
+                      if (previousItem?.path) {
+                        window.location.href = previousItem.path;
+                      } else {
+                        window.history.back();
+                      }
+                    }}
+                    className="p-1 rounded-lg hover:bg-white/10 transition-colors duration-300 mr-2 flex-shrink-0"
+                    aria-label="Go back to previous page"
+                  >
+                    <svg
+                      className="w-4 h-4 text-white/60 hover:text-white transition-colors duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                  </button>
+                  {/* Current page title only */}
+                  <span className="font-semibold">
+                    {getPageTitle()}
+                  </span>
+                </div>
               ) : (
-                <span className="font-semibold">Blog</span>
+                <span className="font-semibold">{getPageTitle()}</span>
               )}
             </div>
           </div>
         </div>
 
-        {/* Right side spacer for balance */}
-        <div className="w-10"></div>
+        {/* Pagination Info */}
+        {isMounted && currentPage && totalPages && currentView === 'posts' && (
+          <div className="text-white/60 text-xs font-cyber">
+            Page {currentPage} of {totalPages}
+          </div>
+        )}
       </div>
     </div>
   );

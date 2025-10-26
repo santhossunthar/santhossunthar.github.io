@@ -2,53 +2,64 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
-import { getAllPosts, getTopPosts } from '@/lib/blog-utils';
+import { BlogPost } from '@/lib/blog-utils';
 import { TableOfContentsItem } from '@/lib/table-of-contents';
 import TableOfContents from './TableOfContents';
 
 
 interface BlogRightSidebarProps {
   tableOfContents?: TableOfContentsItem[];
+  posts?: BlogPost[];
 }
 
-export default function BlogRightSidebar({ tableOfContents }: BlogRightSidebarProps) {
+export default function BlogRightSidebar({ tableOfContents, posts: serverPosts }: BlogRightSidebarProps) {
   const [isContentsSticky, setIsContentsSticky] = useState(false);
   const contentsRef = useRef<HTMLDivElement>(null);
+  const sidebarRef = useRef<HTMLDivElement>(null);
 
   // Memoize the data to prevent infinite re-renders
   const { tags, topPosts } = useMemo(() => {
-    const posts = getAllPosts();
+    // Only use server-side posts to prevent hydration mismatch
+    const posts = serverPosts || [];
     const allTags = posts.flatMap(post => post.tags);
     const uniqueTags = [...new Set(allTags)].sort();
     
-    const topPostsData = getTopPosts(5).map(post => ({
-      id: post.id,
-      title: post.title,
-      views: Math.floor(Math.random() * 1000) + 500 // Mock view count
-    }));
+    // Get top 5 posts (most recent or featured)
+    const topPostsData = posts
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 5)
+      .map((post, index) => ({
+        id: post.id,
+        title: post.title,
+        views: 500 + (index * 200) + (post.id.length * 10) // Deterministic view count based on post data
+      }));
 
     return {
       tags: uniqueTags,
       topPosts: topPostsData
     };
-  }, []); // Empty dependency array since we want this to run only once
+  }, [serverPosts]); // Include serverPosts in dependency array
 
   useEffect(() => {
     const handleScroll = () => {
       if (contentsRef.current) {
         const rect = contentsRef.current.getBoundingClientRect();
+        // Make it sticky when the top of the contents section reaches the top of the viewport
         const isSticky = rect.top <= 0;
         setIsContentsSticky(isSticky);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Initial check
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="h-screen">
-      <div className="bg-black border border-white/20 h-full font-cyber">
+    <div ref={sidebarRef}>
+      <div className="bg-black font-cyber">
         {/* Tags Section */}
         <div className="p-4">
           <h3 className="text-base font-bold text-white mb-3">Tags</h3>
@@ -65,11 +76,8 @@ export default function BlogRightSidebar({ tableOfContents }: BlogRightSidebarPr
           </div>
         </div>
 
-        {/* Horizontal Divider */}
-        <div className="border-t border-white/20"></div>
-
         {/* Recent Posts Section */}
-        <div className="p-4">
+        <div className="p-4 border-t border-white/20">
           <h3 className="text-base font-bold text-white mb-3">Recent Posts</h3>
           <div className="space-y-2">
             {topPosts.map((post, index) => (
@@ -91,14 +99,14 @@ export default function BlogRightSidebar({ tableOfContents }: BlogRightSidebarPr
           </div>
         </div>
 
-        {/* Horizontal Divider */}
-        <div className="border-t border-white/20"></div>
-
         {/* Contents Section - Sticky at top when post is selected */}
         {tableOfContents && tableOfContents.length > 0 && (
-          <>
-            {/* Normal Contents Section */}
-            <div ref={contentsRef} className="bg-black border-b border-white/20">
+          <div className="relative">
+            {/* Normal Contents Section - Hidden when sticky */}
+            <div 
+              ref={contentsRef} 
+              className={`bg-black border-t border-white/20 ${isContentsSticky ? 'opacity-0' : 'opacity-100'}`}
+            >
               <div className="p-4">
                 <TableOfContents items={tableOfContents} />
               </div>
@@ -107,15 +115,19 @@ export default function BlogRightSidebar({ tableOfContents }: BlogRightSidebarPr
             {/* Sticky Contents Section */}
             {isContentsSticky && (
               <div 
-                className="fixed top-0 right-0 w-1/4 bg-black border-l border-white/20 z-50 max-h-screen overflow-y-auto"
-                style={{ width: '25%' }}
+                className="fixed top-0 right-0 bg-black border-l border-white/20 z-50 max-h-screen overflow-y-auto"
+                style={{ 
+                  width: '25%',
+                  minWidth: '300px',
+                  maxWidth: '400px'
+                }}
               >
                 <div className="p-4">
                   <TableOfContents items={tableOfContents} />
                 </div>
               </div>
             )}
-          </>
+          </div>
         )}
 
       </div>

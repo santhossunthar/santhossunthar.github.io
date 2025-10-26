@@ -1,5 +1,5 @@
 ---
-id: "3"
+id: "linux-security-best-practices"
 title: "Linux Security Best Practices for Developers"
 date: "2024-01-05"
 category: "Security"

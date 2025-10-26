@@ -37,14 +37,14 @@ const AnimatedEducationItem = ({ item, delay }: AnimatedEducationItemProps) => {
               className="text-cyber-100"
             />
           </h5>
-          <p className="text-cyber-300">
+          <p className="text-cyber-300 text-justify">
             <TypewriterText 
               text={item.institution} 
               delay={animationTiming.itemInterval}
               className="text-cyber-300"
             />
           </p>
-          <p className="text-sm text-cyber-400 mt-2">
+          <p className="text-sm text-cyber-400 mt-2 text-justify">
             <TypewriterText 
               text={item.status} 
               delay={animationTiming.itemInterval * 2}
@@ -60,21 +60,23 @@ const AnimatedEducationItem = ({ item, delay }: AnimatedEducationItemProps) => {
 export const EducationSection = () => {
   return (
     <div className="space-y-4">
-      <h4 className="text-xl font-semibold text-cyber-100">
+      <h4 className="text-xl font-semibold text-cyber-100 text-center lg:text-left">
         <TypewriterText 
           text={educationContent.title} 
           delay={animationTiming.titleDelay}
           className="text-cyber-100"
         />
       </h4>
-      <div className="space-y-3">
-        {educationContent.items.map((item, index) => (
-          <AnimatedEducationItem
-            key={index}
-            item={item}
-            delay={animationTiming.itemDelay + (index * animationTiming.itemInterval)}
-          />
-        ))}
+      <div className="flex justify-center lg:justify-start">
+        <div className="space-y-3 w-full max-w-md lg:max-w-none">
+          {educationContent.items.map((item, index) => (
+            <AnimatedEducationItem
+              key={index}
+              item={item}
+              delay={animationTiming.itemDelay + (index * animationTiming.itemInterval)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

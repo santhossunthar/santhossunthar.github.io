@@ -199,7 +199,7 @@ export const Main = () => {
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className="flex flex-col justify-center items-center text-center md:items-start md:text-left space-y-4 md:space-y-6 lg:space-y-8 px-2 md:px-4 lg:px-1"
+            className="flex flex-col justify-center items-center text-center lg:items-start lg:text-left space-y-4 md:space-y-6 lg:space-y-8 px-2 md:px-4 lg:px-1"
           >
             <div className="space-y-4">
               <h1 className={`text-2xl md:text-3xl lg:text-5xl font-bold text-cyber-100 tracking-tight glitch ${showGlitch ? 'page-load-glitch' : ''}`} data-text="SANTHOS SUNTHARALINGAM">
@@ -218,7 +218,7 @@ export const Main = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3">
               {socialLinks.map(({ Icon, href, label }, index) => (
                 <motion.a
                   key={index}

@@ -8,9 +8,10 @@ import { useEffect, useState } from 'react';
 
 interface BlogSidebarProps {
   onClose?: () => void;
+  currentView?: 'posts' | 'tags';
 }
 
-export default function BlogSidebar({ onClose }: BlogSidebarProps) {
+export default function BlogSidebar({ onClose, currentView }: BlogSidebarProps) {
   const router = useRouter();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -27,7 +28,7 @@ export default function BlogSidebar({ onClose }: BlogSidebarProps) {
 
   const handleTagsFilter = () => {
     if (isMounted) {
-      router.push('/blog?view=tags');
+      router.push('/blog/tags');
       onClose?.();
     }
   };
@@ -54,9 +55,13 @@ export default function BlogSidebar({ onClose }: BlogSidebarProps) {
         <div className="space-y-2 mb-6">
           <button 
             onClick={handleAllPosts}
-            className="block w-full text-left px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
+            className={`block w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 ${
+              currentView === 'posts' 
+                ? 'text-white bg-white/10' 
+                : 'text-white/80 hover:text-white hover:bg-white/10'
+            }`}
           >
-            All Posts
+            Posts
           </button>
           <Link 
             href="/" 
@@ -66,7 +71,11 @@ export default function BlogSidebar({ onClose }: BlogSidebarProps) {
           </Link>
           <button 
             onClick={handleTagsFilter}
-            className="block w-full text-left px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
+            className={`block w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 ${
+              currentView === 'tags' 
+                ? 'text-white bg-white/10' 
+                : 'text-white/80 hover:text-white hover:bg-white/10'
+            }`}
           >
             Tags
           </button>
@@ -77,9 +86,9 @@ export default function BlogSidebar({ onClose }: BlogSidebarProps) {
         <div className="flex-1"></div>
 
         {/* Social Links - Fixed at Bottom */}
-        <div className="border-t border-white/20 pt-4">
+        <div className="border-t border-white/20 pt-4 text-center">
           <h4 className="text-white font-medium mb-3 text-sm">Connect</h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             {socialLinks.map(({ Icon, href, label }, index) => (
               <a
                 key={index}

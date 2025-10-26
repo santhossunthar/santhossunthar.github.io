@@ -7,7 +7,7 @@ import { getAllPosts, BlogPost } from '@/lib/blog-utils';
 interface BlogPostListProps {
   currentPage: number;
   onPageChange: (page: number) => void;
-  onPostSelect: (postId: string, postTitle: string) => void;
+  onPostSelect: (post: BlogPost) => void;
   posts: BlogPost[];
 }
 
@@ -28,12 +28,13 @@ export default function BlogPostList({ currentPage, onPageChange, onPostSelect, 
   const paginatedPosts = posts.slice(startIndex, endIndex);
 
   const handlePostClick = (post: BlogPost) => {
-    onPostSelect(post.id, post.title);
+    onPostSelect(post);
   };
 
   return (
     <div className="space-y-6 font-cyber">
-      <div className="flex items-center justify-between mb-6">
+      {/* Desktop-only title and pagination */}
+      <div className="hidden lg:flex items-center justify-between mb-6">
         <h1 className="text-xl font-bold text-white">Blog Posts</h1>
         <div className="text-white/70 text-sm">
           Page {currentPage} of {totalPages}
