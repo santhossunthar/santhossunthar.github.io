@@ -28,10 +28,10 @@ export default function BlogRightSidebar({ tableOfContents, posts: serverPosts }
     const topPostsData = posts
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
       .slice(0, 5)
-      .map((post, index) => ({
+      .map((post) => ({
         id: post.id,
-        title: post.title,
-        views: 500 + (index * 200) + (post.id.length * 10) // Deterministic view count based on post data
+        shortId: post.shortId,
+        title: post.title
       }));
 
     return {
@@ -87,12 +87,11 @@ export default function BlogRightSidebar({ tableOfContents, posts: serverPosts }
                 </span>
                 <div className="flex-1 min-w-0">
                   <Link
-                    href={`/blog/${post.id}`}
+                    href={`/blog/${post.shortId}`}
                     className="block text-white/80 hover:text-white text-xs font-medium transition-colors duration-300 line-clamp-2"
                   >
                     {post.title}
                   </Link>
-                  <p className="text-white/60 text-xs mt-1">{post.views} views</p>
                 </div>
               </div>
             ))}

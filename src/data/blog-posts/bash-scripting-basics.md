@@ -1,10 +1,10 @@
 ---
 id: "bash-scripting-basics"
 title: "Bash Scripting Basics"
-date: "2024-01-05"
+date: "2024-01-04"
 category: "Security"
-tags: ["Linux", "Security", "DevOps"]
-readTime: "10 min read"
+tags: ["Bash", "Linux", "Security", "Automation", "Scripting"]
+readTime: "6 min read"
 author: "Santhos Suntharalingam"
 featured: true
 excerpt: "Learn the fundamentals of Bash scripting for automation and system administration. This comprehensive guide covers variables, loops, functions, and more."
@@ -401,7 +401,3 @@ echo $functionOutput  # Output >>> Hello World
 ## Conclusion
 
 That's all in this reading and I hope this article will be helpful to accomplish your automation tasks! Thank you for putting your eyesight and six minutes on this article. I'll see you again with my future post! 😊
-
-**Let's connect:**
-- [LinkedIn](https://www.linkedin.com/in/santhossunthar/)
-- [Twitter](https://twitter.com/santhossunthar)

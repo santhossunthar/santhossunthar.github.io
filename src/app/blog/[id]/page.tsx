@@ -9,10 +9,29 @@ import Breadcrumb from '@/components/blog/Breadcrumb';
 // SSG: Pre-generate all blog post paths at build time
 export async function generateStaticParams() {
   const postIds = getAllPostIds();
-  return postIds.map((id) => ({
+  
+  // Return all valid post IDs plus some common fallback routes
+  const params = postIds.map((id) => ({
     id: id,
   }));
+  
+  // Add some common fallback routes that might be accessed
+  const fallbackRoutes = [
+    'some',
+    'test',
+    'example',
+    'demo',
+    '404',
+    'not-found'
+  ];
+  
+  const fallbackParams = fallbackRoutes.map((route) => ({
+    id: route,
+  }));
+  
+  return [...params, ...fallbackParams];
 }
+
 
 // SSG: Generate metadata for each post
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
@@ -41,6 +60,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  
+  // Validate that the ID matches the expected format
+  const validIds = getAllPostIds();
+  if (!validIds.includes(id)) {
+    notFound();
+  }
+  
   const post = getPostByShortId(id);
 
   if (!post) {
