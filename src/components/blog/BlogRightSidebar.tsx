@@ -24,7 +24,7 @@ export default function BlogRightSidebar({ tableOfContents, posts: serverPosts }
     const allTags = posts.flatMap(post => post.tags);
     const uniqueTags = [...new Set(allTags)].sort();
     
-    // Get top 5 posts (most recent or featured)
+    // Get top 5 posts (most recent or featured) - simplified
     const topPostsData = posts
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
       .slice(0, 5)

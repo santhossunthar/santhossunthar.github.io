@@ -43,7 +43,7 @@ export default function BlogPostDetail({ post, onTableOfContentsChange }: BlogPo
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="bg-black border border-white/20 rounded-lg p-6 font-cyber"
+      className="bg-black border border-white/20 rounded-lg p-4 md:p-6 font-cyber"
     >
       {/* Post Header */}
       <div className="mb-8">

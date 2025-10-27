@@ -1,14 +1,16 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, Suspense, lazy, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
-import BlogPostList from '@/components/blog/BlogPostList';
-import TagsView from '@/components/blog/TagsView';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import MobileNavbar from '@/components/blog/MobileNavbar';
 import { BlogPost } from '@/lib/blog-utils';
+
+// Lazy load heavy components
+const BlogPostList = lazy(() => import('@/components/blog/BlogPostList'));
+const TagsView = lazy(() => import('@/components/blog/TagsView'));
 
 interface BlogPageClientProps {
   posts: BlogPost[];
@@ -17,54 +19,52 @@ interface BlogPageClientProps {
 
 export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPageClientProps) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [breadcrumb, setBreadcrumb] = useState<Array<{label: string, path?: string}>>(
-    initialView === 'tags' 
-      ? [{ label: 'Blog', path: '/blog' }, { label: 'Tags' }]
-      : [{ label: 'Blog', path: '/blog' }]
-  );
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>(posts);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [currentView, setCurrentView] = useState<'posts' | 'tags'>(initialView);
   const searchParams = useSearchParams();
 
+  // Optimize breadcrumb computation
+  const breadcrumb = useMemo(() => {
+    if (currentView === 'tags') {
+      return [{ label: 'Blog', path: '/blog' }, { label: 'Tags' }];
+    }
+    if (selectedTag) {
+      return [
+        { label: 'Blog', path: '/blog' },
+        { label: 'Tag', path: `/blog?tag=${selectedTag}` }
+      ];
+    }
+    return [{ label: 'Blog', path: '/blog' }];
+  }, [currentView, selectedTag]);
+
+  // Optimize filtered posts computation
+  const filteredPosts = useMemo(() => {
+    if (!selectedTag) return posts;
+    return posts.filter(post => 
+      post.tags.some(postTag => postTag.toLowerCase() === selectedTag.toLowerCase())
+    );
+  }, [posts, selectedTag]);
+
+  // Single optimized useEffect for URL handling
   useEffect(() => {
     setIsMounted(true);
-  }, []);
-
-  // Reset state when URL changes (e.g., when clicking "All Posts")
-  useEffect(() => {
-    if (isMounted) {
-      setCurrentPage(1);
-      setBreadcrumb([{ label: 'Blog', path: '/blog' }]);
-    }
-  }, [searchParams, isMounted]);
-
-  // Handle URL parameters for tag filtering (only for query params, not route-based)
-  useEffect(() => {
-    if (isMounted && searchParams) {
+    
+    if (searchParams) {
       const tag = searchParams.get('tag');
       
       if (tag) {
         setCurrentView('posts');
         setSelectedTag(tag);
-        const filtered = posts.filter(post => 
-          post.tags.some(postTag => postTag.toLowerCase() === tag.toLowerCase())
-        );
-        setFilteredPosts(filtered);
-        setBreadcrumb([
-          { label: 'Blog', path: '/blog' },
-          { label: 'Tag', path: `/blog?tag=${tag}` }
-        ]);
+        setCurrentPage(1);
       } else if (initialView === 'posts') {
         setCurrentView('posts');
         setSelectedTag(null);
-        setFilteredPosts(posts);
-        setBreadcrumb([{ label: 'Blog', path: '/blog' }]);
+        setCurrentPage(1);
       }
     }
-  }, [searchParams, isMounted, posts, initialView]);
+  }, [searchParams, initialView]);
 
   const handlePostSelect = (post: BlogPost) => {
     // Navigate to individual post page using shortId
@@ -76,17 +76,9 @@ export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPag
     if (isMounted) {
       setCurrentView('posts');
       setSelectedTag(tag);
-      const filtered = posts.filter(post => 
-        post.tags.some(postTag => postTag.toLowerCase() === tag.toLowerCase())
-      );
-      setFilteredPosts(filtered);
-      setBreadcrumb([
-        { label: 'Blog', path: '/blog' },
-        { label: 'Tag', path: `/blog?tag=${tag}` }
-      ]);
       setCurrentPage(1);
     }
-  }, [isMounted, posts]);
+  }, [isMounted]);
 
   // Show loading state during hydration
   if (!isMounted) {
@@ -146,19 +138,25 @@ export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPag
             <div className="lg:hidden pt-16"></div>
             
                <div className="relative z-0">
-                 {currentView === 'tags' ? (
-                   <TagsView
-                     posts={posts}
-                     onTagClick={handleTagClick}
-                   />
-                 ) : (
-                   <BlogPostList
-                     currentPage={currentPage}
-                     onPageChange={setCurrentPage}
-                     onPostSelect={handlePostSelect}
-                     posts={filteredPosts}
-                   />
-                 )}
+                 <Suspense fallback={
+                   <div className="flex items-center justify-center py-12">
+                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+                   </div>
+                 }>
+                   {currentView === 'tags' ? (
+                     <TagsView
+                       posts={posts}
+                       onTagClick={handleTagClick}
+                     />
+                   ) : (
+                     <BlogPostList
+                       currentPage={currentPage}
+                       onPageChange={setCurrentPage}
+                       onPostSelect={handlePostSelect}
+                       posts={filteredPosts}
+                     />
+                   )}
+                 </Suspense>
                </div>
           </div>
 

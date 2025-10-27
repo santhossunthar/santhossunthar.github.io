@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { getAllPosts, BlogPost } from '@/lib/blog-utils';
+import { motion, Variants } from 'framer-motion';
+import { BlogPost } from '@/lib/blog-utils';
 
 interface BlogPostListProps {
   currentPage: number;
@@ -11,8 +11,36 @@ interface BlogPostListProps {
   posts: BlogPost[];
 }
 
-
 const POSTS_PER_PAGE = 10;
+
+// Animation variants for performance optimization
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 20,
+    scale: 0.95
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.25, 0.46, 0.45, 0.94] // Custom easing curve
+    }
+  }
+};
 
 export default function BlogPostList({ currentPage, onPageChange, onPostSelect, posts }: BlogPostListProps) {
   const [totalPages, setTotalPages] = useState(1);
@@ -41,15 +69,27 @@ export default function BlogPostList({ currentPage, onPageChange, onPostSelect, 
         </div>
       </div>
 
-      <div className="grid gap-6">
+      <motion.div 
+        className="grid gap-4 md:gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        key={currentPage} // Re-trigger animation on page change
+      >
         {paginatedPosts.map((post, index) => (
           <motion.div
             key={post.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
+            variants={itemVariants}
             onClick={() => handlePostClick(post)}
-            className="bg-black border border-white/20 rounded-lg p-6 cursor-pointer hover:bg-white/5 hover:border-white/40 transition-all duration-300 group"
+            className="bg-black border border-white/20 rounded-lg p-4 md:p-6 cursor-pointer hover:bg-white/5 hover:border-white/40 transition-all duration-300 group"
+            whileHover={{ 
+              scale: 1.02,
+              transition: { duration: 0.2 }
+            }}
+            whileTap={{ 
+              scale: 0.98,
+              transition: { duration: 0.1 }
+            }}
           >
             <div className="flex items-start justify-between mb-3">
               <div className="flex items-center gap-2">
@@ -88,22 +128,29 @@ export default function BlogPostList({ currentPage, onPageChange, onPostSelect, 
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-center gap-4 mt-8">
-          <button
+        <motion.div 
+          className="flex items-center justify-center gap-4 mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.4 }}
+        >
+          <motion.button
             onClick={() => onPageChange(currentPage - 1)}
             disabled={currentPage === 1}
             className="px-4 py-2 bg-white/10 hover:bg-white/20 disabled:bg-white/5 disabled:cursor-not-allowed border border-white/20 rounded-lg text-white transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Previous
-          </button>
+          </motion.button>
           
           <div className="flex gap-2">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <button
+              <motion.button
                 key={page}
                 onClick={() => onPageChange(page)}
                 className={`px-3 py-2 rounded-lg transition-all duration-300 ${
@@ -111,20 +158,27 @@ export default function BlogPostList({ currentPage, onPageChange, onPostSelect, 
                     ? 'bg-white text-black'
                     : 'bg-white/10 hover:bg-white/20 text-white'
                 }`}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.1 * page }}
               >
                 {page}
-              </button>
+              </motion.button>
             ))}
           </div>
 
-          <button
+          <motion.button
             onClick={() => onPageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
             className="px-4 py-2 bg-white/10 hover:bg-white/20 disabled:bg-white/5 disabled:cursor-not-allowed border border-white/20 rounded-lg text-white transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Next
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       )}
     </div>
   );

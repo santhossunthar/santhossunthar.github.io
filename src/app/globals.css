@@ -1,9 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,6 +7,29 @@ body {
   font-family: 'JetBrains Mono', 'Fira Code', 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  /* Mobile performance optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  body {
+    font-display: swap;
+  }
+  
+  /* Reduce animations on mobile for better performance */
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  /* Disable hover effects on mobile */
+  *:hover {
+    transform: none !important;
+  }
 }
 
 /* About Me section specific font styling */
@@ -96,9 +113,6 @@ body {
     --sidebar-accent-foreground: 0 0% 98%;
 
     /* fonts */
-    --font-poppins: Poppins;
-    --font-nunito-sans: "Nunito Sans";
-    --font-open-sans: "Open Sans";
     --font-orbitron: "Orbitron";
 
     /* font sizes */
