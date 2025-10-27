@@ -1,0 +1,90 @@
+import Link from 'next/link'
+
+export default function NotFound() {
+
+  return (
+    <div className="min-h-screen bg-background flex items-center justify-center px-4 relative overflow-hidden">
+      {/* Cyber Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background-secondary to-background-tertiary"></div>
+      
+      {/* Cyber Grid Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="w-full h-full" style={{
+          backgroundImage: `
+            linear-gradient(rgba(143, 143, 143, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(143, 143, 143, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }}></div>
+      </div>
+
+      <div className="max-w-md w-full text-center relative z-10">
+        {/* 404 Number with Cyber Styling */}
+        <div className="mb-8">
+          <h1 className="text-6xl font-black text-cyber-100 tracking-wider">
+            404
+          </h1>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-cyber-400 to-transparent mx-auto mt-3 cyber-glow"></div>
+        </div>
+
+        {/* Error Message */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-cyber-100 mb-4">
+            NOT FOUND
+          </h2>
+          <p className="text-cyber-300 text-base leading-relaxed font-cyber">
+            The requested resource has been relocated or does not exist in this dimension.
+            <br />
+            <span className="text-cyber-400 text-sm">Initiating return sequence...</span>
+          </p>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="space-y-3 mb-8">
+          <Link
+            href="/"
+            className="inline-block w-full px-6 py-3 bg-transparent border border-cyber-600 hover:border-cyber-400 hover:bg-cyber-800/10 text-cyber-200 font-medium rounded-lg transition-all duration-300 hover:shadow-cyber transform hover:scale-105 font-cyber"
+          >
+            <span className="flex items-center justify-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              RETURN TO PORTFOLIO
+            </span>
+          </Link>
+          
+          <Link
+            href="/blog"
+            className="inline-block w-full px-6 py-3 bg-transparent border border-cyber-600 hover:border-cyber-400 hover:bg-cyber-800/10 text-cyber-200 font-medium rounded-lg transition-all duration-300 hover:shadow-cyber transform hover:scale-105 font-cyber"
+          >
+            <span className="flex items-center justify-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+              ACCESS BLOG ARCHIVE
+            </span>
+          </Link>
+        </div>
+
+        {/* Additional Help */}
+        <div className="pt-6 border-t border-cyber-800">
+          <p className="text-cyber-500 text-xs font-cyber">
+            If this appears to be a system error,{' '}
+            <a 
+              href="mailto:santhoshsunthar@gmail.com" 
+              className="text-cyber-300 hover:text-cyber-100 transition-colors duration-300 underline decoration-cyber-400 hover:decoration-cyber-200"
+            >
+              contact
+            </a>
+          </p>
+        </div>
+
+        {/* Cyber Decorative Elements */}
+        <div className="absolute -top-4 -left-4 w-8 h-8 border-l-2 border-t-2 border-cyber-400 opacity-30"></div>
+        <div className="absolute -top-4 -right-4 w-8 h-8 border-r-2 border-t-2 border-cyber-400 opacity-30"></div>
+        <div className="absolute -bottom-4 -left-4 w-8 h-8 border-l-2 border-b-2 border-cyber-400 opacity-30"></div>
+        <div className="absolute -bottom-4 -right-4 w-8 h-8 border-r-2 border-b-2 border-cyber-400 opacity-30"></div>
+      </div>
+    </div>
+  )
+}
