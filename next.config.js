@@ -6,7 +6,7 @@ const nextConfig = {
     unoptimized: true
   },
   basePath: '/santhossunthar.github.io',
-  assetPrefix: '/santhossunthar.github.io',
+  assetPrefix: '/santhossunthar.github.io/',
   // Mobile performance optimizations
   experimental: {
     optimizePackageImports: ['react', 'react-dom']
