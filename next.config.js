@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  //basePath: process.env.NODE_ENV === 'production' ? '/santhossunthar.github.io' : '',
-  //assetPrefix: process.env.NODE_ENV === 'production' ? '/santhossunthar.github.io' : '',
+  //basePath: '',
+  //assetPrefix: '',
   // Mobile performance optimizations
   experimental: {
     optimizePackageImports: ['react', 'react-dom']
