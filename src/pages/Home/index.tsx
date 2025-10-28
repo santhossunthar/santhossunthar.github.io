@@ -7,6 +7,7 @@ const Main = lazy(() => import('@/components/main/Main').then(module => ({ defau
 const Body = lazy(() => import('@/components/main/Body').then(module => ({ default: module.Body })));
 
 const Home = () => {
+  console.log(process.env.NODE_ENV);
   const containerRef = useRef(null);
 
   return (
