@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const env = process.env.NODE_ENV || 'development';
-
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
