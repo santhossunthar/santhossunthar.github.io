@@ -9,7 +9,7 @@ const nextConfig = {
     unoptimized: true
   },
   basePath: env === 'production' ? '/santhossunthar.github.io' : '',
-  //assetPrefix: env === 'production' ? '/santhos/' : '',
+  assetPrefix: '',
   // Mobile performance optimizations
   experimental: {
     optimizePackageImports: ['react', 'react-dom']
