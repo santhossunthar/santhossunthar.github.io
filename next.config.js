@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
+
+const env = process.env.NODE_ENV || 'development';
+
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true
   },
-  basePath: '/santhossunthar.github.io',
-  assetPrefix: '/santhossunthar.github.io/',
+  basePath: env === 'production' ? '/santhossunthar.github.io' : '',
+  assetPrefix: env === 'production' ? '/santhossunthar.github.io/' : '',
   // Mobile performance optimizations
   experimental: {
     optimizePackageImports: ['react', 'react-dom']
