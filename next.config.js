@@ -8,7 +8,7 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: env === 'production' ? '/santhossunthar.github.io' : '',
+  basePath: '',
   assetPrefix: '',
   // Mobile performance optimizations
   experimental: {
