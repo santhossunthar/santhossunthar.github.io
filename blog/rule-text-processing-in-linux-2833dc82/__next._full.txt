@@ -1,0 +1,1449 @@
+1:"$Sreact.fragment"
+2:I[39756,["/santhossunthar.github.io/_next/static/chunks/0e64749b36951e72.js","/santhossunthar.github.io/_next/static/chunks/c81db6e24f0cfdeb.js"],"default"]
+3:I[58298,["/santhossunthar.github.io/_next/static/chunks/a8e4764864676cae.js"],"default"]
+4:I[37457,["/santhossunthar.github.io/_next/static/chunks/0e64749b36951e72.js","/santhossunthar.github.io/_next/static/chunks/c81db6e24f0cfdeb.js"],"default"]
+5:I[22016,["/santhossunthar.github.io/_next/static/chunks/9a63cbe381364dd2.js"],""]
+10:I[63491,["/santhossunthar.github.io/_next/static/chunks/0e64749b36951e72.js","/santhossunthar.github.io/_next/static/chunks/c81db6e24f0cfdeb.js"],"default"]
+:HL["/santhossunthar.github.io/_next/static/chunks/7d2b476fd6e87653.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap","style"]
+0:{"P":null,"b":"8o_9PV4xTyaUG9iKPO8Vw","c":["","blog","rule-text-processing-in-linux-2833dc82",""],"q":"","i":false,"f":[[["",{"children":["blog",{"children":[["id","rule-text-processing-in-linux-2833dc82","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/santhossunthar.github.io/_next/static/chunks/7d2b476fd6e87653.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"rel":"preload","href":"https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap","as":"style"}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}]]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/santhossunthar.github.io/_next/static/chunks/a8e4764864676cae.js","async":true}]],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"min-h-screen bg-background flex items-center justify-center px-4 relative overflow-hidden","children":[["$","div",null,{"className":"absolute inset-0 bg-gradient-to-br from-background via-background-secondary to-background-tertiary"}],["$","div",null,{"className":"absolute inset-0 opacity-5","children":["$","div",null,{"className":"w-full h-full","style":{"backgroundImage":"\n            linear-gradient(rgba(143, 143, 143, 0.1) 1px, transparent 1px),\n            linear-gradient(90deg, rgba(143, 143, 143, 0.1) 1px, transparent 1px)\n          ","backgroundSize":"50px 50px"}}]}],["$","div",null,{"className":"max-w-md w-full text-center relative z-10","children":[["$","div",null,{"className":"mb-8","children":[["$","h1",null,{"className":"text-6xl font-black text-cyber-100 tracking-wider","children":"404"}],["$","div",null,{"className":"w-24 h-1 bg-gradient-to-r from-transparent via-cyber-400 to-transparent mx-auto mt-3 cyber-glow"}]]}],["$","div",null,{"className":"mb-8","children":[["$","h2",null,{"className":"text-2xl font-bold text-cyber-100 mb-4","children":"NOT FOUND"}],["$","p",null,{"className":"text-cyber-300 text-base leading-relaxed font-cyber","children":["The requested resource has been relocated or does not exist in this dimension.",["$","br",null,{}],["$","span",null,{"className":"text-cyber-400 text-sm","children":"Initiating return sequence..."}]]}]]}],["$","div",null,{"className":"space-y-3 mb-8","children":[["$","$L5",null,{"href":"/","className":"inline-block w-full px-6 py-3 bg-transparent border border-cyber-600 hover:border-cyber-400 hover:bg-cyber-800/10 text-cyber-200 font-medium rounded-lg transition-all duration-300 hover:shadow-cyber transform hover:scale-105 font-cyber","children":["$","span",null,{"className":"flex items-center justify-center gap-2","children":[["$","svg",null,{"className":"w-4 h-4","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"}]}],"RETURN TO PORTFOLIO"]}]}],["$","$L5",null,{"href":"/blog","className":"inline-block w-full px-6 py-3 bg-transparent border border-cyber-600 hover:border-cyber-400 hover:bg-cyber-800/10 text-cyber-200 font-medium rounded-lg transition-all duration-300 hover:shadow-cyber transform hover:scale-105 font-cyber","children":"$L6"}]]}],"$L7","$L8","$L9","$La","$Lb"]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["$Lc",{"children":["$Ld",{"children":["$Le",{},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$Lf",false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
+12:I[97367,["/santhossunthar.github.io/_next/static/chunks/0e64749b36951e72.js","/santhossunthar.github.io/_next/static/chunks/c81db6e24f0cfdeb.js"],"OutletBoundary"]
+13:"$Sreact.suspense"
+15:I[97367,["/santhossunthar.github.io/_next/static/chunks/0e64749b36951e72.js","/santhossunthar.github.io/_next/static/chunks/c81db6e24f0cfdeb.js"],"ViewportBoundary"]
+17:I[97367,["/santhossunthar.github.io/_next/static/chunks/0e64749b36951e72.js","/santhossunthar.github.io/_next/static/chunks/c81db6e24f0cfdeb.js"],"MetadataBoundary"]
+6:["$","span",null,{"className":"flex items-center justify-center gap-2","children":[["$","svg",null,{"className":"w-4 h-4","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"}]}],"ACCESS BLOG ARCHIVE"]}]
+7:["$","div",null,{"className":"pt-6 border-t border-cyber-800","children":["$","p",null,{"className":"text-cyber-500 text-xs font-cyber","children":["If this appears to be a system error,"," ",["$","a",null,{"href":"mailto:santhoshsunthar@gmail.com","className":"text-cyber-300 hover:text-cyber-100 transition-colors duration-300 underline decoration-cyber-400 hover:decoration-cyber-200","children":"contact"}]]}]}]
+8:["$","div",null,{"className":"absolute -top-4 -left-4 w-8 h-8 border-l-2 border-t-2 border-cyber-400 opacity-30"}]
+9:["$","div",null,{"className":"absolute -top-4 -right-4 w-8 h-8 border-r-2 border-t-2 border-cyber-400 opacity-30"}]
+a:["$","div",null,{"className":"absolute -bottom-4 -left-4 w-8 h-8 border-l-2 border-b-2 border-cyber-400 opacity-30"}]
+b:["$","div",null,{"className":"absolute -bottom-4 -right-4 w-8 h-8 border-r-2 border-b-2 border-cyber-400 opacity-30"}]
+c:["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+e:["$","$1","c",{"children":["$L11",[["$","script","script-0",{"src":"/santhossunthar.github.io/_next/static/chunks/db5674b9ab931fc0.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/santhossunthar.github.io/_next/static/chunks/093e24ded8589b78.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/santhossunthar.github.io/_next/static/chunks/e4f6a69fc6dbae56.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/santhossunthar.github.io/_next/static/chunks/da60825b23f55067.js","async":true,"nonce":"$undefined"}],["$","script","script-4",{"src":"/santhossunthar.github.io/_next/static/chunks/ca4521b7274413c4.js","async":true,"nonce":"$undefined"}]],["$","$L12",null,{"children":["$","$13",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]]}]
+f:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$@16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$13",null,{"name":"Next.Metadata","children":"$@18"}]}]}],null]}]
+19:I[70241,["/santhossunthar.github.io/_next/static/chunks/db5674b9ab931fc0.js","/santhossunthar.github.io/_next/static/chunks/093e24ded8589b78.js","/santhossunthar.github.io/_next/static/chunks/e4f6a69fc6dbae56.js","/santhossunthar.github.io/_next/static/chunks/da60825b23f55067.js","/santhossunthar.github.io/_next/static/chunks/ca4521b7274413c4.js"],"default"]
+1a:I[41560,["/santhossunthar.github.io/_next/static/chunks/db5674b9ab931fc0.js","/santhossunthar.github.io/_next/static/chunks/093e24ded8589b78.js","/santhossunthar.github.io/_next/static/chunks/e4f6a69fc6dbae56.js","/santhossunthar.github.io/_next/static/chunks/da60825b23f55067.js","/santhossunthar.github.io/_next/static/chunks/ca4521b7274413c4.js"],"default"]
+1b:I[86425,["/santhossunthar.github.io/_next/static/chunks/db5674b9ab931fc0.js","/santhossunthar.github.io/_next/static/chunks/093e24ded8589b78.js","/santhossunthar.github.io/_next/static/chunks/e4f6a69fc6dbae56.js","/santhossunthar.github.io/_next/static/chunks/da60825b23f55067.js","/santhossunthar.github.io/_next/static/chunks/ca4521b7274413c4.js"],"default"]
+1c:I[21962,["/santhossunthar.github.io/_next/static/chunks/db5674b9ab931fc0.js","/santhossunthar.github.io/_next/static/chunks/093e24ded8589b78.js","/santhossunthar.github.io/_next/static/chunks/e4f6a69fc6dbae56.js","/santhossunthar.github.io/_next/static/chunks/da60825b23f55067.js","/santhossunthar.github.io/_next/static/chunks/ca4521b7274413c4.js"],"default"]
+1d:T25a2,
+# Rule Text Processing in Linux using Grep, Sed, and Awk
+
+Are you a Linux user? Not a lover? 🫣 Are you fully exploring the power of your Linux system? At the end of this article you'll be!
+
+Therefore, it's inevitable to learn some important utilities we often use for text processing in Linux such as "grep", "sed" and "awk". This article will introduce these tools, highlight their key use cases, and provide practical examples to solve common Linux text processing challenges.
+
+Let's jump into the segment without wasting time…
+
+## Grep
+
+The name "grep" stands for Global Regular Expression Print, and it's a command line utility in Linux and it's a powerful tool also. Grep stands out as one of the most versatile and essential tool for any Linux user specially if you're gonna perform data searching and extraction from different data types. It's an old Unix utility and released nearly 50 years ago since 2024. You don't need to install this tool. It's pre-installed in Linux. It allows searching for matches to certain text patterns (regular expressions) in files.
+
+```bash
+# Get help
+grep -h
+```
+
+Grep is used for a wide range of text processing tasks, including:
+
+- Searching for specific text patterns in files
+- Filtering outputs of other commands
+- Extracting useful information from log files
+- Analyzing large datasets
+
+### Basic Syntax:
+```bash
+grep [options] pattern [file_name]
+```
+
+If file name is not provided then "grep" will take standard input from the shell environment.
+
+### Use Cases
+
+Mainly it can be used for searching plain text data for lines that match a regular expression.
+
+Note that Grep tool is case sensitive.
+
+Let's try the below command…
+
+```bash
+echo "Hello World!" | grep "World"
+```
+
+**Output:**
+```
+Hello World!
+```
+
+In the above command, grep takes standard input and processing it to match for the "World" text and it prints the entire line of text. Therefore, need to look at the default behavior of the Grep command, it searches for the pattern match throughout the inputted text and if it finds a match then it prints the entire line that contains the word we're searching for.
+
+Let's try for a text file that contains following data.
+
+**File Name: myfile.txt**
+
+```plain-text
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+```
+
+```bash
+cat myfile.txt | grep "Name"
+```
+
+**Output:**
+```plain-text
+File Name: myfile.txt
+```
+
+**Also we can run like the below if we're in the input file directory:**
+```bash
+grep "Name" myfile.txt
+```
+
+**Or need to provide an absolute path of the input file:**
+```bash
+grep "Name" /home/santhos/Desktop/myfile.txt
+```
+
+Now you know that Grep tool finds the specified text in the input stream and prints the entire line if there's a match.
+
+Now, let's update the "myfile.txt" file and try to get the same text we tried to get before.
+
+**File Name: myfile.txt**
+
+```plain-text
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+So, now we could see the output like below…
+
+```bash
+cat myfile.txt | grep "Name"
+```
+
+**Output:**
+```plain-text
+File Name: myfile.txt
+Author Name: Santhos Sunthar
+```
+
+Therefore, now you could get an idea about the basic function of this tool and the output pattern.
+
+Let's do something differently!
+
+```bash
+cat myfile.txt | grep -i "Name"
+```
+
+**Output:**
+```plain-text
+File Name: myfile.txt
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+Have you noticed the difference between the previous command and the last one? We've added "-i" attribute to tell grep to perform case insensitive search right. Therefore, we could get results for "Name" and "name" keywords.
+
+How can we get line numbers of the word we search in the specified txt file? We need to add an another attribute "-n" to get line numbers.
+
+```bash
+cat myfile.txt | grep -i -n "Name"
+```
+
+**Output:**
+```plain-text
+3:File Name: myfile.txt
+9:Author Name: Santhos Sunthar
+10:Function name: UtilityTest
+```
+
+## Sed
+
+"sed" stands for "Stream Editor." It's used for parsing and transforming text in a data stream or a file using a simple and compact programming language.
+
+### Use Cases
+- Substitute text in a file
+- Remove lines or text patterns
+- Insert text at specific locations
+
+```bash
+# Get help
+sed -h
+```
+
+It's a powerful and handy tool to substitute text.
+
+```bash
+echo "Hello World!" | sed s/World/Folks/
+```
+
+**Output:**
+```plain-text
+Hello Folks!
+```
+
+What will happen for the below command execution?
+
+```bash
+echo "Hello World! Ah, add another World..." | sed s/World/Folks/
+```
+
+**Output:**
+```plain-text
+Hello Folks! Ah, add another World
+```
+
+As you could see, only the first value of "World" was being substituted but not the second one. Therefore, if we need to substitute all the occurrences of the input data then we have to execute the command like below…
+
+```bash
+echo "Hello World! Ah, add another World..." | sed s/World/Folks/g
+```
+
+**Output:**
+```plain-text
+Hello Folks! Ah, add another Folks
+```
+
+We can substitute text in our myfile.txt too!
+
+```bash
+sed s/name/Name/g myfile.txt
+```
+
+**Output:**
+```plain-text
+# myfile.txt
+
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+
+Author Name: Santhos Sunthar
+Function Name: UtilityTest
+```
+
+How can we remove the first line that starts with "#" from our myfile.txt?
+
+```bash
+sed /^#/d myfile.txt
+```
+
+**Output:**
+```plain-text
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+In the above command execution, all the comments that contains "#" were removed in the "myfile.txt".
+
+Let's insert a new line in the second line of myfile.txt…
+
+```bash
+sed '2i\# Configuration File' myfile.txt
+```
+
+**Output:**
+```plain-text
+# myfile.txt
+# Configuration File
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+Also, we can remove blank lines from the myfile.txt.
+
+```bash
+sed /^$/d myfile.txt
+```
+
+**Output:**
+```plain-text
+# myfile.txt
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+Now If we have multiple files, So how can we substitute text in those all files at once? Let's try this command…
+
+```bash
+sed s/anything/special/g *.txt
+```
+
+## Awk
+
+"awk" is a powerful programming language designed for text processing, and It is typically used as a data extraction and reporting tool.
+
+### Use Cases
+- Select specific fields from structured text files
+- Perform complex text transformations
+- Summarize data from files
+
+Let's print the first column of myfile.txt.
+
+```bash
+awk '{print $1}' myfile.txt
+```
+
+**Output:**
+```plain-text
+#
+File
+Created
+Updated
+Secure:
+Author
+Function
+```
+
+Let's print the third column of myfile.txt.
+
+```bash
+awk '{print $3}' myfile.txt
+```
+
+**Output:**
+```plain-text
+myfile.txt
+August
+August
+
+Santhos
+UtilityTest
+```
+
+Now you could have an idea on the "awk" command and its text processing function. It goes through all lines one by one and treats spaces as a default delimiter to split a line of text and find the word which is placed in the specified number in the command. For an example, the tool splits the line and find the word in third occurrence in the last command execution.
+
+Can we count the number of lines that starts with "#" in the myfile.txt?
+
+```bash
+awk '/#/{count++}END{print count}' myfile.txt
+```
+
+**Output:**
+```plain-text
+1
+```
+
+Above output shows that the myfile.txt only contains a commented line that's "# myfile.txt".
+
+Let's filter the "Author Name" and "Function Name"…
+
+```bash
+awk -F: '/Author Name|Function name/{print $2}' myfile.txt
+```
+
+**Output:**
+```plain-text
+Santhos Sunthar
+GrepTest
+```
+
+We can format it in a good way!
+
+```bash
+awk -F': ' '/Author Name|Function name/ {printf "%s: %s\n", $1, $2}' myfile.txt
+```
+
+**Output:**
+```plain-text
+Author Name: Santhos Sunthar
+Function name: GrepTest
+```
+
+Let's extract the timeline information of myfile.txt…
+
+```bash
+awk -F': ' '/Created At|Updated At/{print $2}' myfile.txt
+```
+
+**Output:**
+```plain-text
+August 5, 2024
+August 9, 2024
+```
+
+Let's check whether the myfile.txt is secure or not…
+
+```bash
+awk -F: '/Secure/{if($2~/True/) print "myfile.txt is secure"; else print "myfile.txt is not secure"}' myfile.txt
+```
+
+**Output:**
+```plain-text
+myfile.txt is secure
+```
+
+You learnt these commands now to explore text processing in Linux!
+
+Let's explore the benefits of pipelining these commands…
+
+I'm gonna extract timeline information to modify it. So, let's change the month "August" to "July".
+
+```bash
+grep 'At:' myfile.txt | sed 's/August 9/August 10/' | awk -F': ' '{print $2}'
+```
+
+**Output:**
+```plain-text
+August 5, 2024
+August 10, 2024
+```
+
+Let's format the output data nicely using "awk" and "sed".
+
+```bash
+awk -F': ' '/File Name|Author Name|Secure/ {print $1 ": " $2}' myfile.txt | sed 's/^/-> /'
+```
+
+**Output:**
+```plain-text
+-> File Name: myfile.txt
+-> Secure: True
+-> Author Name: Santhos Sunthar
+```
+
+By combining "grep", "sed" and "awk", you can create powerful and flexible scripts to handle complex text processing tasks in Linux.
+
+## Conclusion
+
+I hope you liked this article, and mastering in "grep", "sed" and "awk" can significantly enhance your ability to process and analyze text data in Linux systems. Therefore, why are you waiting to make your hands dirty? Let's practice these amazing utilities in your favorite Linux distro! 🙂11:["$","div",null,{"className":"min-h-screen bg-black","children":[["$","div",null,{"className":"lg:hidden","children":["$","$L19",null,{"postTitle":"Rule Text Processing in Linux using Grep, Sed, and Awk"}]}],["$","div",null,{"className":"w-full","children":["$","div",null,{"className":"grid grid-cols-1 lg:grid-cols-12 min-h-screen","children":[["$","div",null,{"className":"hidden lg:flex lg:col-span-2 flex-col sticky top-0 h-screen border-r border-white/20","children":["$","$L1a",null,{"currentView":"posts"}]}],["$","div",null,{"className":"lg:col-span-7 px-4 border-r border-white/20","children":[["$","div",null,{"className":"hidden lg:block sticky top-0 z-10 bg-black/95 backdrop-blur-sm border-b border-white/30 py-3 px-2 mb-6","children":["$","$L1b",null,{"items":[{"label":"Blog","path":"/blog"},{"label":"Rule Text Processing in Linux using Grep, Sed, and Awk"}]}]}],["$","div",null,{"className":"lg:hidden pt-16"}],["$","div",null,{"className":"relative z-0","children":["$","$13",null,{"fallback":["$","div",null,{"className":"flex items-center justify-center py-12","children":["$","div",null,{"className":"animate-spin rounded-full h-8 w-8 border-b-2 border-white"}]}],"children":["$","$L1c",null,{"post":{"id":"rule-text-processing-in-linux","shortId":"rule-text-processing-in-linux-2833dc82","title":"Rule Text Processing in Linux using Grep, Sed, and Awk","date":"2024-11-19","category":"Linux","tags":["Linux","Command Line","Text Processing","Grep","Sed","Awk"],"readTime":"6 min read","author":"Santhos Suntharalingam","featured":true,"content":"$1d","excerpt":"Master the essential Linux text processing utilities - grep, sed, and awk. Learn how to search, filter, and transform text data efficiently with practical examples and real-world use cases."}}]}]}]]}],"$L1e"]}]}]]}]
+1f:I[32483,["/santhossunthar.github.io/_next/static/chunks/db5674b9ab931fc0.js","/santhossunthar.github.io/_next/static/chunks/093e24ded8589b78.js","/santhossunthar.github.io/_next/static/chunks/e4f6a69fc6dbae56.js","/santhossunthar.github.io/_next/static/chunks/da60825b23f55067.js","/santhossunthar.github.io/_next/static/chunks/ca4521b7274413c4.js"],"default"]
+20:T25a2,
+# Rule Text Processing in Linux using Grep, Sed, and Awk
+
+Are you a Linux user? Not a lover? 🫣 Are you fully exploring the power of your Linux system? At the end of this article you'll be!
+
+Therefore, it's inevitable to learn some important utilities we often use for text processing in Linux such as "grep", "sed" and "awk". This article will introduce these tools, highlight their key use cases, and provide practical examples to solve common Linux text processing challenges.
+
+Let's jump into the segment without wasting time…
+
+## Grep
+
+The name "grep" stands for Global Regular Expression Print, and it's a command line utility in Linux and it's a powerful tool also. Grep stands out as one of the most versatile and essential tool for any Linux user specially if you're gonna perform data searching and extraction from different data types. It's an old Unix utility and released nearly 50 years ago since 2024. You don't need to install this tool. It's pre-installed in Linux. It allows searching for matches to certain text patterns (regular expressions) in files.
+
+```bash
+# Get help
+grep -h
+```
+
+Grep is used for a wide range of text processing tasks, including:
+
+- Searching for specific text patterns in files
+- Filtering outputs of other commands
+- Extracting useful information from log files
+- Analyzing large datasets
+
+### Basic Syntax:
+```bash
+grep [options] pattern [file_name]
+```
+
+If file name is not provided then "grep" will take standard input from the shell environment.
+
+### Use Cases
+
+Mainly it can be used for searching plain text data for lines that match a regular expression.
+
+Note that Grep tool is case sensitive.
+
+Let's try the below command…
+
+```bash
+echo "Hello World!" | grep "World"
+```
+
+**Output:**
+```
+Hello World!
+```
+
+In the above command, grep takes standard input and processing it to match for the "World" text and it prints the entire line of text. Therefore, need to look at the default behavior of the Grep command, it searches for the pattern match throughout the inputted text and if it finds a match then it prints the entire line that contains the word we're searching for.
+
+Let's try for a text file that contains following data.
+
+**File Name: myfile.txt**
+
+```plain-text
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+```
+
+```bash
+cat myfile.txt | grep "Name"
+```
+
+**Output:**
+```plain-text
+File Name: myfile.txt
+```
+
+**Also we can run like the below if we're in the input file directory:**
+```bash
+grep "Name" myfile.txt
+```
+
+**Or need to provide an absolute path of the input file:**
+```bash
+grep "Name" /home/santhos/Desktop/myfile.txt
+```
+
+Now you know that Grep tool finds the specified text in the input stream and prints the entire line if there's a match.
+
+Now, let's update the "myfile.txt" file and try to get the same text we tried to get before.
+
+**File Name: myfile.txt**
+
+```plain-text
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+So, now we could see the output like below…
+
+```bash
+cat myfile.txt | grep "Name"
+```
+
+**Output:**
+```plain-text
+File Name: myfile.txt
+Author Name: Santhos Sunthar
+```
+
+Therefore, now you could get an idea about the basic function of this tool and the output pattern.
+
+Let's do something differently!
+
+```bash
+cat myfile.txt | grep -i "Name"
+```
+
+**Output:**
+```plain-text
+File Name: myfile.txt
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+Have you noticed the difference between the previous command and the last one? We've added "-i" attribute to tell grep to perform case insensitive search right. Therefore, we could get results for "Name" and "name" keywords.
+
+How can we get line numbers of the word we search in the specified txt file? We need to add an another attribute "-n" to get line numbers.
+
+```bash
+cat myfile.txt | grep -i -n "Name"
+```
+
+**Output:**
+```plain-text
+3:File Name: myfile.txt
+9:Author Name: Santhos Sunthar
+10:Function name: UtilityTest
+```
+
+## Sed
+
+"sed" stands for "Stream Editor." It's used for parsing and transforming text in a data stream or a file using a simple and compact programming language.
+
+### Use Cases
+- Substitute text in a file
+- Remove lines or text patterns
+- Insert text at specific locations
+
+```bash
+# Get help
+sed -h
+```
+
+It's a powerful and handy tool to substitute text.
+
+```bash
+echo "Hello World!" | sed s/World/Folks/
+```
+
+**Output:**
+```plain-text
+Hello Folks!
+```
+
+What will happen for the below command execution?
+
+```bash
+echo "Hello World! Ah, add another World..." | sed s/World/Folks/
+```
+
+**Output:**
+```plain-text
+Hello Folks! Ah, add another World
+```
+
+As you could see, only the first value of "World" was being substituted but not the second one. Therefore, if we need to substitute all the occurrences of the input data then we have to execute the command like below…
+
+```bash
+echo "Hello World! Ah, add another World..." | sed s/World/Folks/g
+```
+
+**Output:**
+```plain-text
+Hello Folks! Ah, add another Folks
+```
+
+We can substitute text in our myfile.txt too!
+
+```bash
+sed s/name/Name/g myfile.txt
+```
+
+**Output:**
+```plain-text
+# myfile.txt
+
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+
+Author Name: Santhos Sunthar
+Function Name: UtilityTest
+```
+
+How can we remove the first line that starts with "#" from our myfile.txt?
+
+```bash
+sed /^#/d myfile.txt
+```
+
+**Output:**
+```plain-text
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+In the above command execution, all the comments that contains "#" were removed in the "myfile.txt".
+
+Let's insert a new line in the second line of myfile.txt…
+
+```bash
+sed '2i\# Configuration File' myfile.txt
+```
+
+**Output:**
+```plain-text
+# myfile.txt
+# Configuration File
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+Also, we can remove blank lines from the myfile.txt.
+
+```bash
+sed /^$/d myfile.txt
+```
+
+**Output:**
+```plain-text
+# myfile.txt
+File Name: myfile.txt
+Created At: August 5, 2024
+Updated At: August 9, 2024
+Secure: True
+Author Name: Santhos Sunthar
+Function name: UtilityTest
+```
+
+Now If we have multiple files, So how can we substitute text in those all files at once? Let's try this command…
+
+```bash
+sed s/anything/special/g *.txt
+```
+
+## Awk
+
+"awk" is a powerful programming language designed for text processing, and It is typically used as a data extraction and reporting tool.
+
+### Use Cases
+- Select specific fields from structured text files
+- Perform complex text transformations
+- Summarize data from files
+
+Let's print the first column of myfile.txt.
+
+```bash
+awk '{print $1}' myfile.txt
+```
+
+**Output:**
+```plain-text
+#
+File
+Created
+Updated
+Secure:
+Author
+Function
+```
+
+Let's print the third column of myfile.txt.
+
+```bash
+awk '{print $3}' myfile.txt
+```
+
+**Output:**
+```plain-text
+myfile.txt
+August
+August
+
+Santhos
+UtilityTest
+```
+
+Now you could have an idea on the "awk" command and its text processing function. It goes through all lines one by one and treats spaces as a default delimiter to split a line of text and find the word which is placed in the specified number in the command. For an example, the tool splits the line and find the word in third occurrence in the last command execution.
+
+Can we count the number of lines that starts with "#" in the myfile.txt?
+
+```bash
+awk '/#/{count++}END{print count}' myfile.txt
+```
+
+**Output:**
+```plain-text
+1
+```
+
+Above output shows that the myfile.txt only contains a commented line that's "# myfile.txt".
+
+Let's filter the "Author Name" and "Function Name"…
+
+```bash
+awk -F: '/Author Name|Function name/{print $2}' myfile.txt
+```
+
+**Output:**
+```plain-text
+Santhos Sunthar
+GrepTest
+```
+
+We can format it in a good way!
+
+```bash
+awk -F': ' '/Author Name|Function name/ {printf "%s: %s\n", $1, $2}' myfile.txt
+```
+
+**Output:**
+```plain-text
+Author Name: Santhos Sunthar
+Function name: GrepTest
+```
+
+Let's extract the timeline information of myfile.txt…
+
+```bash
+awk -F': ' '/Created At|Updated At/{print $2}' myfile.txt
+```
+
+**Output:**
+```plain-text
+August 5, 2024
+August 9, 2024
+```
+
+Let's check whether the myfile.txt is secure or not…
+
+```bash
+awk -F: '/Secure/{if($2~/True/) print "myfile.txt is secure"; else print "myfile.txt is not secure"}' myfile.txt
+```
+
+**Output:**
+```plain-text
+myfile.txt is secure
+```
+
+You learnt these commands now to explore text processing in Linux!
+
+Let's explore the benefits of pipelining these commands…
+
+I'm gonna extract timeline information to modify it. So, let's change the month "August" to "July".
+
+```bash
+grep 'At:' myfile.txt | sed 's/August 9/August 10/' | awk -F': ' '{print $2}'
+```
+
+**Output:**
+```plain-text
+August 5, 2024
+August 10, 2024
+```
+
+Let's format the output data nicely using "awk" and "sed".
+
+```bash
+awk -F': ' '/File Name|Author Name|Secure/ {print $1 ": " $2}' myfile.txt | sed 's/^/-> /'
+```
+
+**Output:**
+```plain-text
+-> File Name: myfile.txt
+-> Secure: True
+-> Author Name: Santhos Sunthar
+```
+
+By combining "grep", "sed" and "awk", you can create powerful and flexible scripts to handle complex text processing tasks in Linux.
+
+## Conclusion
+
+I hope you liked this article, and mastering in "grep", "sed" and "awk" can significantly enhance your ability to process and analyze text data in Linux systems. Therefore, why are you waiting to make your hands dirty? Let's practice these amazing utilities in your favorite Linux distro! 🙂21:T1b65,
+# Batch File Processing in Linux
+
+We are going to see how batch file processing makes your life easier with any Unix like operating systems including Linux when it comes to deal with files and directories.
+
+So, Let's get started…
+
+## Find Utility
+
+"find" is used to search any files or directories in your Linux machine. Let's see how we can do that effectively for our own needs!
+
+Your questions would be like these…
+
+- How can I find a file using its name?
+- How can I find a directory using its name?
+- How can I find a file using its extension?
+- How can I find a file using its size?
+
+Therefore, we can use "find" command to solve those questions!
+
+First of all, we should know the common syntax of the "find" command.
+
+```bash
+root@host:~$ find [path] [expression1] [expression2] [expression3]
+```
+
+Now, we can use the above command pattern to fulfill our batch file processing needs!
+
+### Finding a File using Its Name
+
+To find a file using its name, we should know the specific filename and the path that file exists.
+
+```bash
+root@host:~$ find /etc -name "passwd"
+```
+
+The above command finds all files with the name "passwd".
+
+What will happen if we do not provide "path" parameter in "find" command? It will automatically set the current working directory as the path and It will try to find the file from the current working directory file index.
+
+The above command only looks files without the concern of extensions. It will not find "passwd.txt" file. If we want to include extensions in our search then we have to use the following command…
+
+```bash
+root@host:~$ find /etc -name "passwd*"
+```
+
+The "passwd*" pattern matches files whose names begin with "passwd" including extension.
+
+### Finding a Directory using Its Name
+
+To find a directory using its name, we should know the directory name and the specific path that the directory exists. Also, we should provide a parameter called "type" as "d".
+
+```bash
+root@host:~$ find /var -name "www" -type d
+```
+
+The above command finds the specified "www" directory within "/usr" directory path.
+
+### Finding a File using Its Extension
+
+To find a file using its extension, we should provide the following command.
+
+```bash
+root@host:~$ find /var/www -name "*.html"
+```
+
+The above command finds all the "html" files within "/var/www" directory path. "*" is a placeholder that represents all the filenames.
+
+### Finding a File using Its Size
+
+To find a file using its size, we should provide another parameter called "size".
+
+```bash
+root@host:~$ find /var/www -name "*.png" -size +1M
+```
+
+The above command finds all "png" files within the specified directory path whose size is greater than "1 Megabyte (1M)".
+
+## Use Case of Find Utility
+
+Think that you are currently working on a directory that contains lot of "txt" files. Now, you should need to convert all of the "txt" files into "json" files. How can you solve this problem without changing each file manually by editing each file's extension from ".txt" to ".json"?
+
+Now, we can use "find" command to solve this problem by automating all the tasks using a "Bash" script.
+
+```bash
+#!/bin/bash
+
+for i in `find -name "*.txt"`; do
+  "$i" > "${i%.*}.json";
+done
+```
+
+The above script contains a "for" loop that iterates over each file name and new file will be created with ".json" extension in each iteration.
+
+## Xargs Utility
+
+"xargs" is used to execute multiple commands by passing arguments from the input stream.
+
+For an example, if we want to pass 100 arguments to the "touch" command to create 100 ".txt" files then "xargs" command will help us.
+
+Let's see this scenario…
+
+We have a file named as "backup.txt" and that file contains following data.
+
+```plain-text
+2024-01_backup-01
+2024-01_backup-02
+2024-01_backup-03
+2024-01_backup-04
+2024-01_backup-05
+...
+...
+...
+2024-01_backup-100
+```
+
+The task is…
+
+We have to create "txt" files that should be named in "2024–01_backup-[number]" pattern. Shall we do it manually by using touch command by specifying each filename like this?
+
+```bash
+root@host:~$ touch 2024-01_backup-01 2024-01_backup-02 2024-01_backup-03 ... 2024-01_backup-100
+```
+
+Boring!
+
+Then how we can solve this problem efficiently? "xargs" comes into play in these kind of scenarios!
+
+Let's see how we can do this by using "xargs" command…
+
+```bash
+root@host:~$ cat backup.txt | xargs touch
+```
+
+The above simple command creates 100 "txt" files named as its own from the "backup.txt" file data as inputs.
+
+To view the newly created files, use "ls" command.
+
+```bash
+root@host:~$ ls
+2024-01_backup-01 2024-01_backup-02 2024-01_backup-03 2024-01_backup-04
+2024-01_backup-05 2024-01_backup-06 ... 2024-01_backup-99 2024-01_backup-100
+```
+
+Where is ".txt" extension of all of the newly created files? To add an extension, we should customize our "xargs" command.
+
+```bash
+root@host:~$ cat backup.txt | xargs -i touch {}.txt
+```
+
+The above command prints the data of the "backup.txt" file and "xargs" command gets the all printed output and each line will be passed as an argument to the "touch" command through the "{}" placeholder.
+
+If we want to use custom placeholder instead of "{}" then we have to use "-I" instead of "-i" parameter.
+
+```bash
+root@host:~$ cat backup.txt | xargs -I arg_name touch arg_name.txt
+```
+
+How we can pass number of arguments into a command? For this, we should specify how many arguments should be passed into a command when a single command execution happens by using "-n" parameter.
+
+For an example, we have a "txt" file named as "data.txt" that contains following data.
+
+```plain-text
+Food=Rice Fruit=Banana Drink=Milk
+```
+
+Now, we can print each pair of data in newline from the above "data.txt" with the help of "xargs" command by passing number of arguments.
+
+```bash
+root@host:~$ cat data.txt | xargs -n 1 echo
+Food = Rice
+Fruit = Banana
+Drink = Milk
+```
+
+What will happen, if we give 2 arguments…
+
+```bash
+root@host:~$ cat data.txt | xargs -n 2 echo
+Food=Rice Fruit=Banana
+Drink=Milk
+```
+
+Like this, we can control the number of arguments before passing into any commands.
+
+## Use Case of Xargs Utility
+
+We have "filenames.txt" file that contains the following data…
+
+```plain-text
+passwd
+secrets
+admin
+index
+```
+
+Our current working directory listing is…
+
+```bash
+root@host:~$ ls
+admin.php  filenames.txt  secrets.json
+```
+
+Task is…
+
+We have to find files whether files exist or not in the current working directory.
+
+To solve this task, we can use "xargs" command…
+
+```bash
+root@host:~$ cat filenames.txt | xargs -I file_name sh -c 'find -name "file_name*"'
+./secrets.json
+./admin.php
+```
+
+The above commands find files from the current directory by using "filenames.txt" data. "sh -c" executes the "find" command for each filename separately.
+
+## Conclusion
+
+That's all about this reading and It's time to end! I hope this article will be helpful to accomplish your batch file processing activities! Thank you for putting your eyesight and five minutes on this article. I'll see you again with my future post! 😊22:T252a,
+# Introduction
+
+Why Bash? Do you know that you can automate your most of the daily tasks by using Bash scripting! Sequence of commands can be automated and perform repeatedly. Bash is a Unix shell and command language written by Brian Fox and first released in 1989.
+
+## Creating Bash Files
+
+`.sh` extension is used to create Bash files. We can create Bash files manually or using touch or nano commands in Linux system.
+
+```bash
+root@host:~$ nano my_bash_file.sh
+```
+
+The above command will create a bash file name called "my_bash_file" with the extension ".sh".
+
+## Simple Hello World Script
+
+In the Linux terminal whatever commands we execute to do any task can be recorded into a Bash file and all the recorded tasks can be executed by using a single command in the Terminal.
+
+When we create Bash files, we often define the file belongs to Bash file by defining shebang `#!/bin/bash` at the first line of the file.
+
+Let's create hello_world.sh file:
+
+```bash
+root@host:~$ nano hello_world.sh
+```
+
+Write a command to print "Hello World!":
+
+```bash
+#!/bin/bash
+
+echo "Hello World!"
+```
+
+We can execute the above script after saving the file using "bash" command:
+
+```bash
+root@host:~$ bash hello_world.sh
+```
+
+If we make the file executable then we can execute the script by using "./" and your file name as postfix. To make the file as executable, we should set permission to execute the program. To set permissions for a file, we can use "chmod" command:
+
+```bash
+root@host:~$ chmod +x hello_world.sh
+```
+
+The above command sets executable permission to the specified file. "chmod" is used to change the permissions and "+x" adds the execute permission. If you need to remove the permission then use "-x". "+" for adding permission and "-" for removing permission of a file.
+
+Now we can execute our bash script file by putting "./" at the start of the file name:
+
+```bash
+root@host:~$ ./hello_world.sh
+```
+
+Above both commands will execute our script file to perform the specified tasks.
+
+## Passing Arguments to a Script
+
+While performing some certain tasks, our script often need some arguments from the user input. Therefore, arguments can be passed to a script while its execution and passed values can be captured by using "$" sign with the arguments passed order.
+
+```bash
+#!/bin/bash
+
+echo $1 $2
+```
+
+Above statement's `$1` represents the first argument and `$2` represents the second argument to be passed.
+
+```bash
+root@host:~$ ./hello_world.sh "Hello" "World"
+```
+
+If we see the above command line, `$1` represents "Hello" and `$2` represents "World" and the program output will be "Hello World".
+
+
+## Variables
+
+Variables are not strictly typed in Bash means if we provide a value to a variable then bash will understand and interpret the corresponding data type of that value. Just use meaningful names when you define and initialize variables. Variable can contain letters, underscores and numbers but it cannot start with a number and it is case sensitive.
+
+```bash
+#!/bin/bash
+
+firstName="Santhos"
+lastName="Sunthar"
+age=24
+```
+
+Make sure that you do not include spaces between the variable name and specified value otherwise you will end up with "command not found error".
+
+```bash
+#!/bin/bash
+
+firstName = "Santhos"  # Wrong
+firstName="Santhos"    # Correct
+```
+
+When we access the variable in any place within the file, we should use "$" sign to access the variable's specified value.
+
+```bash
+#!/bin/bash
+
+firstName="Santhos"
+
+echo $firstName  # Output >>> Santhos
+```
+
+### Variable Scope
+
+#### Global Scope
+
+Global variable is defined and accessible throughout the entire script. It can be accessed from the function and also outside of the function.
+
+```bash
+#!/bin/bash
+
+variable="I am global and I can be accessed from anywhere!"
+
+function testVariable() {
+  echo "Accessed from the function: $variable"
+}
+
+testVariable
+echo "Accessed from outside of the function: $variable"
+```
+
+#### Local Scope
+
+Variable which is defined within a function using "local" keyword and it is only accessible within the function. It will not affect the global variable which contains same name as the local variable.
+
+```bash
+#!/bin/bash
+
+variable="I am global and I can be accessed from anywhere!"
+
+function testVariable() {
+  local variable="I am local and I am only accessible within the function!"
+  echo "Accessed from the function: $variable"
+}
+
+testVariable
+echo "Accessed from outside of the function: $variable"
+```
+
+If you do not define the local variable within the function using "local" keyword then the variable will be treated as a global variable and the value of the variable will be modified.
+
+
+## String Concatenation
+
+We can concatenate multiple strings to produce a new string.
+
+```bash
+#!/bin/bash
+
+firstName="Santhos"
+lastName="Sunthar"
+age=24
+
+fullName="$firstName $lastName"  
+
+echo $fullName  # Output >>> Santhos Sunthar
+```
+
+## Arithmetic Operators
+
+Arithmetic operators are useful when performing addition, subtraction, multiplication, division and etc.
+
+- `(+)` - Addition
+- `(-)` - Subtraction
+- `(*)` - Multiplication
+- `(/)` - Division
+- `(%)` - Modulus (To get the reminder of division)
+- `(**)` - Exponentiation
+- `(++)` - Increment
+- `(--)` - Decrement
+- `(=)` - Assignment
+
+Arithmetic operations should be performed within double open and close parenthesizes.
+
+```bash
+#!/bin/bash
+
+number=5
+
+square=$(($number ** 2))
+echo $square  # Output >>> 25
+```
+
+When writing expressions be aware that we cannot use spaces between the variable name and the equal sign.
+
+```bash
+#!/bash
+
+sum = $((100 + 200))  # Wrong
+sum=$((100 + 200))    # Correct
+```
+
+When you have a string that contains a variable name, "let" keyword can be used to access the specific variable's value by using the variable name.
+
+```bash
+#!/bin/bash
+
+let "sum = 100 + 200"
+echo $sum  # Output >>> 300
+```
+
+You can see that the above command "sum = 100 + 200" does not contain parenthesizes and it can contain spaces between the variable name and specified values.
+
+
+
+## Conditional Operators
+
+Conditional operators are useful when we need to make decisions. We can achieve this by using if, elif and else statements.
+
+Before moving into the statements we should know the comparison operators which are used to compare values in bash to make decisions.
+
+### Comparison Operators
+
+- `-gt`: Greater than
+- `-ge`: Greater than or equal
+- `-lt`: Less than
+- `-le`: Less than or equal
+- `-eq`: Equal
+- `-ne`: Not equal
+
+### if Statement
+
+```bash
+#!/bin/bash
+
+if [ $age -ge 21 ]; then
+  echo "You are eligible!"
+fi
+```
+
+Did you see the "fi" keyword at the end of the if statement. "fi" is used to terminate the if statement which is the reversed form of "if" keyword.
+
+### if and else Statements
+
+```bash
+#!/bin/bash
+
+if [ $age -ge 21 ]; then
+  echo "You are eligible!"
+else
+  echo "You are not eligible!"
+fi 
+```
+
+### if and elif Statements
+
+```bash
+#!/bin/bash
+
+if [ $marks -ge 75 ]; then
+  echo "You are doing well!"
+elif [ $marks -ge 50 ]; then
+  echo "You can improve than this!"
+else
+  echo "Poor performance!"
+fi
+```
+
+
+
+## Iterators
+
+Iterations can be performed using loops such as while loop, for loop and until loop.
+
+### for Loop
+
+When we know how many times the task should be iterated.
+
+```bash
+#!/bin/bash
+
+for ((initialization; condition; increment)); do
+  # Some Code
+done
+```
+
+**For an example:**
+
+```bash
+for ((number=1; number<=5; number++)); do
+  echo $number
+done
+```
+
+### while Loop
+
+Iterations happen till the certain condition is true.
+
+```bash
+#!/bin/bash
+
+while [ condition ]; do
+  # Some Code
+done
+```
+
+**For an example:**
+
+```bash
+processId=10
+while [ $processId -ge 1 ]; do
+    echo "Process $processId is running!"
+    ((processId--))
+done
+
+echo "Processes executed successfully!"
+```
+
+### until Loop
+
+Iterations happen till the certain condition is false.
+
+```bash
+#!/bin/bash
+
+until [ condition ]; do
+    # Some Code
+done
+```
+
+**For an example:**
+
+```bash
+processId=1
+until [ $processId -ge 10 ]; do
+    echo "Loading..."
+    ((processId++))
+    sleep 1
+done
+
+echo "Loaded successfully!"
+```
+
+You can see the "sleep" keyword in the until loop statement which is used to make the iteration delay by one second.
+
+
+
+## Functions
+
+Functions are useful when you need to reuse some piece of code. Once define and call multiple time purposes!
+
+### Function Definition and Call
+
+We can define the function using "function" keyword with the function name and can write codes within curly braces. Function can be called by using its name.
+
+```bash
+#!/bin/bash
+
+function print() {
+    echo "Program loaded successfully!"
+}
+
+print  # Output >>> Program loaded successfully!
+```
+
+### Parameters and Arguments
+
+Arguments can be passed as sequences of values with spaces and the passes values can be captured within the function using "$" sign with the number order that refers the argument values passed order.
+
+```bash
+#!/bin/bash
+
+function print() {
+    echo "$1 $2"
+}
+
+print "Hello" "World"  # Output >>> Hello World
+```
+
+Note that when we use "echo" command within a function, it returns the value as a function output.
+
+If we want to capture the return value of the function, we should use parenthesizes.
+
+```bash
+#!/bin/bash
+
+function print() {
+    echo "$1 $2"
+}
+
+functionOutput=$(print "Hello" "World")
+echo $functionOutput  # Output >>> Hello World
+```
+
+## Conclusion
+
+That's all in this reading and I hope this article will be helpful to accomplish your automation tasks! Thank you for putting your eyesight and six minutes on this article. I'll see you again with my future post! 😊1e:["$","div",null,{"className":"hidden lg:flex lg:col-span-3 flex-col","children":["$","$L1f",null,{"tableOfContents":[{"id":"rule-text-processing-in-linux-using-grep-sed-and-awk","text":"Rule Text Processing in Linux using Grep, Sed, and Awk","level":1},{"id":"grep","text":"Grep","level":2},{"id":"get-help","text":"Get help","level":1},{"id":"basic-syntax","text":"Basic Syntax:","level":3},{"id":"use-cases","text":"Use Cases","level":3},{"id":"sed","text":"Sed","level":2},{"id":"use-cases","text":"Use Cases","level":3},{"id":"get-help","text":"Get help","level":1},{"id":"myfiletxt","text":"myfile.txt","level":1},{"id":"myfiletxt","text":"myfile.txt","level":1},{"id":"configuration-file","text":"Configuration File","level":1},{"id":"myfiletxt","text":"myfile.txt","level":1},{"id":"awk","text":"Awk","level":2},{"id":"use-cases","text":"Use Cases","level":3},{"id":"file","text":"File","level":1},{"id":"conclusion","text":"Conclusion","level":2}],"posts":[{"id":"rule-text-processing-in-linux","shortId":"rule-text-processing-in-linux-2833dc82","title":"Rule Text Processing in Linux using Grep, Sed, and Awk","date":"2024-11-19","category":"Linux","tags":"$11:props:children:1:props:children:props:children:1:props:children:2:props:children:props:children:props:post:tags","readTime":"6 min read","author":"Santhos Suntharalingam","featured":true,"content":"$20","excerpt":"Master the essential Linux text processing utilities - grep, sed, and awk. Learn how to search, filter, and transform text data efficiently with practical examples and real-world use cases."},{"id":"batch-file-processing-in-linux","shortId":"batch-file-processing-in-linux-66e38aaf","title":"Batch File Processing in Linux","date":"2024-01-24","category":"Linux","tags":["Linux","Command Line","Automation","File Management"],"readTime":"5 min read","author":"Santhos Suntharalingam","featured":true,"content":"$21","excerpt":"Learn how to efficiently process files in batches using Linux command-line tools like find and xargs for automation and file management tasks."},{"id":"bash-scripting-basics","shortId":"bash-scripting-basics-0f57f216","title":"Bash Scripting Basics","date":"2024-01-04","category":"Security","tags":["Bash","Linux","Security","Automation","Scripting"],"readTime":"6 min read","author":"Santhos Suntharalingam","featured":true,"content":"$22","excerpt":"Learn the fundamentals of Bash scripting for automation and system administration. This comprehensive guide covers variables, loops, functions, and more."}]}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+18:[["$","title","0",{"children":"Rule Text Processing in Linux using Grep, Sed, and Awk - Santhos Suntharalingam"}],["$","meta","1",{"name":"description","content":"Master the essential Linux text processing utilities - grep, sed, and awk. Learn how to search, filter, and transform text data efficiently with practical examples and real-world use cases."}],["$","meta","2",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","3",{"name":"apple-mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}],["$","meta","5",{"property":"og:title","content":"Rule Text Processing in Linux using Grep, Sed, and Awk"}],["$","meta","6",{"property":"og:description","content":"Master the essential Linux text processing utilities - grep, sed, and awk. Learn how to search, filter, and transform text data efficiently with practical examples and real-world use cases."}],["$","meta","7",{"property":"og:type","content":"article"}],["$","meta","8",{"property":"article:published_time","content":"2024-11-19"}],["$","meta","9",{"property":"article:author","content":"Santhos Suntharalingam"}],["$","meta","10",{"property":"article:tag","content":"Linux"}],["$","meta","11",{"property":"article:tag","content":"Command Line"}],["$","meta","12",{"property":"article:tag","content":"Text Processing"}],["$","meta","13",{"property":"article:tag","content":"Grep"}],["$","meta","14",{"property":"article:tag","content":"Sed"}],["$","meta","15",{"property":"article:tag","content":"Awk"}],["$","meta","16",{"name":"twitter:card","content":"summary"}],["$","meta","17",{"name":"twitter:title","content":"Rule Text Processing in Linux using Grep, Sed, and Awk"}],["$","meta","18",{"name":"twitter:description","content":"Master the essential Linux text processing utilities - grep, sed, and awk. Learn how to search, filter, and transform text data efficiently with practical examples and real-world use cases."}]]
+14:null
