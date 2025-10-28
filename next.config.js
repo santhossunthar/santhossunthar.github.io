@@ -6,8 +6,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: '',
-  assetPrefix: '',
+  // basePath: '',
+  // assetPrefix: '',
   // Mobile performance optimizations
   experimental: {
     optimizePackageImports: ['react', 'react-dom']
