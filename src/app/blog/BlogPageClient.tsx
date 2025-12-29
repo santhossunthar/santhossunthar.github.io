@@ -66,12 +66,6 @@ export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPag
     }
   }, [searchParams, initialView]);
 
-  const handlePostSelect = (post: BlogPost) => {
-    // Navigate to individual post page using shortId
-    window.location.href = `/blog/${post.shortId}`;
-  };
-
-
   const handleTagClick = useCallback((tag: string) => {
     if (isMounted) {
       setCurrentView('posts');
@@ -144,18 +138,17 @@ export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPag
                    </div>
                  }>
                    {currentView === 'tags' ? (
-                     <TagsView
-                       posts={posts}
-                       onTagClick={handleTagClick}
-                     />
-                   ) : (
-                     <BlogPostList
-                       currentPage={currentPage}
-                       onPageChange={setCurrentPage}
-                       onPostSelect={handlePostSelect}
-                       posts={filteredPosts}
-                     />
-                   )}
+                    <TagsView
+                      posts={posts}
+                      onTagClick={handleTagClick}
+                    />
+                  ) : (
+                    <BlogPostList
+                      currentPage={currentPage}
+                      onPageChange={setCurrentPage}
+                      posts={filteredPosts}
+                    />
+                  )}
                  </Suspense>
                </div>
           </div>

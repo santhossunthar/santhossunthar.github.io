@@ -1,14 +1,11 @@
 import { notFound } from 'next/navigation';
-import { Suspense, lazy } from 'react';
 import { getPostByShortId, getAllPostIds, getAllPosts, BlogPost } from '@/lib/blog-utils';
 import { extractTableOfContents } from '@/lib/table-of-contents';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import BlogPostMobileNavbar from '@/components/blog/BlogPostMobileNavbar';
-
-// Lazy load the heaviest component
-const BlogPostDetail = lazy(() => import('@/components/blog/BlogPostDetail'));
+import BlogPostDetail from '@/components/blog/BlogPostDetail';
 
 // SSG: Pre-generate all blog post paths at build time
 export async function generateStaticParams() {
@@ -111,15 +108,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
             <div className="lg:hidden pt-16"></div>
             
             <div className="relative z-0">
-              <Suspense fallback={
-                <div className="flex items-center justify-center py-12">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-                </div>
-              }>
-                <BlogPostDetail 
-                  post={post}
-                />
-              </Suspense>
+              <BlogPostDetail 
+                post={post}
+              />
             </div>
           </div>
 

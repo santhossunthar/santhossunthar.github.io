@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { FileText, Home, Tags } from 'lucide-react';
 import { socialLinks } from '@/data/constants';
 import { useEffect, useState } from 'react';
 
@@ -55,29 +56,32 @@ export default function BlogSidebar({ onClose, currentView }: BlogSidebarProps) 
         <div className="space-y-2 mb-6">
           <button 
             onClick={handleAllPosts}
-            className={`block w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 ${
+            className={`flex items-center gap-3 w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 ${
               currentView === 'posts' 
                 ? 'text-white bg-white/10' 
                 : 'text-white/80 hover:text-white hover:bg-white/10'
             }`}
           >
-            Posts
+            <FileText className="h-4 w-4" />
+            <span>Posts</span>
           </button>
           <Link 
             href="/" 
-            className="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
+            className="flex items-center gap-3 px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
           >
-            Portfolio
+            <Home className="h-4 w-4" />
+            <span>Portfolio</span>
           </Link>
           <button 
             onClick={handleTagsFilter}
-            className={`block w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 ${
+            className={`flex items-center gap-3 w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 ${
               currentView === 'tags' 
                 ? 'text-white bg-white/10' 
                 : 'text-white/80 hover:text-white hover:bg-white/10'
             }`}
           >
-            Tags
+            <Tags className="h-4 w-4" />
+            <span>Tags</span>
           </button>
         </div>
 

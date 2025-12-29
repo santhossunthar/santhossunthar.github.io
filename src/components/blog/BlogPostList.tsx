@@ -1,13 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 import { BlogPost } from '@/lib/blog-utils';
 
 interface BlogPostListProps {
   currentPage: number;
   onPageChange: (page: number) => void;
-  onPostSelect: (post: BlogPost) => void;
   posts: BlogPost[];
 }
 
@@ -42,7 +42,7 @@ const itemVariants: Variants = {
   }
 };
 
-export default function BlogPostList({ currentPage, onPageChange, onPostSelect, posts }: BlogPostListProps) {
+export default function BlogPostList({ currentPage, onPageChange, posts }: BlogPostListProps) {
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
@@ -54,10 +54,6 @@ export default function BlogPostList({ currentPage, onPageChange, onPostSelect, 
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
   const endIndex = startIndex + POSTS_PER_PAGE;
   const paginatedPosts = posts.slice(startIndex, endIndex);
-
-  const handlePostClick = (post: BlogPost) => {
-    onPostSelect(post);
-  };
 
   return (
     <div className="space-y-6 font-cyber">
@@ -77,56 +73,60 @@ export default function BlogPostList({ currentPage, onPageChange, onPostSelect, 
         key={currentPage} // Re-trigger animation on page change
       >
         {paginatedPosts.map((post, index) => (
-          <motion.div
+          <Link 
             key={post.id}
-            variants={itemVariants}
-            onClick={() => handlePostClick(post)}
-            className="bg-black border border-white/20 rounded-lg p-4 md:p-6 cursor-pointer hover:bg-white/5 hover:border-white/40 transition-all duration-300 group"
-            whileHover={{ 
-              scale: 1.02,
-              transition: { duration: 0.2 }
-            }}
-            whileTap={{ 
-              scale: 0.98,
-              transition: { duration: 0.1 }
-            }}
+            href={`/blog/${post.shortId}`}
+            className="block"
           >
-            <div className="flex items-start justify-between mb-3">
-              <div className="flex items-center gap-2">
-                {post.featured && (
-                  <span className="px-2 py-1 bg-white/20 text-white text-xs rounded-full border border-white/30">
-                    Featured
+            <motion.div
+              variants={itemVariants}
+              className="bg-black border border-white/20 rounded-lg p-4 md:p-6 cursor-pointer hover:bg-white/5 hover:border-white/40 transition-all duration-300 group"
+              whileHover={{ 
+                scale: 1.02,
+                transition: { duration: 0.2 }
+              }}
+              whileTap={{ 
+                scale: 0.98,
+                transition: { duration: 0.1 }
+              }}
+            >
+              <div className="flex items-start justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  {post.featured && (
+                    <span className="px-2 py-1 bg-white/20 text-white text-xs rounded-full border border-white/30">
+                      Featured
+                    </span>
+                  )}
+                  <span className="px-2 py-1 bg-white/10 text-white text-xs rounded-full">
+                    {post.category}
                   </span>
-                )}
-                <span className="px-2 py-1 bg-white/10 text-white text-xs rounded-full">
-                  {post.category}
-                </span>
+                </div>
+                <span className="text-white/60 text-sm">{post.readTime}</span>
               </div>
-              <span className="text-white/60 text-sm">{post.readTime}</span>
-            </div>
 
-            <h2 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">
-              {post.title}
-            </h2>
+              <h2 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">
+                {post.title}
+              </h2>
 
-            <p className="text-white/80 mb-4 line-clamp-3">
-              {post.excerpt}
-            </p>
+              <p className="text-white/80 mb-4 line-clamp-3">
+                {post.excerpt}
+              </p>
 
-            <div className="flex items-center justify-between">
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className="px-2 py-1 bg-white/10 text-white/80 text-xs rounded border border-white/20"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              <div className="flex items-center justify-between">
+                <div className="flex flex-wrap gap-2">
+                  {post.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-2 py-1 bg-white/10 text-white/80 text-xs rounded border border-white/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <span className="text-white/60 text-sm">{post.date}</span>
               </div>
-              <span className="text-white/60 text-sm">{post.date}</span>
-            </div>
-          </motion.div>
+            </motion.div>
+          </Link>
         ))}
       </motion.div>
 
