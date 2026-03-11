@@ -2,25 +2,41 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { socialLinks } from '@/data/constants';
+import { mainSectionConfig, socialLinks } from '@/data/constants';
 
 export const Main = () => {
   const [showThunder, setShowThunder] = useState(true);
   const [showGlitch, setShowGlitch] = useState(true);
-  const [lightningPersist, setLightningPersist] = useState(true);
-  const [showFlash, setShowFlash] = useState(true);
+  const [flashPhase, setFlashPhase] = useState<'off' | 'first' | 'second'>('off');
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    // Set up timers to turn off effects after page load
-    setTimeout(() => {
+    // Realistic thunder rhythm: flash -> gap -> second flash.
+    setFlashPhase('first');
+
+    const firstFlashOffTimer = setTimeout(() => {
+      setFlashPhase('off');
+    }, mainSectionConfig.intro.firstFlashOffMs);
+
+    const secondFlashOnTimer = setTimeout(() => {
+      setFlashPhase('second');
+    }, mainSectionConfig.intro.secondFlashOnMs);
+
+    const secondFlashOffTimer = setTimeout(() => {
+      setFlashPhase('off');
+    }, mainSectionConfig.intro.secondFlashOffMs);
+
+    const introEndTimer = setTimeout(() => {
       setShowThunder(false);
       setShowGlitch(false);
-    }, 3000);
-    
-    setTimeout(() => {
-      setShowFlash(false);
-    }, 2000);
+    }, mainSectionConfig.intro.introEndMs);
+
+    return () => {
+      clearTimeout(firstFlashOffTimer);
+      clearTimeout(secondFlashOnTimer);
+      clearTimeout(secondFlashOffTimer);
+      clearTimeout(introEndTimer);
+    };
   }, []);
 
   useEffect(() => {
@@ -33,15 +49,16 @@ export const Main = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background">
       {showThunder && (
-        <div className="thunder-bg" data-testid="thunder-bg" />
+        <div className="thunder-bg thunder-ambient" data-testid="thunder-bg" />
       )}
-      {lightningPersist && (
-        <div className="thunder-lines" data-testid="thunder-lines" />
-      )}
-      {showFlash && (
-        <div className="thunder-bg" data-testid="flash-effect" />
+      <div className="thunder-lines" data-testid="thunder-lines" />
+      {flashPhase !== 'off' && (
+        <div
+          className={`thunder-bg ${flashPhase === 'first' ? 'thunder-burst-1' : 'thunder-burst-2'}`}
+          data-testid="flash-effect"
+        />
       )}
       
       <motion.div
@@ -70,7 +87,7 @@ export const Main = () => {
                 <div className="relative">
                   {/* Outer Layer - Broken Circle */}
                   <div className="absolute -inset-16 md:-inset-20 lg:-inset-28">
-                    {[0, 90, 180, 270].map((rotation) => (
+                    {mainSectionConfig.rings.outerRotations.map((rotation) => (
                       <div
                         key={`outer-${rotation}`}
                         className="absolute w-full h-full"
@@ -96,7 +113,7 @@ export const Main = () => {
 
                   {/* Middle Layer - Spinning Segments */}
                   <div className="absolute -inset-12 md:-inset-16 lg:-inset-20">
-                    {[45, 135, 225, 315].map((rotation) => (
+                    {mainSectionConfig.rings.middleRotations.map((rotation) => (
                       <div
                         key={`middle-${rotation}`}
                         className={`absolute w-full h-full ${showGlitch ? 'animate-spin-slower' : ''}`}
@@ -120,7 +137,7 @@ export const Main = () => {
 
                   {/* Inner Layer - Pulsing Arcs */}
                   <div className="absolute -inset-10 md:-inset-12 lg:-inset-16">
-                    {[30, 150, 270].map((rotation) => (
+                    {mainSectionConfig.rings.innerRotations.map((rotation) => (
                       <div
                         key={`inner-${rotation}`}
                         className={`absolute w-full h-full ${showGlitch ? 'animate-pulse-slow' : ''}`}
@@ -148,8 +165,8 @@ export const Main = () => {
                   {/* Main image */}
                   <div className="relative rounded-full overflow-hidden">
                     <img
-                      src="/images/picture.jpg"
-                      alt="Profile"
+                      src={mainSectionConfig.profile.imageSrc}
+                      alt={mainSectionConfig.profile.imageAlt}
                       className="
                         relative 
                         h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 
@@ -169,27 +186,27 @@ export const Main = () => {
                   </div>
 
                   {/* Interface dots */}
-                  {[60, 180, 300].map((rotation) => (
-                    <div
-                      key={`dot-${rotation}`}
-                      className="
-                        absolute 
-                        w-2 
-                        h-2 
-                        rounded-full 
-                        bg-cyber-400/80"
-                      style={{
-                        left: `calc(50% + ${
-                          Math.cos(
-                            rotation * Math.PI / 180
-                          ) * 120}px)`,
-                        top: `calc(50% + ${
-                          Math.sin(
-                            rotation * Math.PI / 180
-                          ) * 120}px)`
-                      }}
-                    />
-                  ))}
+                  <div className="[--dot-orbit:124px] md:[--dot-orbit:156px] lg:[--dot-orbit:196px]">
+                    {mainSectionConfig.rings.dotRotations.map((rotation) => (
+                      <div
+                        key={`dot-${rotation}`}
+                        className="
+                          absolute 
+                          w-2 
+                          h-2 
+                          rounded-full 
+                          bg-cyber-400/80"
+                        style={{
+                          left: `calc(50% + ${
+                            Math.cos(rotation * Math.PI / 180)
+                          } * var(--dot-orbit))`,
+                          top: `calc(50% + ${
+                            Math.sin(rotation * Math.PI / 180)
+                          } * var(--dot-orbit))`
+                        }}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -202,17 +219,17 @@ export const Main = () => {
             className="flex flex-col justify-center items-center text-center lg:items-start lg:text-left space-y-4 md:space-y-6 lg:space-y-8 px-2 md:px-4 lg:px-1"
           >
             <div className="space-y-4">
-              <h1 className={`text-2xl md:text-3xl lg:text-5xl font-bold text-cyber-100 tracking-tight glitch ${showGlitch ? 'page-load-glitch' : ''}`} data-text="SANTHOS SUNTHARALINGAM">
-                SANTHOS SUNTHARALINGAM
+              <h1 className={`text-2xl md:text-3xl lg:text-5xl font-bold text-cyber-100 tracking-tight glitch ${showGlitch ? 'page-load-glitch' : ''}`} data-text={mainSectionConfig.profile.name}>
+                {mainSectionConfig.profile.name}
               </h1>
               <div className="space-y-2">
-                <h2 className={`text-lg md:text-xl lg:text-2xl text-cyber-200 font-medium glitch ${showGlitch ? 'page-load-glitch' : ''}`} data-text="SECURITY RESEARCHER">
-                  SECURITY RESEARCHER
+                <h2 className={`text-lg md:text-xl lg:text-2xl text-cyber-200 font-medium glitch ${showGlitch ? 'page-load-glitch' : ''}`} data-text={mainSectionConfig.profile.title}>
+                  {mainSectionConfig.profile.title}
                 </h2>
                 <p className="text-cyber-300 text-sm md:text-base lg:text-lg">
-                  BSc (Hons) in Software Engineering
+                  {mainSectionConfig.profile.degree}
                   <span className="block text-cyber-400 text-xs md:text-sm lg:text-base">
-                    University of Kelaniya, Sri Lanka
+                    {mainSectionConfig.profile.university}
                   </span>
                 </p>
               </div>

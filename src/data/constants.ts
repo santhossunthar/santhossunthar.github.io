@@ -1,6 +1,7 @@
 import { 
   FaGithub, 
   FaLinkedinIn, 
+  FaMedium,
   FaHackerrank, 
   FaStackOverflow
 } from 'react-icons/fa';
@@ -11,7 +12,7 @@ import { BlogIcon } from '../components/shared/BlogIcon';
 export const socialLinks = [
   {
     Icon: SiGmail,
-    href: "mailto:santhoshsunthar@gmail.com",
+    href: "mailto:santhos.sunthar@outlook.com",
     label: "Email"
   },
   {
@@ -23,6 +24,11 @@ export const socialLinks = [
     Icon: FaGithub,
     href: "https://github.com/santhossunthar",
     label: "GitHub"
+  },
+  {
+    Icon: FaMedium,
+    href: "https://medium.com/@santhossunthar",
+    label: "Medium"
   },
   {
     Icon: BlogIcon,
@@ -65,3 +71,130 @@ export const projectData = [
     technologies: ["C++", "Qt", "libpcap"]
   }
 ];
+
+export const aboutContent = {
+  title: "About Me",
+  paragraphs: [
+    "I bring hands-on academic and industry experience in cybersecurity. \
+    Currently working as a Cyber Security Engineer at iVedha Inc, \
+    contributing to real-world security operations, threat analysis, \
+    and vulnerability management. I have a strong foundation in network \
+    security, application security, incident response, penetration \
+    testing, vulnerability assessment, and red team operations, \
+    with a proactive mindset toward emerging cyber threats. \
+    I am passionate about continuous learning and applying practical \
+    security solutions to protect digital infrastructure.",
+    "With a BSc (Hons) in Software Engineering, I decided to blend my \
+    coding skills with my passion for Cybersecurity. Building tools, \
+    automating attack simulations, and understanding systems from both \
+    a developer's and an attacker's perspective. This combination has \
+    shaped the way I think!"
+  ]
+};
+
+export const educationContent = {
+  title: "Education",
+  items: [
+    {
+      degree: "BSc (Hons) in Software Engineering",
+      institution: "University of Kelaniya, Sri Lanka",
+      startDate: "2021",
+      endDate: "2025",
+      status: "Strong foundation in software development, system design, \
+        and security"
+    }
+  ]
+};
+
+export const expertiseContent = {
+  title: "Key Expertise",
+  items: [
+    "Network Security & Penetration Testing",
+    "Application Security & Penetration Testing",
+    "Vulnerability Assessment & Risk Analysis",
+    "Secure Software Development Lifecycle",
+    "Active Directory Security & Hardening",
+    "Incident Response & Threat Analysis",
+  ]
+};
+
+export const certificationsContent = {
+  title: "Certifications",
+  items: [
+    {
+      name: "HTB CPTS",
+      fullName: "Hack The Box Certified Penetration Testing Specialist",
+      issuer: "Hack The Box",
+      logo: "/images/CPTS.png"
+    },
+    {
+      name: "CRTO",
+      fullName: "Certified Red Team Operator",
+      issuer: "Zero-Point Security",
+      logo: "/images/CRTO.png"
+    }
+  ]
+};
+
+export const interestsContent = {
+  title: "Interests & Technologies",
+  tags: [
+    "Network Security",
+    "Application Security",
+    "Cloud Security",
+    "Penetration Testing",
+    "Red Team Operations",
+    "Vulnerability Assessment",
+    "Incident Response",
+    "Threat Intelligence",
+    "Risk Analysis",
+    "Security Automation",
+    "DevSecOps",
+    "Linux",
+    "Bash",
+    "Windows",
+    "PowerShell",
+    "Python",
+    "Rust",
+    "JavaScript",
+    "Docker",
+    "CI/CD",
+  ],
+  description: "I'm passionate about staying up-to-date with the latest \
+    security trends and technologies. I enjoy contributing to open-source \
+    projects, writing technical articles, and participating in cybersecurity \
+    communities. My goal is to make the digital world more secure through \
+    education, research, and practical implementation of security best \
+    practices."
+};
+
+export const animationTiming = {
+  titleDelay: 500,
+  itemDelay: 1000,
+  itemInterval: 500,
+  tagInterval: 150,
+  descriptionDelay: 3000
+};
+
+export const mainSectionConfig = {
+  intro: {
+    firstFlashOffMs: 140,
+    secondFlashOnMs: 430,
+    secondFlashOffMs: 580,
+    introEndMs: 1200,
+  },
+  rings: {
+    outerRotations: [0, 90, 180, 270],
+    middleRotations: [45, 135, 225, 315],
+    innerRotations: [30, 150, 270],
+    dotRotations: [60, 180, 300],
+  },
+  profile: {
+    name: 'SANTHOS SUNTHARALINGAM',
+    title: 'CYBERSECURITY ENGINEER',
+    degree: 'BSc (Hons) in Software Engineering',
+    university: 'University of Kelaniya, Sri Lanka',
+    imageSrc: '/images/picture.jpg',
+    imageAlt: 'Profile',
+  },
+};

@@ -55,21 +55,6 @@ const Home = () => {
           bg-background"
         style={{ scrollSnapAlign: 'start', position: 'relative' }}
       >
-        {/* Horizontal line */}
-        <div
-          className="absolute left-0 right-0 z-0 pointer-events-none"
-          style={{ top: '7.5rem' }}
-        >
-          <div className="
-            w-screen 
-            h-[3px] 
-            bg-gradient-to-r 
-            from-transparent 
-            via-cyber-400/50 
-            to-transparent" 
-          />
-        </div>
-
         <div className="
           relative 
           z-20 

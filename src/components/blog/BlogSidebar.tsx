@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FileText, Home, Tags } from 'lucide-react';
 import { socialLinks } from '@/data/constants';
-import { useEffect, useState } from 'react';
 
 interface BlogSidebarProps {
   onClose?: () => void;
@@ -14,24 +13,15 @@ interface BlogSidebarProps {
 
 export default function BlogSidebar({ onClose, currentView }: BlogSidebarProps) {
   const router = useRouter();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const handleAllPosts = () => {
-    if (isMounted) {
-      router.push('/blog');
-      onClose?.();
-    }
+    router.push('/blog');
+    onClose?.();
   };
 
   const handleTagsFilter = () => {
-    if (isMounted) {
-      router.push('/blog/tags');
-      onClose?.();
-    }
+    router.push('/blog/tags');
+    onClose?.();
   };
   return (
     <div className="h-screen">
@@ -93,7 +83,9 @@ export default function BlogSidebar({ onClose, currentView }: BlogSidebarProps) 
         <div className="border-t border-white/20 pt-4 text-center">
           <h4 className="text-white font-medium mb-3 text-sm">Connect</h4>
           <div className="flex flex-wrap justify-center gap-2">
-            {socialLinks.map(({ Icon, href, label }, index) => (
+            {socialLinks
+              .filter(({ label }) => label !== 'Blog')
+              .map(({ Icon, href, label }, index) => (
               <a
                 key={index}
                 href={href}

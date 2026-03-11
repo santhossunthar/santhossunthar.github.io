@@ -17,25 +17,39 @@ export const TypewriterText = ({
   className = '', 
   onComplete 
 }: TypewriterTextProps) => {
-  const [showText, setShowText] = useState(false);
+  const [visibleText, setVisibleText] = useState('');
 
   useEffect(() => {
-    // Show text after a delay to simulate scroll-triggered effect
+    let index = 0;
+    let intervalId: ReturnType<typeof setInterval> | undefined;
+
     const timeoutId = setTimeout(() => {
-      setShowText(true);
-      if (onComplete) {
-        onComplete();
-      }
+      setVisibleText('');
+
+      intervalId = setInterval(() => {
+        index += 1;
+        setVisibleText(text.slice(0, index));
+
+        if (index >= text.length) {
+          if (intervalId) {
+            clearInterval(intervalId);
+          }
+          onComplete?.();
+        }
+      }, Math.max(10, speed));
     }, delay);
 
     return () => {
       clearTimeout(timeoutId);
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
     };
-  }, [delay, onComplete]);
+  }, [delay, onComplete, speed, text]);
 
   return (
     <span className={className}>
-      {showText ? text : ''}
+      {visibleText}
     </span>
   );
 };

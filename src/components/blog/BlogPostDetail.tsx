@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { BlogPost } from '@/lib/blog-utils';
-import { extractTableOfContents, TableOfContentsItem } from '@/lib/table-of-contents';
+import { extractTableOfContents, stripFirstH1, TableOfContentsItem } from '@/lib/table-of-contents';
 
 interface BlogPostDetailProps {
   post: BlogPost;
@@ -13,29 +13,15 @@ interface BlogPostDetailProps {
 }
 
 export default function BlogPostDetail({ post, onTableOfContentsChange }: BlogPostDetailProps) {
-
-  // Function to strip the first H1 from markdown content
-  const stripFirstH1 = (content: string) => {
-    // Remove the first H1 heading (lines starting with #)
-    const lines = content.split('\n');
-    let foundFirstH1 = false;
-    const filteredLines = lines.filter(line => {
-      if (!foundFirstH1 && line.trim().startsWith('# ')) {
-        foundFirstH1 = true;
-        return false; // Skip this line
-      }
-      return true;
-    });
-    return filteredLines.join('\n');
-  };
+  const renderedContent = stripFirstH1(post.content);
 
   useEffect(() => {
     // Extract table of contents and notify parent
     if (post && onTableOfContentsChange) {
-      const toc = extractTableOfContents(post.content);
+      const toc = extractTableOfContents(renderedContent);
       onTableOfContentsChange(toc);
     }
-  }, [post, onTableOfContentsChange]);
+  }, [post, onTableOfContentsChange, renderedContent]);
 
 
   return (
@@ -158,7 +144,7 @@ export default function BlogPostDetail({ post, onTableOfContentsChange }: BlogPo
             em: ({children}) => <em className="italic text-white/90">{children}</em>
           }}
         >
-          {stripFirstH1(post.content)}
+          {renderedContent}
         </ReactMarkdown>
       </div>
 

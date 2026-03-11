@@ -1,7 +1,5 @@
 'use client'
 
-import { useState, useEffect } from 'react';
-
 interface BreadcrumbItem {
   label: string;
   path?: string;
@@ -16,12 +14,6 @@ interface MobileNavbarProps {
 }
 
 export default function MobileNavbar({ breadcrumb, onMenuClick, currentPage, totalPages, currentView }: MobileNavbarProps) {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   // Get the current page title based on view
   const getPageTitle = () => {
     if (currentView === 'tags') {
@@ -61,14 +53,14 @@ export default function MobileNavbar({ breadcrumb, onMenuClick, currentPage, tot
         <div className="flex-1 mx-4">
           <div className="overflow-x-auto scrollbar-hide">
             <div className="flex items-center space-x-2 text-white font-cyber text-sm whitespace-nowrap">
-              {isMounted && breadcrumb.length > 1 ? (
+              {breadcrumb.length > 1 ? (
                 <div className="flex items-center">
                   {/* Previous page clickable icon */}
                   <button
                     onClick={() => {
                       const previousItem = breadcrumb[breadcrumb.length - 2];
                       if (previousItem?.path) {
-                        window.location.href = previousItem.path;
+                        window.location.assign(previousItem.path);
                       } else {
                         window.history.back();
                       }
@@ -103,7 +95,7 @@ export default function MobileNavbar({ breadcrumb, onMenuClick, currentPage, tot
         </div>
 
         {/* Pagination Info */}
-        {isMounted && currentPage && totalPages && currentView === 'posts' && (
+        {currentPage && totalPages && currentView === 'posts' && (
           <div className="text-white/60 text-xs font-cyber">
             Page {currentPage} of {totalPages}
           </div>
