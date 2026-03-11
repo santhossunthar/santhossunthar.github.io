@@ -83,7 +83,9 @@ export default function BlogSidebar({ onClose, currentView }: BlogSidebarProps) 
         <div className="border-t border-white/20 pt-4 text-center">
           <h4 className="text-white font-medium mb-3 text-sm">Connect</h4>
           <div className="flex flex-wrap justify-center gap-2">
-            {socialLinks.map(({ Icon, href, label }, index) => (
+            {socialLinks
+              .filter(({ label }) => label !== 'Blog')
+              .map(({ Icon, href, label }, index) => (
               <a
                 key={index}
                 href={href}

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image';
-import { certificationsContent } from '../../../data/sectionContent';
+import { certificationsContent } from '../../../data/constants';
 
 interface CertificationItemProps {
   item: {

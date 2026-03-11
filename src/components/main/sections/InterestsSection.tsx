@@ -1,6 +1,6 @@
 'use client'
 
-import { interestsContent } from '../../../data/sectionContent';
+import { interestsContent } from '../../../data/constants';
 
 export const InterestsSection = () => {
   return (

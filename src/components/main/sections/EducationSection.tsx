@@ -1,6 +1,6 @@
 'use client'
 
-import { educationContent } from '../../../data/sectionContent';
+import { educationContent } from '../../../data/constants';
 
 export const EducationSection = () => {
   return (

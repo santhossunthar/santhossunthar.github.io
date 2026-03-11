@@ -1,6 +1,6 @@
 'use client'
 
-import { aboutContent } from '../../../data/sectionContent';
+import { aboutContent } from '../../../data/constants';
 
 export const AboutSection = () => {
   return (
