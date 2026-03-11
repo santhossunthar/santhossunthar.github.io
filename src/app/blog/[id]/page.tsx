@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
-import { getPostByShortId, getAllPostIds, getAllPosts, BlogPost } from '@/lib/blog-utils';
-import { extractTableOfContents } from '@/lib/table-of-contents';
+import { getPostByShortId, getAllPostIds, getAllPosts } from '@/lib/blog-utils';
+import { extractTableOfContents, stripFirstH1 } from '@/lib/table-of-contents';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
 import Breadcrumb from '@/components/blog/Breadcrumb';
@@ -9,28 +9,9 @@ import BlogPostDetail from '@/components/blog/BlogPostDetail';
 
 // SSG: Pre-generate all blog post paths at build time
 export async function generateStaticParams() {
-  const postIds = getAllPostIds();
-  
-  // Return all valid post IDs plus some common fallback routes
-  const params = postIds.map((id) => ({
-    id: id,
+  return getAllPostIds().map((id) => ({
+    id,
   }));
-  
-  // Add some common fallback routes that might be accessed
-  const fallbackRoutes = [
-    'some',
-    'test',
-    'example',
-    'demo',
-    '404',
-    'not-found'
-  ];
-  
-  const fallbackParams = fallbackRoutes.map((route) => ({
-    id: route,
-  }));
-  
-  return [...params, ...fallbackParams];
 }
 
 
@@ -75,7 +56,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
   }
 
   // Extract table of contents on the server side
-  const tableOfContents = extractTableOfContents(post.content);
+  const tableOfContents = extractTableOfContents(stripFirstH1(post.content));
   
   // Get all posts for the right sidebar
   const allPosts = getAllPosts();

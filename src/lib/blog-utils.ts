@@ -1,5 +1,7 @@
 // Only import these on server-side
-let fs: any, path: any, matter: any;
+let fs: typeof import('fs') | undefined;
+let path: typeof import('path') | undefined;
+let matter: (typeof import('gray-matter')) | undefined;
 
 if (typeof window === 'undefined') {
   // Server-side only
@@ -24,7 +26,7 @@ export interface BlogPost {
 
 // SSG: Read from markdown files (server-side only)
 const postsDirectory = typeof window === 'undefined' 
-  ? path.join(process.cwd(), 'src/data/blog-posts')
+  ? path?.join(process.cwd(), 'src/data/blog-posts') ?? ''
   : '';
 
 // Generate short ID from filename with blog ID + short SHA format

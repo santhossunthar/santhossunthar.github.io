@@ -4,6 +4,22 @@ export interface TableOfContentsItem {
   level: number;
 }
 
+export function stripFirstH1(content: string): string {
+  const lines = content.split('\n');
+  let removed = false;
+
+  return lines
+    .filter((line) => {
+      if (!removed && line.trim().startsWith('# ')) {
+        removed = true;
+        return false;
+      }
+
+      return true;
+    })
+    .join('\n');
+}
+
 export function extractTableOfContents(content: string): TableOfContentsItem[] {
   const headingRegex = /^(#{1,6})\s+(.+)$/gm;
   const headings: TableOfContentsItem[] = [];

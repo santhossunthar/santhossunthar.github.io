@@ -7,20 +7,36 @@ import { socialLinks } from '@/data/constants';
 export const Main = () => {
   const [showThunder, setShowThunder] = useState(true);
   const [showGlitch, setShowGlitch] = useState(true);
-  const [lightningPersist, setLightningPersist] = useState(true);
-  const [showFlash, setShowFlash] = useState(true);
+  const [flashPhase, setFlashPhase] = useState<'off' | 'first' | 'second'>('off');
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    // Set up timers to turn off effects after page load
-    setTimeout(() => {
+    // Realistic thunder rhythm: flash -> gap -> second flash.
+    setFlashPhase('first');
+
+    const firstFlashOffTimer = setTimeout(() => {
+      setFlashPhase('off');
+    }, 140);
+
+    const secondFlashOnTimer = setTimeout(() => {
+      setFlashPhase('second');
+    }, 430);
+
+    const secondFlashOffTimer = setTimeout(() => {
+      setFlashPhase('off');
+    }, 580);
+
+    const introEndTimer = setTimeout(() => {
       setShowThunder(false);
       setShowGlitch(false);
-    }, 3000);
-    
-    setTimeout(() => {
-      setShowFlash(false);
-    }, 2000);
+    }, 1200);
+
+    return () => {
+      clearTimeout(firstFlashOffTimer);
+      clearTimeout(secondFlashOnTimer);
+      clearTimeout(secondFlashOffTimer);
+      clearTimeout(introEndTimer);
+    };
   }, []);
 
   useEffect(() => {
@@ -33,15 +49,16 @@ export const Main = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background">
       {showThunder && (
-        <div className="thunder-bg" data-testid="thunder-bg" />
+        <div className="thunder-bg thunder-ambient" data-testid="thunder-bg" />
       )}
-      {lightningPersist && (
-        <div className="thunder-lines" data-testid="thunder-lines" />
-      )}
-      {showFlash && (
-        <div className="thunder-bg" data-testid="flash-effect" />
+      <div className="thunder-lines" data-testid="thunder-lines" />
+      {flashPhase !== 'off' && (
+        <div
+          className={`thunder-bg ${flashPhase === 'first' ? 'thunder-burst-1' : 'thunder-burst-2'}`}
+          data-testid="flash-effect"
+        />
       )}
       
       <motion.div

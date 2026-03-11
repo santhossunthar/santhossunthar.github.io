@@ -33,14 +33,14 @@ export default function BlogPostMobileNavbar({ postTitle }: BlogPostMobileNavbar
         <div className="flex-1 mx-4">
           <div className="overflow-x-auto scrollbar-hide">
             <div className="flex items-center space-x-2 text-white font-cyber text-sm whitespace-nowrap">
-              <span className="font-semibold">Post</span>
+              <span className="font-semibold">{postTitle}</span>
             </div>
           </div>
         </div>
 
         {/* Blog Link */}
         <button
-          onClick={() => window.location.href = '/blog'}
+          onClick={() => window.location.assign('/blog')}
           className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
           aria-label="Go to blog"
         >

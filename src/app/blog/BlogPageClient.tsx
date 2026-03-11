@@ -6,6 +6,7 @@ import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import MobileNavbar from '@/components/blog/MobileNavbar';
+import { POSTS_PER_PAGE } from '@/components/blog/BlogPostList';
 import { BlogPost } from '@/lib/blog-utils';
 
 // Lazy load heavy components
@@ -20,7 +21,6 @@ interface BlogPageClientProps {
 export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPageClientProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [currentView, setCurrentView] = useState<'posts' | 'tags'>(initialView);
   const searchParams = useSearchParams();
@@ -49,8 +49,6 @@ export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPag
 
   // Single optimized useEffect for URL handling
   useEffect(() => {
-    setIsMounted(true);
-    
     if (searchParams) {
       const tag = searchParams.get('tag');
       
@@ -67,21 +65,10 @@ export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPag
   }, [searchParams, initialView]);
 
   const handleTagClick = useCallback((tag: string) => {
-    if (isMounted) {
-      setCurrentView('posts');
-      setSelectedTag(tag);
-      setCurrentPage(1);
-    }
-  }, [isMounted]);
-
-  // Show loading state during hydration
-  if (!isMounted) {
-    return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-      </div>
-    );
-  }
+    setCurrentView('posts');
+    setSelectedTag(tag);
+    setCurrentPage(1);
+  }, []);
 
   return (
     <div className="min-h-screen bg-black">
@@ -91,7 +78,7 @@ export default function BlogPageClient({ posts, initialView = 'posts' }: BlogPag
           breadcrumb={breadcrumb}
           onMenuClick={() => setIsMobileSidebarOpen(true)}
           currentPage={currentPage}
-          totalPages={Math.ceil(filteredPosts.length / 6)}
+          totalPages={Math.max(1, Math.ceil(filteredPosts.length / POSTS_PER_PAGE))}
           currentView={currentView}
         />
       </div>

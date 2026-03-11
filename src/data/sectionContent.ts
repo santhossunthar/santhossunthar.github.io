@@ -3,7 +3,7 @@
 export const aboutContent = {
   title: "About Me",
   paragraphs: [
-    "Recent graduate awaiting formal graduation, with hands-on academic and industry experience in Cybersecurity. Currently working as a Cyber Security Engineer at iVedha Inc, contributing to real-world security operations, threat analysis, and vulnerability management. I have strong foundation in network security, application security, and incident response, with a proactive mindset toward emerging cyber threats. Passionate about continuous learning and applying practical security solutions to protect digital infrastructure.",
+    "With hands-on academic and industry experience in Cybersecurity. Currently working as a Cyber Security Engineer at iVedha Inc, contributing to real-world security operations, threat analysis, and vulnerability management. I have strong foundation in network security, application security, and incident response, with a proactive mindset toward emerging cyber threats. Passionate about continuous learning and applying practical security solutions to protect digital infrastructure.",
     "With a BSc (Hons) in Software Engineering, I decided to blend my coding skills with my passion for Cybersecurity. Building tools, automating attack simulations, and understanding systems from both a developer's and an attacker's perspective. This combination has shaped the way I think!"
   ]
 };
@@ -14,7 +14,9 @@ export const educationContent = {
     {
       degree: "BSc (Hons) in Software Engineering",
       institution: "University of Kelaniya, Sri Lanka",
-      status: "Graduation Pending - Strong foundation in software development, system design, and security"
+      startDate: "2021",
+      endDate: "2025",
+      status: "Strong foundation in software development, system design, and security"
     }
   ]
 };
@@ -28,6 +30,24 @@ export const expertiseContent = {
     "Secure Software Development Lifecycle",
     "Active Directory Security & Hardening",
     "Incident Response & Threat Analysis",
+  ]
+};
+
+export const certificationsContent = {
+  title: "Certifications",
+  items: [
+    {
+      name: "HTB CPTS",
+      fullName: "Hack The Box Certified Penetration Testing Specialist",
+      issuer: "Hack The Box",
+      logo: "/images/CPTS.png"
+    },
+    {
+      name: "CRTO",
+      fullName: "Certified Red Team Operator",
+      issuer: "Zero-Point Security",
+      logo: "/images/CRTO.png"
+    }
   ]
 };
 

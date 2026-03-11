@@ -11,7 +11,7 @@ interface BlogPostListProps {
   posts: BlogPost[];
 }
 
-const POSTS_PER_PAGE = 10;
+export const POSTS_PER_PAGE = 10;
 
 // Animation variants for performance optimization
 const containerVariants: Variants = {

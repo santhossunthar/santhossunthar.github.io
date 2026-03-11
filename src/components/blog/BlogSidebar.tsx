@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FileText, Home, Tags } from 'lucide-react';
 import { socialLinks } from '@/data/constants';
-import { useEffect, useState } from 'react';
 
 interface BlogSidebarProps {
   onClose?: () => void;
@@ -14,24 +13,15 @@ interface BlogSidebarProps {
 
 export default function BlogSidebar({ onClose, currentView }: BlogSidebarProps) {
   const router = useRouter();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const handleAllPosts = () => {
-    if (isMounted) {
-      router.push('/blog');
-      onClose?.();
-    }
+    router.push('/blog');
+    onClose?.();
   };
 
   const handleTagsFilter = () => {
-    if (isMounted) {
-      router.push('/blog/tags');
-      onClose?.();
-    }
+    router.push('/blog/tags');
+    onClose?.();
   };
   return (
     <div className="h-screen">
