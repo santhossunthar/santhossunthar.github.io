@@ -75,15 +75,14 @@ export const projectData = [
 export const aboutContent = {
   title: "About Me",
   paragraphs: [
-    "I bring hands-on academic and industry experience in cybersecurity. \
-    Currently working as a Cyber Security Engineer at iVedha Inc, \
-    contributing to real-world security operations, threat analysis, \
-    and vulnerability management. I have a strong foundation in network \
-    security, application security, incident response, penetration \
-    testing, vulnerability assessment, and red team operations, \
-    with a proactive mindset toward emerging cyber threats. \
-    I am passionate about continuous learning and applying practical \
-    security solutions to protect digital infrastructure.",
+    "A cybersecurity professional with both academic and industry experience \
+    in securing modern digital environments. Currently working as \
+    a Cyber Security Engineer at iVedha Inc, contributing to security \
+    operations, threat analysis, and vulnerability management. Experienced \
+    in network security, application security, incident response, penetration \
+    testing, vulnerability assessment, and red team operations. Passionate \
+    about continuous learning and staying updated with emerging \
+    cybersecurity threats.",
     "With a BSc (Hons) in Software Engineering, I decided to blend my \
     coding skills with my passion for Cybersecurity. Building tools, \
     automating attack simulations, and understanding systems from both \
