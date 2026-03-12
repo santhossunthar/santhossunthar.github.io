@@ -121,16 +121,18 @@ export const certificationsContent = {
   title: "Certifications",
   items: [
     {
-      name: "HTB CPTS",
-      fullName: "Hack The Box Certified Penetration Testing Specialist",
+      name: "CPTS",
+      fullName: "Certified Penetration Testing Specialist",
       issuer: "Hack The Box",
-      logo: "/images/CPTS.png"
+      logo: "/images/CPTS.png",
+      verifyUrl: "https://www.credly.com/badges/77c4aaa4-63bd-4f9f-a27d-0f2042185f28/public_url"
     },
     {
       name: "CRTO",
       fullName: "Certified Red Team Operator",
       issuer: "Zero-Point Security",
-      logo: "/images/CRTO.png"
+      logo: "/images/CRTO.png",
+      verifyUrl: "https://certs.zeropointsecurity.co.uk/5ce3433c-101a-4555-bac2-26369fb46c92#acc.mHB5f2Zs"
     }
   ]
 };

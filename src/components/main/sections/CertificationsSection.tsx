@@ -9,13 +9,14 @@ interface CertificationItemProps {
     fullName: string;
     issuer: string;
     logo: string;
+    verifyUrl: string;
   };
 }
 
 const CertificationItem = ({ item }: CertificationItemProps) => {
   return (
-    <div className="bg-cyber-800/30 border border-cyber-400/20 rounded-lg p-4">
-      <div className="flex flex-col gap-4">
+    <div className="bg-cyber-800/30 border border-cyber-400/20 rounded-lg p-4 h-full">
+      <div className="flex flex-col gap-4 h-full">
         <div className="w-full">
           <Image
             src={item.logo}
@@ -26,10 +27,20 @@ const CertificationItem = ({ item }: CertificationItemProps) => {
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
-        <div className="flex-1 text-center">
+        <div className="flex-1 text-center flex flex-col">
           <h5 className="text-lg font-semibold text-cyber-100">{item.name}</h5>
           <p className="text-cyber-300 mt-1">{item.fullName}</p>
-          <p className="text-sm text-cyber-400 mt-2">{`Issuer: ${item.issuer}`}</p>
+          <div className="mt-auto pt-2">
+            <p className="text-sm text-cyber-400">{`Issuer: ${item.issuer}`}</p>
+            <a
+              href={item.verifyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex mt-3 text-sm font-medium text-cyan-300 hover:text-cyan-200"
+            >
+              Verify
+            </a>
+          </div>
         </div>
       </div>
     </div>
