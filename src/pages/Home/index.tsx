@@ -1,17 +1,9 @@
-'use client'
-
-import { useRef, Suspense, lazy } from 'react';
-
-// Lazy load heavy components
-const Main = lazy(() => import('@/components/main/Main').then(module => ({ default: module.Main })));
-const Body = lazy(() => import('@/components/main/Body').then(module => ({ default: module.Body })));
+import { Main } from '@/components/main/Main';
+import { Body } from '@/components/main/Body';
 
 const Home = () => {
-  const containerRef = useRef(null);
-
   return (
     <div
-      ref={containerRef}
       className="
         bg-background 
         h-screen 
@@ -34,13 +26,7 @@ const Home = () => {
           scroll-snap-start"
         style={{ scrollSnapAlign: 'start' }}
       >
-        <Suspense fallback={
-          <div className="flex items-center justify-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-          </div>
-        }>
-          <Main />
-        </Suspense>
+        <Main />
       </section>
 
       {/* PAGE 2: Body */}
@@ -66,13 +52,7 @@ const Home = () => {
           lg:px-8"
         >
           <div className="relative pt-4 pb-6">
-            <Suspense fallback={
-              <div className="flex items-center justify-center py-12">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-              </div>
-            }>
-              <Body />
-            </Suspense>
+            <Body />
           </div>
         </div>
       </section>

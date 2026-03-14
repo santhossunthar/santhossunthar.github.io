@@ -24,6 +24,15 @@ export interface BlogPost {
   excerpt: string;
 }
 
+export function slugifyTag(tag: string): string {
+  return tag
+    .trim()
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
+
 // SSG: Read from markdown files (server-side only)
 const postsDirectory = typeof window === 'undefined' 
   ? path?.join(process.cwd(), 'src/data/blog-posts') ?? ''
@@ -180,4 +189,15 @@ export function getFeaturedPosts(): BlogPost[] {
   
   // Client-side: Return empty array
   return [];
+}
+
+export function getAllTags(): string[] {
+  const posts = getAllPosts();
+  const uniqueTags = new Set<string>();
+
+  posts.forEach((post) => {
+    post.tags.forEach((tag) => uniqueTags.add(tag));
+  });
+
+  return Array.from(uniqueTags).sort((a, b) => a.localeCompare(b));
 }

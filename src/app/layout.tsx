@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
+export const dynamic = 'error'
+export const revalidate = false
+
 export const metadata: Metadata = {
   title: 'Santhos Suntharalingam - Security Researcher',
   description: 'Portfolio of Santhos Suntharalingam, Security Researcher and Software Engineer',

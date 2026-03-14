@@ -1,4 +1,3 @@
-'use client'
 
 import { expertiseContent } from '../../../data/constants';
 

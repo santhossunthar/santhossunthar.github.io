@@ -1,4 +1,3 @@
-'use client'
 
 import { interestsContent } from '../../../data/constants';
 

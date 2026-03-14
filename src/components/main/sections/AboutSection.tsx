@@ -1,4 +1,3 @@
-'use client'
 
 import { aboutContent } from '../../../data/constants';
 
