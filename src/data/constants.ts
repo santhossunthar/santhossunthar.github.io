@@ -208,7 +208,7 @@ export const mainSectionConfig = {
       'Passionate about ethical hacking, penetration testing and \
        proactive defense. I specialize in analyzing threats, hardening \
        systems, and continuously learning to stay ahead of evolving attacks.',
-    imageSrc: '/images/picture.jpg',
+    imageSrc: '/images/profile-picture.jpg',
     imageAlt: 'Profile',
   },
 };

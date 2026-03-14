@@ -61,7 +61,7 @@ export default function BlogPostDetail({ post }: BlogPostDetailProps) {
             h1: ({ children }) => {
               const id = toHeadingId(String(children));
               return (
-                <h1 id={id} className="text-3xl font-bold text-white mb-6 mt-8">
+                <h1 id={id} className="scroll-mt-24 text-3xl font-bold text-white mb-6 mt-8">
                   {children}
                 </h1>
               );
@@ -69,7 +69,7 @@ export default function BlogPostDetail({ post }: BlogPostDetailProps) {
             h2: ({ children }) => {
               const id = toHeadingId(String(children));
               return (
-                <h2 id={id} className="text-2xl font-bold text-white mb-4 mt-6">
+                <h2 id={id} className="scroll-mt-24 text-2xl font-bold text-white mb-4 mt-6">
                   {children}
                 </h2>
               );
@@ -77,7 +77,7 @@ export default function BlogPostDetail({ post }: BlogPostDetailProps) {
             h3: ({ children }) => {
               const id = toHeadingId(String(children));
               return (
-                <h3 id={id} className="text-xl font-bold text-white mb-3 mt-4">
+                <h3 id={id} className="scroll-mt-24 text-xl font-bold text-white mb-3 mt-4">
                   {children}
                 </h3>
               );
@@ -85,7 +85,7 @@ export default function BlogPostDetail({ post }: BlogPostDetailProps) {
             h4: ({ children }) => {
               const id = toHeadingId(String(children));
               return (
-                <h4 id={id} className="text-lg font-bold text-white mb-2 mt-3">
+                <h4 id={id} className="scroll-mt-24 text-lg font-bold text-white mb-2 mt-3">
                   {children}
                 </h4>
               );
