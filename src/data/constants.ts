@@ -75,18 +75,19 @@ export const projectData = [
 export const aboutContent = {
   title: "About Me",
   paragraphs: [
-    "I am a cybersecurity professional with both academic and industry experience \
-    in securing modern digital environments. Contributing to security \
-    operations, threat analysis, and vulnerability management. Experienced \
-    in network security, application security, incident response, penetration \
-    testing, vulnerability assessment, and red team operations. I am passionate \
-    about continuous learning and staying up to date with emerging \
-    cybersecurity threats.",
-    "With a BSc (Hons) in Software Engineering, I decided to blend my \
-    coding skills with my passion for Cybersecurity. Building tools, \
-    automating attack simulations, and understanding systems from both \
-    a developer's and an attacker's perspective. This combination has \
-    shaped the way I think!"
+    "Hello! Curious to know me better? I am a cybersecurity professional \
+    who is on a mission to defend information systems! My journey has started \
+    since my childhood when I was trying to crack childhood games. You've got this \
+    right? My daily operations are contributing to threat \
+    analysis and vulnerability research. Trust me, a well offensive \
+    mindset contributes better for improved defense. That's why I blend my \
+    offensive security \
+    skills for defensive operations to protect the digital world!",
+    "I could have secured workplaces with my ethical hacking and penetration \
+    testing skills. I build security automation tools to help organizations \
+    and security community members to protect their systems. I understand the \
+    systems well before gonna break it and test it. This way has \
+    shaped me!"
   ]
 };
 
@@ -121,16 +122,23 @@ export const certificationsContent = {
   items: [
     {
       name: "CPTS",
-      fullName: "Certified Penetration Testing Specialist",
+      fullName: "Certified Penetration Testing Specialist (CPTS)",
       issuer: "Hack The Box",
+      issuedDate: "February 2026",
       logo: "/images/CPTS.png",
+      bgImage: "/images/cpts-logo.png",
+      bgScale: 0.9,
+      bgPosition: "right center",
       verifyUrl: "https://www.credly.com/badges/77c4aaa4-63bd-4f9f-a27d-0f2042185f28/public_url"
     },
     {
       name: "CRTO",
-      fullName: "Certified Red Team Operator",
+      fullName: "Certified Red Team Operator (CRTO)",
       issuer: "Zero-Point Security",
+      issuedDate: "February 2026",
       logo: "/images/CRTO.png",
+      bgImage: "/images/crto-logo.png",
+      bgFlipHorizontal: true,
       verifyUrl: "https://certs.zeropointsecurity.co.uk/5ce3433c-101a-4555-bac2-26369fb46c92#acc.mHB5f2Zs"
     }
   ]
@@ -191,10 +199,17 @@ export const mainSectionConfig = {
   },
   profile: {
     name: 'SANTHOS SUNTHARALINGAM',
-    title: 'CYBERSECURITY ENGINEER',
+    title: 'CYBERSECURITY PROFESSIONAL',
     degree: 'BSc (Hons) in Software Engineering',
     university: 'University of Kelaniya, Sri Lanka',
+    summary:
+      'Passionate about cybersecurity, ethical hacking, and proactive defense. I enjoy analyzing threats, hardening systems, and continuously learning to stay ahead of evolving attacks.',
     imageSrc: '/images/picture.jpg',
     imageAlt: 'Profile',
   },
+};
+
+export const homePageConfig = {
+  topNavTitle: 'SANTHOS',
+  topNavShowThresholdRatio: 0.6,
 };
