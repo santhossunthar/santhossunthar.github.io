@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
   const allPosts = getAllPosts();
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="blog-page min-h-screen bg-black">
       {/* Mobile Navbar */}
       <div className="lg:hidden">
         <BlogPostMobileNavbar postTitle={post.title} />

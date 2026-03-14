@@ -18,11 +18,9 @@ export default function BlogPostMobileNavbar({ postTitle }: BlogPostMobileNavbar
           </svg>
         </Link>
 
-        <div className="flex-1 mx-4">
-          <div className="overflow-x-auto scrollbar-hide">
-            <div className="flex items-center space-x-2 text-white font-cyber text-sm whitespace-nowrap">
-              <span className="font-semibold">{postTitle}</span>
-            </div>
+        <div className="flex-1 min-w-0 mx-3">
+          <div className="text-white font-cyber text-sm">
+            <span className="block font-semibold truncate">{postTitle}</span>
           </div>
         </div>
 

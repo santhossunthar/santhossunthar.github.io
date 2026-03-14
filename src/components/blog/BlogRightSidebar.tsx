@@ -61,7 +61,7 @@ export default function BlogRightSidebar({ tableOfContents, posts = [] }: BlogRi
         </div>
 
         {tableOfContents && tableOfContents.length > 0 && (
-          <div className="border-t border-white/20">
+          <div className="border-t border-white/20 bg-black/95 backdrop-blur-sm z-10">
             <div className="p-4">
               <TableOfContents items={tableOfContents} />
             </div>

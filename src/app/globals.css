@@ -16,6 +16,10 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 /* Respect OS-level accessibility settings for reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -47,6 +51,28 @@ body {
   font-size: 0.95rem;
   line-height: 1.55;
   letter-spacing: 0.01em;
+}
+
+/* Blog typography */
+.blog-page h1,
+.blog-page h2,
+.blog-page h3,
+.blog-page h4,
+.blog-page h5,
+.blog-page h6 {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.blog-page p,
+.blog-page li,
+.blog-page span,
+.blog-page a {
+  font-family: var(--font-about-body), sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 @layer utilities {

@@ -75,19 +75,16 @@ export const projectData = [
 export const aboutContent = {
   title: "About Me",
   paragraphs: [
-    "Hello! Curious to know me better? I am a cybersecurity professional \
-    who is on a mission to defend information systems! My journey has started \
-    since my childhood when I was trying to crack childhood games. You've got this \
-    right? My daily operations are contributing to threat \
-    analysis and vulnerability research. Trust me, a well offensive \
-    mindset contributes better for improved defense. That's why I blend my \
-    offensive security \
-    skills for defensive operations to protect the digital world!",
-    "I could have secured workplaces with my ethical hacking and penetration \
+    "Hello! Curious to know me better? I am a cybersecurity professional on a mission \
+      to defend information systems. My cybersecurity journey started in childhood \
+      when I tried to crack games. You got that right? I focus on threat analysis and vulnerability research. A strong offensive mindset is essential \
+      for building stronger defenses. That is why I blend offensive security skills \
+      with defensive operations to help protect the digital world.",
+    "I have helped secure workplaces with my ethical hacking and penetration \
     testing skills. I build security automation tools to help organizations \
-    and security community members to protect their systems. I understand the \
-    systems well before gonna break it and test it. This way has \
-    shaped me!"
+    and community members protect their systems. I make it a priority to \
+    understand systems deeply before attempting to break and test them. \
+    This approach has shaped who I am today."
   ]
 };
 
@@ -166,7 +163,12 @@ export const interestsContent = {
     "Rust",
     "JavaScript",
     "Docker",
-    "CI/CD",
+    "Jenkins",
+    "Azure Sentinel",
+    "SentinelOne",
+    "ELK Stack",
+    "Wazuh",
+    "Ansible"
   ],
   description: "I'm passionate about staying up-to-date with the latest \
     security trends and technologies. I enjoy contributing to open-source \
@@ -203,7 +205,9 @@ export const mainSectionConfig = {
     degree: 'BSc (Hons) in Software Engineering',
     university: 'University of Kelaniya, Sri Lanka',
     summary:
-      'Passionate about cybersecurity, ethical hacking, and proactive defense. I enjoy analyzing threats, hardening systems, and continuously learning to stay ahead of evolving attacks.',
+      'Passionate about ethical hacking, penetration testing and \
+       proactive defense. I specialize in analyzing threats, hardening \
+       systems, and continuously learning to stay ahead of evolving attacks.',
     imageSrc: '/images/picture.jpg',
     imageAlt: 'Profile',
   },

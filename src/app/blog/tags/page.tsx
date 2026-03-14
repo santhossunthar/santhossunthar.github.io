@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog-utils';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import TagsView from '@/components/blog/TagsView';
+import BlogMobileMenu from '@/components/blog/BlogMobileMenu';
 
 export async function generateMetadata() {
   return {
@@ -16,16 +16,8 @@ export default function BlogTagsPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="min-h-screen bg-black">
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-black border-b border-white/20">
-        <div className="flex items-center justify-between px-4 py-3 font-cyber text-sm">
-          <span className="text-white font-semibold">Tags</span>
-          <div className="flex items-center gap-4">
-            <Link href="/blog" className="text-white/80 hover:text-white">Posts</Link>
-            <Link href="/" className="text-white/80 hover:text-white">Portfolio</Link>
-          </div>
-        </div>
-      </div>
+    <div className="blog-page min-h-screen bg-black">
+      <BlogMobileMenu title="Tags" currentView="tags" />
 
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-screen">
