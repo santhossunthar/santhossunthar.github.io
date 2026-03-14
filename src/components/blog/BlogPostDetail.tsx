@@ -90,10 +90,10 @@ export default function BlogPostDetail({ post }: BlogPostDetailProps) {
                 </h4>
               );
             },
-            p: ({ children }) => <p className="text-white/90 mb-4 leading-relaxed">{children}</p>,
-            ul: ({ children }) => <ul className="text-white/90 mb-4 ml-6 list-disc">{children}</ul>,
-            ol: ({ children }) => <ol className="text-white/90 mb-4 ml-6 list-decimal">{children}</ol>,
-            li: ({ children }) => <li className="mb-2">{children}</li>,
+            p: ({ children }) => <p className="text-white/90 text-[0.95rem] mb-4 leading-relaxed">{children}</p>,
+            ul: ({ children }) => <ul className="text-white/90 text-[0.95rem] mb-4 ml-6 list-disc">{children}</ul>,
+            ol: ({ children }) => <ol className="text-white/90 text-[0.95rem] mb-4 ml-6 list-decimal">{children}</ol>,
+            li: ({ children }) => <li className="mb-2 text-[0.95rem]">{children}</li>,
             code: ({ children, className }) => {
               const isInline = !className;
               return isInline ? (
@@ -130,7 +130,7 @@ export default function BlogPostDetail({ post }: BlogPostDetailProps) {
             <span>Share</span>
             <div className="flex gap-2">
               <a
-                href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`}
+                href={`https://x.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors duration-300"

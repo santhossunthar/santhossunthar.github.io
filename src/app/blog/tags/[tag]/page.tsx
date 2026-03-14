@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog-utils';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
 import Breadcrumb from '@/components/blog/Breadcrumb';
 import BlogPostList from '@/components/blog/BlogPostList';
+import BlogMobileMenu from '@/components/blog/BlogMobileMenu';
 
 interface TagPageProps {
   params: Promise<{ tag: string }>;
@@ -48,16 +48,8 @@ export default async function BlogTagPage({ params }: TagPageProps) {
   );
 
   return (
-    <div className="min-h-screen bg-black">
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-black border-b border-white/20">
-        <div className="flex items-center justify-between px-4 py-3 font-cyber text-sm">
-          <span className="text-white font-semibold">{matchedTag}</span>
-          <div className="flex items-center gap-4">
-            <Link href="/blog/tags" className="text-white/80 hover:text-white">Tags</Link>
-            <Link href="/blog" className="text-white/80 hover:text-white">Posts</Link>
-          </div>
-        </div>
-      </div>
+    <div className="blog-page min-h-screen bg-black">
+      <BlogMobileMenu title={matchedTag} currentView="posts" />
 
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-screen">

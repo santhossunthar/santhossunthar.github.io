@@ -4,13 +4,20 @@
 
 /* Global font settings for better readability */
 body {
-  font-family: 'JetBrains Mono', 'Fira Code', 'Poppins', sans-serif;
-  font-weight: 400;
+  font-family: var(--font-main), var(--font-fira-code), 'Poppins', sans-serif;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
   line-height: 1.6;
+  letter-spacing: 0;
   /* Mobile performance optimizations */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
+}
+
+html {
+  scrollbar-gutter: stable;
 }
 
 /* Respect OS-level accessibility settings for reduced motion */
@@ -29,12 +36,43 @@ body {
 .about-me-section h3,
 .about-me-section h4,
 .about-me-section h5,
-.about-me-section h6,
-.about-me-section p,
-.about-me-section span {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+.about-me-section h6 {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.about-me-section #about p,
+.about-me-section #interests p {
+  font-family: var(--font-about-body), sans-serif;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+/* Blog typography */
+.blog-page h1,
+.blog-page h2,
+.blog-page h3,
+.blog-page h4,
+.blog-page h5,
+.blog-page h6 {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.blog-page p,
+.blog-page li,
+.blog-page span,
+.blog-page a {
+  font-family: var(--font-about-body), sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 @layer utilities {
@@ -104,8 +142,6 @@ body {
     --sidebar-accent-foreground: 0 0% 98%;
 
     /* fonts */
-    --font-orbitron: "Orbitron";
-
     /* font sizes */
     --font-size-sm: 14px;
     --font-size-29xl: 48px;
@@ -363,7 +399,7 @@ body {
       .glitch {
         position: relative;
         color: #ffffff;
-        font-family: 'Orbitron', monospace;
+        font-family: var(--font-orbitron), monospace;
         font-weight: 900;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -494,7 +530,7 @@ body {
 .text-reveal-glitch {
   position: relative;
   color: #00ff88;
-  font-family: 'Orbitron', monospace;
+  font-family: var(--font-orbitron), monospace;
 }
 
 .text-reveal-glitch::before,

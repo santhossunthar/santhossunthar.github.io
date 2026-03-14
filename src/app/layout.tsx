@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { Fira_Code, Montserrat, Orbitron, Oswald } from 'next/font/google'
 import './globals.css'
 
 export const dynamic = 'error'
@@ -21,34 +22,42 @@ export const viewport: Viewport = {
   themeColor: '#000000',
 }
 
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-main',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-about-body',
+})
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-fira-code',
+})
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-orbitron',
+})
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-        {/* Mobile-optimized font loading */}
-        <link 
-          rel="preconnect" 
-          href="https://fonts.googleapis.com"
-        />
-        <link 
-          rel="preconnect" 
-          href="https://fonts.gstatic.com" 
-          crossOrigin="anonymous"
-        />
-        <link 
-          rel="preload" 
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" 
-          as="style"
-        />
-        <link 
-          rel="stylesheet" 
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
-        />
-      </head>
+    <html lang="en" className={`${oswald.variable} ${montserrat.variable} ${firaCode.variable} ${orbitron.variable}`}>
       <body>{children}</body>
     </html>
   )

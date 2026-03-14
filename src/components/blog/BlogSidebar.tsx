@@ -13,13 +13,15 @@ export default function BlogSidebar({ currentView }: BlogSidebarProps) {
       <div className="bg-black border border-white/20 p-4 h-full flex flex-col font-cyber">
         <div className="text-center mb-4">
           <div className="relative w-20 h-20 mx-auto mb-3">
-            <Image
-              src="/images/picture.jpg"
-              alt="Profile"
-              width={80}
-              height={80}
-              className="rounded-full object-cover border-2 border-white/40"
-            />
+            <div className="w-20 h-20 rounded-full border-2 border-white/40 bg-white/10 flex items-center justify-center">
+              <Image
+                src="/images/blog-profile-icon.png"
+                alt="Blog profile icon"
+                width={80}
+                height={80}
+                className="h-full w-full rounded-full object-cover"
+              />
+            </div>
             <div className="absolute inset-0 rounded-full bg-gradient-radial from-white/20 to-transparent" />
           </div>
           <h3 className="text-lg font-bold text-white mb-1">Santhos Suntharalingam</h3>

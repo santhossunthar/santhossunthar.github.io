@@ -30,7 +30,7 @@ export default function BlogPostList({ posts, title = 'Blog Posts' }: BlogPostLi
 
               <h2 className="text-xl font-bold text-white mb-3 transition-colors duration-300">{post.title}</h2>
 
-              <p className="text-white/80 mb-4 line-clamp-3">{post.excerpt}</p>
+              <p className="text-white/80 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
 
               <div className="flex items-center justify-between">
                 <div className="flex flex-wrap gap-2">
