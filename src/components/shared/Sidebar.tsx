@@ -17,7 +17,7 @@ export const Sidebar = () => (
     <div className="mx-auto mb-6 relative">
       <div className="absolute -inset-2 rounded-full bg-cyber-400/20 blur-lg z-0" />
       <Image
-        src="/images/picture.jpg"
+        src="/images/profile-picture.jpg"
         alt="Profile"
         width={128}
         height={128}

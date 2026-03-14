@@ -43,7 +43,7 @@ export const ProfilePicture = ({ showGlitch }: ProfilePictureProps) => {
             </div>
 
             <div className="relative rounded-full overflow-hidden flex items-center justify-center">
-              <Image src="/images/picture.jpg" alt="Profile" width={320} height={320} className="relative h-80 w-80 rounded-full object-cover border-2 border-cyber-900" />
+              <Image src="/images/profile-picture.jpg" alt="Profile" width={320} height={320} className="relative h-80 w-80 rounded-full object-cover border-2 border-cyber-900" />
               <div className="absolute inset-0 rounded-full bg-gradient-radial from-cyber-400/10 via-transparent to-transparent" />
             </div>
 
