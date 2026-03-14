@@ -7,6 +7,7 @@ import { mainSectionConfig, socialLinks } from '@/data/constants';
 export const Main = () => {
   const [showThunder, setShowThunder] = useState(true);
   const [showGlitch, setShowGlitch] = useState(true);
+  const [runProfileSpin, setRunProfileSpin] = useState(true);
   const [flashPhase, setFlashPhase] = useState<'off' | 'first' | 'second'>('off');
   const [scrolled, setScrolled] = useState(false);
 
@@ -31,11 +32,16 @@ export const Main = () => {
       setShowGlitch(false);
     }, mainSectionConfig.intro.introEndMs);
 
+    const profileSpinEndTimer = setTimeout(() => {
+      setRunProfileSpin(false);
+    }, mainSectionConfig.intro.introEndMs + 180);
+
     return () => {
       clearTimeout(firstFlashOffTimer);
       clearTimeout(secondFlashOnTimer);
       clearTimeout(secondFlashOffTimer);
       clearTimeout(introEndTimer);
+      clearTimeout(profileSpinEndTimer);
     };
   }, []);
 
@@ -117,7 +123,7 @@ export const Main = () => {
                         style={{
                           transform: `rotate(${rotation}deg)`,
                           animation: 'spin 3s linear infinite',
-                          animationPlayState: showThunder ? 'running' : 'paused',
+                          animationPlayState: runProfileSpin ? 'running' : 'paused',
                         }}
                       >
                         <div
@@ -143,7 +149,7 @@ export const Main = () => {
                         style={{
                           transform: `rotate(${rotation}deg)`,
                           animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                          animationPlayState: showThunder ? 'running' : 'paused',
+                          animationPlayState: runProfileSpin ? 'running' : 'paused',
                         }}
                       >
                         <div
