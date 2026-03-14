@@ -1,4 +1,3 @@
-'use client'
 
 import { educationContent } from '../../../data/constants';
 

@@ -243,11 +243,11 @@ body {
 
 @layer utilities {
   .animate-spin-slower {
-    animation: spin 3s linear infinite;
+    animation: spin 3s linear 1;
   }
   
   .animate-pulse-slow {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) 1;
   }
 }
 
@@ -382,7 +382,7 @@ body {
       }
       
       .glitch.page-load-glitch::before {
-        animation: glitch-1 0.2s infinite linear;
+        animation: glitch-1 0.2s linear 1;
         color: #ff0000;
         z-index: -1;
         filter: blur(1px);
@@ -390,7 +390,7 @@ body {
       }
       
       .glitch.page-load-glitch::after {
-        animation: glitch-2 0.2s infinite linear;
+        animation: glitch-2 0.2s linear 1;
         color: #00ff00;
         z-index: -2;
         filter: blur(1px);
@@ -398,7 +398,7 @@ body {
       }
       
       .glitch.scroll-glitch::before {
-        animation: glitch-1 0.15s infinite linear;
+        animation: glitch-1 0.15s linear 1;
         color: #ff0000;
         z-index: -1;
         filter: blur(1.5px);
@@ -406,7 +406,7 @@ body {
       }
       
       .glitch.scroll-glitch::after {
-        animation: glitch-2 0.15s infinite linear;
+        animation: glitch-2 0.15s linear 1;
         color: #00ff00;
         z-index: -2;
         filter: blur(1.5px);
