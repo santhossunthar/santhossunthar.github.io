@@ -76,8 +76,11 @@ export const aboutContent = {
   title: "About Me",
   paragraphs: [
     "Hello! Curious to know me better? I am a cybersecurity professional on a mission \
-      to defend information systems. My cybersecurity journey started in childhood \
-      when I tried to crack games. You got that right? I focus on threat analysis and vulnerability research. A strong offensive mindset is essential \
+      to defend information systems. My interest in cybersecurity began in childhood \
+      through a curiosity about how software systems worked, which gradually evolved \
+      into a passion for ethical hacking, security research, and securing modern digital \
+      environments. I focus on threat analysis and vulnerability research. A strong \
+      offensive mindset is essential \
       for building stronger defenses. That is why I blend offensive security skills \
       with defensive operations to help protect the digital world.",
     "I have helped secure workplaces with my ethical hacking and penetration \
@@ -148,7 +151,7 @@ export const interestsContent = {
     "Application Security",
     "Cloud Security",
     "Penetration Testing",
-    "Red Team Operations",
+    "Adversary Simulation",
     "Vulnerability Assessment",
     "Incident Response",
     "Threat Intelligence",
@@ -216,4 +219,46 @@ export const mainSectionConfig = {
 export const homePageConfig = {
   topNavTitle: 'SANTHOS',
   topNavShowThresholdRatio: 0.6,
+};
+
+export const pinnedProjectsConfig = {
+  profileUrl: 'https://github.com/santhossunthar?tab=repositories',
+  projects: [
+    {
+      name: 'TestX',
+      description: 'AI Powered Chrome DevTools Extension for automated security testing',
+      language: 'HTML',
+      url: 'https://github.com/santhossunthar/TestX',
+    },
+    {
+      name: 'OpenSOC',
+      description: 'AI Powered Automated SOC operations',
+      language: 'Go',
+      url: 'https://github.com/santhossunthar/OpenSOC',
+    },
+    {
+      name: 'SecureWebApp',
+      description: 'Implementation of secure SSO workflow',
+      language: 'Java',
+      url: 'https://github.com/santhossunthar/SecureWebApp',
+    },
+    {
+      name: 'EnDe',
+      description: 'Password manager for windows systems',
+      language: 'Python',
+      url: 'https://github.com/santhossunthar/EnDe',
+    },
+    {
+      name: 'myRecon',
+      description: 'Automated recon tool for bug bounty hunters',
+      language: 'Shell',
+      url: 'https://github.com/santhossunthar/myRecon',
+    },
+    {
+      name: 'Tent',
+      description: 'Q&A Android App for discussions',
+      language: 'Java',
+      url: 'https://github.com/santhossunthar/Tent',
+    },
+  ],
 };
