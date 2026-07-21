@@ -106,13 +106,13 @@ export const workHistoryContent = {
       bgPosition: "center center",
       roles: [
         {
-          title: "Cyber Security Engineer",
+          title: "Cybersecurity Engineer",
           startDate: "Jul 2025",
           endDate: "Present",
           description: "Leading security engineering initiatives and building automation-focused defense workflows.",
         },
         {
-          title: "Associate Cyber Security Analyst",
+          title: "Associate Cybersecurity Analyst",
           startDate: "Aug 2024",
           endDate: "Jun 2025",
           description: "Supported security operations, vulnerability review, and internal security assessments.",
