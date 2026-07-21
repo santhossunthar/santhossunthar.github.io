@@ -92,42 +92,40 @@ export const aboutContent = {
 };
 
 export const workHistoryContent = {
-  title: "Work History",
+  title: "Professional Experience",
   items: [
     {
-      name: "Cyber Security Engineer",
-      fullName: "Cyber Security Engineer",
-      location: "iVedha Inc, Toronto, Ontario, Canada (Remote)",
-      startDate: "July 2025",
+      name: "iVedha Inc",
+      fullName: "iVedha Inc.",
+      location: "Toronto, Ontario, Canada (Remote)",
+      startDate: "Feb 2024",
       endDate: "Present",
       logo: "/images/iVedha-logo.png",
       bgImage: "/images/iVedha-bg.png",
       bgScale: 1.2,
       bgPosition: "center center",
+      roles: [
+        {
+          title: "Cyber Security Engineer",
+          startDate: "Jul 2025",
+          endDate: "Present",
+          description: "Leading security engineering initiatives and building automation-focused defense workflows.",
+        },
+        {
+          title: "Associate Cyber Security Analyst",
+          startDate: "Aug 2024",
+          endDate: "Jun 2025",
+          description: "Supported security operations, vulnerability review, and internal security assessments.",
+        },
+        {
+          title: "Cybersecurity Intern",
+          startDate: "Feb 2024",
+          endDate: "Jul 2024",
+          description: "Gained hands-on experience in security testing, analysis, and internal processes.",
+        },
+      ],
     },
-    {
-      name: "Associate Cyber Security Analyst",
-      fullName: "Associate Cyber Security Analyst",
-      location: "iVedha Inc, Toronto, Ontario, Canada (Remote)",
-      startDate: "August 2024",
-      endDate: "June 2025",
-      logo: "/images/iVedha-logo.png",
-      bgImage: "/images/iVedha-bg.png",
-      bgScale: 1.2,
-      bgPosition: "center center",
-    },
-    {
-      name: "Cybersecurity Intern",
-      fullName: "Cyber Security Intern",
-      location: "iVedha Inc, Toronto, Ontario, Canada (Remote)",
-      startDate: "February 2024",
-      endDate: "July 2024",
-      logo: "/images/iVedha-logo.png",
-      bgImage: "/images/iVedha-bg.png",
-      bgScale: 1.2,
-      bgPosition: "center center",
-    },
-  ]
+  ],
 };
 
 export const educationContent = {
