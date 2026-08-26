@@ -158,11 +158,28 @@ export const certificationsContent = {
   title: "Certifications",
   items: [
     {
+      name: "C|PENT",
+      fullName: "Certified Penetration Testing Professional (C|PENT)",
+      issuer: "EC-Council",
+      issuedDate: "August 2026",
+      logo: "/images/CPENT.png",
+      logoScale: 1.52,
+      logoOffsetY: "-14%",
+      bgImage: "/images/cpent-logo.jpg",
+      bgScale: 0.85,
+      bgPosition: "right center",
+      bgOffsetX: "12%",
+      bgLeftFadeEnd: "89%",
+      bgRightFadeStart: "92%",
+      verifyUrl: "https://aspen.eccouncil.org/VerifyBadge?type=certification&a=cDsN87WCe+xTSvrso1MkqSmvuSTJkosbY7hYj7jCZFc="
+    },
+    {
       name: "CPTS",
       fullName: "Certified Penetration Testing Specialist (CPTS)",
       issuer: "Hack The Box",
       issuedDate: "February 2026",
       logo: "/images/CPTS.png",
+      logoScale: 1.52,
       bgImage: "/images/cpts-logo.png",
       bgScale: 0.9,
       bgPosition: "right center",
@@ -174,6 +191,7 @@ export const certificationsContent = {
       issuer: "Zero-Point Security",
       issuedDate: "February 2026",
       logo: "/images/CRTO.png",
+      logoScale: 1.52,
       bgImage: "/images/crto-logo.png",
       bgFlipHorizontal: true,
       verifyUrl: "https://certs.zeropointsecurity.co.uk/5ce3433c-101a-4555-bac2-26369fb46c92#acc.mHB5f2Zs"
