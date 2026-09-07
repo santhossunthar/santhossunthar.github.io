@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPostByShortId, getAllPostIds, getAllPosts } from '@/lib/blog-utils';
 import { extractTableOfContents, stripFirstH1 } from '@/lib/table-of-contents';
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
 
 
 // SSG: Generate metadata for each post
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const post = getPostByShortId(id);
   
@@ -29,6 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: `${post.title} - Santhos Suntharalingam`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${post.shortId}/`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -80,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
             {/* Desktop Breadcrumb */}
             <div className="hidden lg:block sticky top-0 z-10 bg-black/95 backdrop-blur-sm border-b border-white/30 py-3 px-2 mb-6">
               <Breadcrumb items={[
-                { label: 'Blog', path: '/blog' },
+                { label: 'Blog', path: '/blog/' },
                 { label: post.title }
               ]} />
             </div>

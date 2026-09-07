@@ -30,7 +30,7 @@ export default function BlogRightSidebar({ tableOfContents, posts = [] }: BlogRi
             {tags.map((tag, index) => (
               <Link
                 key={index}
-                href={`/blog/tags/${slugifyTag(tag)}`}
+                href={`/blog/tags/${slugifyTag(tag)}/`}
                 className="px-2 py-1 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 rounded-full text-white/80 hover:text-white text-xs transition-all duration-300"
               >
                 {tag}
@@ -49,7 +49,7 @@ export default function BlogRightSidebar({ tableOfContents, posts = [] }: BlogRi
                 </span>
                 <div className="flex-1 min-w-0">
                   <Link
-                    href={`/blog/${post.shortId}`}
+                    href={`/blog/${post.shortId}/`}
                     className="block text-white/80 hover:text-white text-xs font-medium transition-colors duration-300 line-clamp-2"
                   >
                     {post.title}

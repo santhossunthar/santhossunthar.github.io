@@ -34,7 +34,7 @@ export default function TagsView({ posts }: TagsViewProps) {
         {allTags.map(({ tag, count }) => (
           <Link
             key={tag}
-            href={`/blog/tags/${slugifyTag(tag)}`}
+            href={`/blog/tags/${slugifyTag(tag)}/`}
             className="group p-6 bg-black border border-white/20 hover:border-white/40 rounded-lg transition-all duration-300 hover:bg-white/5"
           >
             <div className="text-left">

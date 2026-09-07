@@ -9,7 +9,7 @@ export default function BlogPostMobileNavbar({ postTitle }: BlogPostMobileNavbar
     <div className="fixed top-0 left-0 right-0 z-40 bg-black border-b border-white/20">
       <div className="flex items-center justify-between px-4 py-3">
         <Link
-          href="/blog"
+          href="/blog/"
           className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
           aria-label="Back to blog"
         >
@@ -25,7 +25,7 @@ export default function BlogPostMobileNavbar({ postTitle }: BlogPostMobileNavbar
         </div>
 
         <Link
-          href="/blog"
+          href="/blog/"
           className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
           aria-label="Go to blog"
         >

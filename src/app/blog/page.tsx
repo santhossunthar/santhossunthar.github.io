@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { getAllPosts } from '@/lib/blog-utils';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
@@ -5,10 +6,13 @@ import Breadcrumb from '@/components/blog/Breadcrumb';
 import BlogPostList from '@/components/blog/BlogPostList';
 import BlogMobileMenu from '@/components/blog/BlogMobileMenu';
 
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Blog - Santhos Suntharalingam',
     description: 'Security and development blog posts',
+    alternates: {
+      canonical: '/blog/',
+    },
   };
 }
 

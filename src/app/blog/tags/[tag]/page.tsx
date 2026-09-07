@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog-utils';
 import BlogSidebar from '@/components/blog/BlogSidebar';
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: TagPageProps) {
+export async function generateMetadata({ params }: TagPageProps): Promise<Metadata> {
   const { tag } = await params;
   const tags = getAllTags();
   const matchedTag = tags.find((item) => slugifyTag(item) === tag);
@@ -30,6 +31,9 @@ export async function generateMetadata({ params }: TagPageProps) {
   return {
     title: `${matchedTag} Posts | Santhos Suntharalingam`,
     description: `Browse blog posts tagged with ${matchedTag}`,
+    alternates: {
+      canonical: `/blog/tags/${tag}/`,
+    },
   };
 }
 
@@ -59,7 +63,7 @@ export default async function BlogTagPage({ params }: TagPageProps) {
 
           <div className="lg:col-span-7 px-4 border-r border-white/20">
             <div className="hidden lg:block sticky top-0 z-10 bg-black/95 backdrop-blur-sm border-b border-white/30 py-3 px-2 mb-6">
-              <Breadcrumb items={[{ label: 'Blog', path: '/blog' }, { label: 'Tags', path: '/blog/tags' }, { label: matchedTag }]} />
+              <Breadcrumb items={[{ label: 'Blog', path: '/blog/' }, { label: 'Tags', path: '/blog/tags/' }, { label: matchedTag }]} />
             </div>
 
             <div className="lg:hidden pt-16"></div>

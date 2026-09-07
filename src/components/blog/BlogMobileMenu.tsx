@@ -61,7 +61,7 @@ export default function BlogMobileMenu({ title, currentView = 'posts' }: BlogMob
           >
             <div className="space-y-4 w-full max-w-xs">
               <Link
-                href="/blog"
+                href="/blog/"
                 onClick={() => setIsOpen(false)}
                 className={`flex items-center justify-center gap-2 rounded-lg border px-4 py-3 transition-colors duration-200 ${
                   currentView === 'posts'
@@ -74,7 +74,7 @@ export default function BlogMobileMenu({ title, currentView = 'posts' }: BlogMob
               </Link>
 
               <Link
-                href="/blog/tags"
+                href="/blog/tags/"
                 onClick={() => setIsOpen(false)}
                 className={`flex items-center justify-center gap-2 rounded-lg border px-4 py-3 transition-colors duration-200 ${
                   currentView === 'tags'

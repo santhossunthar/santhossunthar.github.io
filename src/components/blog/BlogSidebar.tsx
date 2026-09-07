@@ -30,7 +30,7 @@ export default function BlogSidebar({ currentView }: BlogSidebarProps) {
 
         <div className="space-y-2 mb-6">
           <Link
-            href="/blog"
+            href="/blog/"
             className={`flex items-center gap-3 w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 ${
               currentView === 'posts'
                 ? 'text-white bg-white/10'
@@ -48,7 +48,7 @@ export default function BlogSidebar({ currentView }: BlogSidebarProps) {
             <span>Portfolio</span>
           </Link>
           <Link
-            href="/blog/tags"
+            href="/blog/tags/"
             className={`flex items-center gap-3 w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 ${
               currentView === 'tags'
                 ? 'text-white bg-white/10'

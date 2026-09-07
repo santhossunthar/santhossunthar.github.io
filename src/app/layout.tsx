@@ -1,13 +1,26 @@
 import type { Metadata, Viewport } from 'next'
 import { Fira_Code, Montserrat, Orbitron, Oswald } from 'next/font/google'
+import { SITE_URL } from '@/lib/site'
 import './globals.css'
 
 export const dynamic = 'error'
 export const revalidate = false
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'Santhos Suntharalingam - Security Researcher',
   description: 'Portfolio of Santhos Suntharalingam, Security Researcher and Software Engineer',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   // Mobile performance optimizations
   other: {
     'mobile-web-app-capable': 'yes',

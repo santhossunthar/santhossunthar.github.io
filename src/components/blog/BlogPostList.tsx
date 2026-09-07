@@ -16,7 +16,7 @@ export default function BlogPostList({ posts, title = 'Blog Posts' }: BlogPostLi
 
       <div className="grid gap-4 md:gap-6">
         {posts.map((post) => (
-          <Link key={post.id} href={`/blog/${post.shortId}`} className="block">
+          <Link key={post.id} href={`/blog/${post.shortId}/`} className="block">
             <article className="bg-black border border-white/20 rounded-lg p-4 md:p-6 hover:bg-white/5 hover:border-white/40 transition-all duration-300 group">
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-2">
