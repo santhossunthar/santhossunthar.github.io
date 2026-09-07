@@ -16,7 +16,7 @@ export default function BlogSidebar({ currentView }: BlogSidebarProps) {
             <div className="w-20 h-20 rounded-full border-2 border-white/40 bg-white/10 flex items-center justify-center">
               <Image
                 src="/images/blog-profile-icon.png"
-                alt="Blog profile icon"
+                alt="Santhos Suntharalingam blog avatar"
                 width={80}
                 height={80}
                 className="h-full w-full rounded-full object-cover"

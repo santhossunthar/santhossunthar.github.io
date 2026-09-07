@@ -26,7 +26,8 @@ export const Main = ({ scrollOffset = 0 }: MainProps) => {
       <div className="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 z-0 pointer-events-none">
         <img
           src="/images/header.jpeg"
-          alt="Header background"
+          alt=""
+          aria-hidden="true"
           className="h-full w-full object-cover blur-sm scale-100 opacity-70"
           style={{ transform: `translateY(${parallaxY}px) scale(1.02)` }}
         />

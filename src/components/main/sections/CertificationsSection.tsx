@@ -36,7 +36,8 @@ const CertificationItem = ({ item }: CertificationItemProps) => {
         >
           <Image
             src={item.bgImage}
-            alt={`${item.name} background`}
+            alt=""
+            aria-hidden="true"
             fill
             className="object-cover blur-sm"
             style={{
@@ -56,7 +57,7 @@ const CertificationItem = ({ item }: CertificationItemProps) => {
           <div className="w-24 md:w-28 h-20 md:h-24 shrink-0 overflow-hidden rounded-md bg-black/35 p-2">
             <Image
               src={item.logo}
-              alt={`${item.name} logo`}
+              alt={`${item.fullName} certification badge`}
               width={800}
               height={320}
               className="h-full w-full object-contain"
