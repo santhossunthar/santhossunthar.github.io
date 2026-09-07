@@ -267,7 +267,7 @@ export const mainSectionConfig = {
   },
   profile: {
     name: 'SANTHOS SUNTHARALINGAM',
-    title: 'CYBERSECURITY PROFESSIONAL',
+    title: 'CYBERSECURITY ENGINEER',
     degree: 'BSc (Hons) in Software Engineering',
     university: 'University of Kelaniya, Sri Lanka',
     summary:
