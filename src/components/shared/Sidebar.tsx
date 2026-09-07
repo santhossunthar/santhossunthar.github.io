@@ -18,7 +18,7 @@ export const Sidebar = () => (
       <div className="absolute -inset-2 rounded-full bg-cyber-400/20 blur-lg z-0" />
       <Image
         src="/images/profile-picture.jpg"
-        alt="Profile"
+        alt="Portrait of Santhos Suntharalingam"
         width={128}
         height={128}
         className="

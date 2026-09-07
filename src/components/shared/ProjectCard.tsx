@@ -22,7 +22,7 @@ export const ProjectCard = ({ project, className }: ProjectCardProps) => (
       <div className="flex flex-row items-stretch w-full">
         <div className="relative w-[200px]">
           <div className="absolute inset-0 bg-cyber-400/10 blur-md opacity-75 group-hover:opacity-100 transition-opacity duration-300" />
-          <Image src={project.image} alt={project.title} width={200} height={256} className="relative h-64 w-full object-cover" />
+          <Image src={project.image} alt={`${project.title} project preview`} width={200} height={256} className="relative h-64 w-full object-cover" />
         </div>
 
         <div className="flex-1 p-4 flex flex-col justify-between bg-black/95">

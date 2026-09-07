@@ -12,7 +12,8 @@ export const EducationSection = () => {
           <div className="absolute inset-0">
             <Image
               src="/images/education.jpeg"
-              alt="Education background"
+              alt=""
+              aria-hidden="true"
               fill
               className="object-cover blur-sm scale-105"
               sizes="100vw"

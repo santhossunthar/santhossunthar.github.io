@@ -267,7 +267,7 @@ export const mainSectionConfig = {
        proactive defense. I specialize in analyzing threats, hardening \
        systems, and continuously learning to stay ahead of evolving attacks.',
     imageSrc: '/images/profile-picture.jpg',
-    imageAlt: 'Profile',
+    imageAlt: 'Portrait of Santhos Suntharalingam',
   },
 };
 
