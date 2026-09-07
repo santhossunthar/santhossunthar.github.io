@@ -8,11 +8,58 @@ export const revalidate = false
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Santhos Suntharalingam - Security Researcher',
-  description: 'Portfolio of Santhos Suntharalingam, Security Researcher and Software Engineer',
+
+  title: {
+    default: 'Santhos Suntharalingam | Cybersecurity Engineer',
+    template: '%s | Santhos Suntharalingam',
+  },
+
+  description:
+    'Cybersecurity Engineer specializing in offensive security, penetration testing, cloud security, threat detection, incident response, and security automation.',
+
+  authors: [
+    {
+      name: 'Santhos Suntharalingam',
+      url: SITE_URL,
+    },
+  ],
+
+  creator: 'Santhos Suntharalingam',
+
+  alternates: {
+    canonical: SITE_URL,
+  },
+
+  openGraph: {
+    type: 'website',
+    siteName: 'Santhos Suntharalingam',
+    title: 'Santhos Suntharalingam | Cybersecurity Engineer',
+    description:
+      'Cybersecurity Engineer specializing in offensive security, cloud security, threat detection, and security automation.',
+    url: SITE_URL,
+
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Santhos Suntharalingam - Cybersecurity Engineer',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Santhos Suntharalingam | Cybersecurity Engineer',
+    description:
+      'Cybersecurity Engineer specializing in offensive security, cloud security, and threat detection.',
+    images: ['/og-image.png'],
+  },
+
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -21,13 +68,13 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  // Mobile performance optimizations
+
   other: {
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
-  }
-}
+  },
+};
 
 export const viewport: Viewport = {
   width: 'device-width',
