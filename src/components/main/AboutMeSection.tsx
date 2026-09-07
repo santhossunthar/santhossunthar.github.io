@@ -44,7 +44,7 @@ export const AboutMeSection = () => {
           <InterestsSection />
         </div>
       </section>
-      {/*}
+      {/*
       <section id="projects" className="w-full">
         <div className="w-full max-w-[46rem] mx-auto bg-cyber-900/20 rounded-xl p-4 md:p-6">
           <GithubStatsSection />
