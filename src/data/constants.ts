@@ -190,7 +190,7 @@ export const certificationsContent = {
       issuer: "Zero-Point Security",
       issuedDate: "February 2026",
       logo: "/images/CRTO.png",
-      logoScale: 1.22,
+      logoScale: 1.52,
       bgImage: "/images/crto-logo.png",
       bgFlipHorizontal: true,
       verifyUrl: "https://certs.zeropointsecurity.co.uk/5ce3433c-101a-4555-bac2-26369fb46c92#acc.mHB5f2Zs"
