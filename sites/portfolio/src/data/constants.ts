@@ -170,7 +170,7 @@ export const certificationsContent = {
     },
     {
       name: "C|PENT",
-      fullName: "Certified Penetration Testing Professional (C|PENT)",
+      fullName: "Certified Penetration Testing Professional (C|PENT v2)",
       issuer: "EC-Council",
       issuedDate: "August 2026",
       logo: "/images/CPENT.png",
