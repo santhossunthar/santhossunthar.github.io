@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { BlogPost, slugifyTag } from '@/lib/blog-utils';
-import { TableOfContentsItem } from '@/lib/table-of-contents';
+import { BlogPost, slugifyTag } from '@/lib/blog/blog-utils';
+import { TableOfContentsItem } from '@/lib/shared/table-of-contents';
 import TableOfContents from './TableOfContents';
 
 interface BlogRightSidebarProps {

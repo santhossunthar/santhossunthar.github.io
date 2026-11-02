@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReturnDesk</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell home-shell">
+    <section class="intro">
+      <p class="eyebrow">South Region Logistics</p>
+      <h1>ReturnDesk</h1>
+      <p>Warehouse return intake and vendor disposition queue.</p>
+    </section>
+    <section class="panel login-panel">
+      <h2>Staff Sign In</h2>
+      <form method="post">
+        <label>Username <input name="username" autocomplete="username"></label>
+        <label>Password <input name="password" type="password" autocomplete="current-password"></label>
+        <button class="button" type="submit">Sign in</button>
+      </form>
+      {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    </section>
+  </main>
+</body>
+</html>

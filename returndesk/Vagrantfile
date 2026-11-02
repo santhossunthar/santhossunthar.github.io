@@ -1,0 +1,61 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/jammy64"
+  config.vm.box_check_update = false
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = 1024
+    vb.cpus = 1
+  end
+
+  config.vm.define "returndesk-web" do |web|
+    web.vm.hostname = "returndesk-web"
+
+    # Attacker-facing host-only network. Browse from Windows:
+    # http://192.168.56.20/
+    web.vm.network "private_network", ip: "192.168.56.20"
+
+    # Internal lab network used for pivoting to ArchiveNode.
+    web.vm.network "private_network", ip: "10.10.20.10", virtualbox__intnet: "returndesk-int"
+
+    web.vm.provider "virtualbox" do |vb|
+      vb.name = "returndesk-web"
+      vb.memory = 2048
+      vb.cpus = 1
+    end
+
+    web.vm.provision "shell", inline: <<-SHELL
+      set -e
+      rm -rf /root/returndesk-web
+      cp -r /vagrant/artifacts/returndesk-web /root/returndesk-web
+      chmod +x /root/returndesk-web/build-web.sh
+      cd /root/returndesk-web
+      ./build-web.sh
+    SHELL
+  end
+
+  config.vm.define "archive-node" do |archive|
+    archive.vm.hostname = "archive-node"
+
+    # Internal-only network. The intended attack path reaches this host from
+    # returndesk-web, not directly from the attacker.
+    archive.vm.network "private_network", ip: "10.10.20.20", virtualbox__intnet: "returndesk-int"
+
+    archive.vm.provider "virtualbox" do |vb|
+      vb.name = "archive-node"
+      vb.memory = 1024
+      vb.cpus = 1
+    end
+
+    archive.vm.provision "shell", inline: <<-SHELL
+      set -e
+      rm -rf /root/archive-node
+      cp -r /vagrant/artifacts/archive-node /root/archive-node
+      chmod +x /root/archive-node/build-archive.sh
+      cd /root/archive-node
+      ./build-archive.sh
+    SHELL
+  end
+end

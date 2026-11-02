@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getAllPosts } from '@/lib/blog-utils';
+import { getAllPosts } from '@/lib/blog/blog-utils';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
 import Breadcrumb from '@/components/blog/Breadcrumb';

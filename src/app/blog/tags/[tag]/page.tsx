@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog-utils';
+import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog/blog-utils';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
 import Breadcrumb from '@/components/blog/Breadcrumb';

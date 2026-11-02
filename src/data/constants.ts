@@ -158,8 +158,19 @@ export const certificationsContent = {
   title: "Certifications",
   items: [
     {
+      name: "CRTL",
+      fullName: "Certified Red Team Lead (CRTL)",
+      issuer: "Zero-Point Security",
+      issuedDate: "October 2026",
+      logo: "/images/CRTL.png",
+      logoScale: 1.52,
+      bgImage: "/images/crto-logo.png",
+      bgFlipHorizontal: true,
+      verifyUrl: "https://certs.zeropointsecurity.co.uk/5883934f-823e-4936-8943-81563052e09c#acc.P82EWtCY"
+    },
+    {
       name: "C|PENT",
-      fullName: "Certified Penetration Testing Professional (C|PENT)",
+      fullName: "Certified Penetration Testing Professional (C|PENT v2)",
       issuer: "EC-Council",
       issuedDate: "August 2026",
       logo: "/images/CPENT.png",
@@ -174,6 +185,17 @@ export const certificationsContent = {
       verifyUrl: "https://aspen.eccouncil.org/VerifyBadge?type=certification&a=cDsN87WCe+xTSvrso1MkqSmvuSTJkosbY7hYj7jCZFc="
     },
     {
+      name: "CRTO",
+      fullName: "Certified Red Team Operator (CRTO)",
+      issuer: "Zero-Point Security",
+      issuedDate: "February 2026",
+      logo: "/images/CRTO.png",
+      logoScale: 1.52,
+      bgImage: "/images/crto-logo.png",
+      bgFlipHorizontal: true,
+      verifyUrl: "https://certs.zeropointsecurity.co.uk/5ce3433c-101a-4555-bac2-26369fb46c92#acc.mHB5f2Zs"
+    },
+    {
       name: "CPTS",
       fullName: "Certified Penetration Testing Specialist (CPTS)",
       issuer: "Hack The Box",
@@ -185,17 +207,6 @@ export const certificationsContent = {
       bgPosition: "right center",
       verifyUrl: "https://www.credly.com/badges/77c4aaa4-63bd-4f9f-a27d-0f2042185f28/public_url"
     },
-    {
-      name: "CRTO",
-      fullName: "Certified Red Team Operator (CRTO)",
-      issuer: "Zero-Point Security",
-      issuedDate: "February 2026",
-      logo: "/images/CRTO.png",
-      logoScale: 1.52,
-      bgImage: "/images/crto-logo.png",
-      bgFlipHorizontal: true,
-      verifyUrl: "https://certs.zeropointsecurity.co.uk/5ce3433c-101a-4555-bac2-26369fb46c92#acc.mHB5f2Zs"
-    }
   ]
 };
 

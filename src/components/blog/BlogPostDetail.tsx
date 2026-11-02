@@ -1,7 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { BlogPost } from '@/lib/blog-utils';
-import { stripFirstH1 } from '@/lib/table-of-contents';
+import { BlogPost } from '@/lib/blog/blog-utils';
+import { stripFirstH1 } from '@/lib/shared/table-of-contents';
 
 interface BlogPostDetailProps {
   post: BlogPost;
@@ -115,6 +115,17 @@ export default function BlogPostDetail({ post }: BlogPostDetailProps) {
               <a href={href} className="text-white hover:text-white/80 underline transition-colors duration-300" target="_blank" rel="noopener noreferrer">
                 {children}
               </a>
+            ),
+            img: ({ src, alt }) => (
+              <figure className="my-6">
+                <img
+                  src={src ?? ''}
+                  alt={alt ?? ''}
+                  loading="lazy"
+                  className="w-full rounded-lg border border-white/20 bg-white/5 object-contain"
+                />
+                {alt && <figcaption className="mt-2 text-center text-xs text-white/55">{alt}</figcaption>}
+              </figure>
             ),
             strong: ({ children }) => <strong className="font-bold text-white">{children}</strong>,
             em: ({ children }) => <em className="italic text-white/90">{children}</em>,

@@ -1,4 +1,4 @@
-import { TableOfContentsItem } from '@/lib/table-of-contents';
+import { TableOfContentsItem } from '@/lib/shared/table-of-contents';
 
 interface TableOfContentsProps {
   items: TableOfContentsItem[];

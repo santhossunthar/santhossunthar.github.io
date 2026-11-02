@@ -1,0 +1,59 @@
+{
+  "name": "ReturnDesk: Dead Letter Queue",
+  "slug": "returndesk",
+  "version": "1.0.0",
+  "provider": "vagrant",
+  "entrypoint": "Vagrantfile",
+  "description": "Two-machine Linux CTF lab with an exposed support portal and an internal archive node.",
+  "commands": {
+    "up": "vagrant up",
+    "stop": "vagrant halt",
+    "destroy": "vagrant destroy -f",
+    "status": "vagrant status",
+    "sshWeb": "vagrant ssh returndesk-web",
+    "sshArchive": "vagrant ssh archive-node"
+  },
+  "access": {
+    "url": "http://192.168.56.20/",
+    "webHost": "192.168.56.20",
+    "archiveHost": "10.10.20.20"
+  },
+  "machines": [
+    {
+      "name": "returndesk-web",
+      "hostname": "returndesk-web",
+      "role": "Public-facing support portal",
+      "box": "ubuntu/jammy64",
+      "memory": 2048,
+      "cpus": 1,
+      "interfaces": [
+        {
+          "type": "host-only",
+          "ip": "192.168.56.20",
+          "ports": ["22/tcp", "80/tcp"]
+        },
+        {
+          "type": "internal",
+          "ip": "10.10.20.10",
+          "network": "returndesk-int"
+        }
+      ]
+    },
+    {
+      "name": "archive-node",
+      "hostname": "archive-node",
+      "role": "Internal-only archive node",
+      "box": "ubuntu/jammy64",
+      "memory": 1024,
+      "cpus": 1,
+      "interfaces": [
+        {
+          "type": "internal",
+          "ip": "10.10.20.20",
+          "network": "returndesk-int",
+          "ports": ["22/tcp"]
+        }
+      ]
+    }
+  ]
+}
