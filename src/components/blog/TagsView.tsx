@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BlogPost, slugifyTag } from '@/lib/blog-utils';
+import { BlogPost, slugifyTag } from '@/lib/blog/blog-utils';
 
 interface TagsViewProps {
   posts: BlogPost[];

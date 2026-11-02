@@ -1,12 +1,15 @@
 import type { MetadataRoute } from 'next';
-import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog-utils';
-import { absoluteUrl } from '@/lib/site';
+import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog/blog-utils';
+import { getAllLabs } from '@/lib/lab/lab-utils';
+import { absoluteUrl } from '@/lib/shared/site';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
+  const labs = getAllLabs();
   const latestPostDate = posts[0]?.date ? new Date(posts[0].date) : new Date();
+  const latestLabDate = labs[0]?.date ? new Date(labs[0].date) : latestPostDate;
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: absoluteUrl('/'),
@@ -25,6 +28,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: latestPostDate,
       changeFrequency: 'weekly',
       priority: 0.6,
+    },
+    {
+      url: absoluteUrl('/labs/'),
+      lastModified: latestLabDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: absoluteUrl('/labs/setup/'),
+      lastModified: latestLabDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ];
 
@@ -49,5 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticRoutes, ...postRoutes, ...tagRoutes];
+  const labRoutes = labs.map((lab) => ({
+    url: absoluteUrl(`/labs/${lab.slug}/`),
+    lastModified: new Date(lab.date),
+    changeFrequency: 'monthly' as const,
+    priority: lab.featured ? 0.8 : 0.7,
+  }));
+
+  return [...staticRoutes, ...postRoutes, ...tagRoutes, ...labRoutes];
 }

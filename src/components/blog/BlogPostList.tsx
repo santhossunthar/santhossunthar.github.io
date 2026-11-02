@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BlogPost } from '@/lib/blog-utils';
+import { BlogPost } from '@/lib/blog/blog-utils';
 
 interface BlogPostListProps {
   posts: BlogPost[];

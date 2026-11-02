@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReturnDesk Policy Import</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin">ReturnDesk</a>
+    <nav>
+      <a href="/admin">Dashboard</a>
+      <a href="/admin/import-policy">Policies</a>
+      <a class="logout" href="/logout">Logout</a>
+    </nav>
+  </header>
+  <main class="admin-shell">
+    <section class="summary">
+      <div>
+        <p class="eyebrow">Policy Management</p>
+        <h1>Vendor Policy Packs</h1>
+      </div>
+    </section>
+
+    <section class="workspace two-column">
+      <article class="panel">
+        <h2>Import Policy</h2>
+        <form action="/admin/import-policy" method="post" enctype="multipart/form-data">
+          <label>Policy file <input name="policy" type="file" accept=".yml,.yaml"></label>
+          <button class="button" type="submit">Import</button>
+          <p class="hint">Only YAML files are allowed.</p>
+        </form>
+      </article>
+
+      <aside class="panel">
+        <h2>Policy Registry</h2>
+        <ul class="policy-list">
+          {% for policy in policies %}
+          <li>
+            <strong>{{ policy.name }}</strong>
+            <span>v{{ policy.version }} - {{ policy.rules }} rules - {{ policy.owner }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

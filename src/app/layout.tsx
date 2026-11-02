@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Fira_Code, Montserrat, Orbitron, Oswald } from 'next/font/google'
-import { SITE_URL } from '@/lib/site'
+import { SITE_URL } from '@/lib/shared/site'
 import './globals.css'
 
 export const dynamic = 'error'

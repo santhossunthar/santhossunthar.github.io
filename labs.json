@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "labs": [
+    {
+      "name": "ReturnDesk: Dead Letter Queue",
+      "slug": "returndesk",
+      "version": "1.0.0",
+      "provider": "vagrant",
+      "path": "returndesk",
+      "entrypoint": "Vagrantfile",
+      "description": "Two-machine Linux CTF lab with an exposed support portal and an internal archive node.",
+      "machines": [
+        {
+          "name": "returndesk-web",
+          "role": "Public web host",
+          "ip": "192.168.56.20",
+          "internalIp": "10.10.20.10",
+          "ports": ["22/tcp", "80/tcp"]
+        },
+        {
+          "name": "archive-node",
+          "role": "Internal archive host",
+          "ip": "10.10.20.20",
+          "ports": ["22/tcp"]
+        }
+      ]
+    }
+  ]
+}

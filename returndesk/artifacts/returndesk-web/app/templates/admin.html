@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReturnDesk Admin</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin">ReturnDesk</a>
+    <nav>
+      <a href="/admin">Dashboard</a>
+      <a href="/admin/import-policy">Policies</a>
+      <a class="logout" href="/logout">Logout</a>
+    </nav>
+  </header>
+  <main class="admin-shell">
+    <section class="summary">
+      <div>
+        <p class="eyebrow">Operations Dashboard</p>
+        <h1>South Region Returns</h1>
+      </div>
+      <a class="button" href="/admin/import-policy">Import policy</a>
+    </section>
+
+    <section class="metrics">
+      <article>
+        <span>Open returns</span>
+        <strong>42</strong>
+      </article>
+      <article>
+        <span>Quarantine holds</span>
+        <strong>7</strong>
+      </article>
+      <article>
+        <span>Archive backlog</span>
+        <strong>13</strong>
+      </article>
+      <article>
+        <span>Vendor policies</span>
+        <strong>{{ policies|length }}</strong>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <article class="panel">
+        <h2>Return Queue</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Case</th>
+              <th>Vendor</th>
+              <th>Status</th>
+              <th>Age</th>
+              <th>Risk</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in queue %}
+            <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.vendor }}</td>
+              <td>{{ item.status }}</td>
+              <td>{{ item.age }}</td>
+              <td><span class="risk {{ item.risk|lower }}">{{ item.risk }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </article>
+
+      <aside class="panel">
+        <h2>Active Policies</h2>
+        <ul class="policy-list">
+          {% for policy in policies %}
+          <li>
+            <strong>{{ policy.name }}</strong>
+            <span>v{{ policy.version }} - {{ policy.rules }} rules - {{ policy.owner }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

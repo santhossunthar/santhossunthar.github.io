@@ -4,7 +4,7 @@ import {
   mainSectionConfig,
   socialLinks,
 } from '@/data/constants'
-import { absoluteUrl, SITE_URL } from '@/lib/site'
+import { absoluteUrl, SITE_URL } from '@/lib/shared/site'
 import Home from '@/pages/Home'
 
 export const metadata: Metadata = {

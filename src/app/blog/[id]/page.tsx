@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getPostByShortId, getAllPostIds, getAllPosts } from '@/lib/blog-utils';
-import { extractTableOfContents, stripFirstH1 } from '@/lib/table-of-contents';
+import { getPostByShortId, getAllPostIds, getAllPosts } from '@/lib/blog/blog-utils';
+import { extractTableOfContents, stripFirstH1 } from '@/lib/shared/table-of-contents';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import BlogRightSidebar from '@/components/blog/BlogRightSidebar';
 import Breadcrumb from '@/components/blog/Breadcrumb';

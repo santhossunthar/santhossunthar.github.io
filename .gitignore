@@ -20,6 +20,9 @@
 # misc
 .DS_Store
 *.pem
+.vagrant/
+__pycache__/
+*.pyc
 
 # debug
 npm-debug.log*
